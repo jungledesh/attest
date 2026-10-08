@@ -131,9 +131,28 @@ def resolve_patient(con, clinic, patient):
     # matches an earlier one is a copy, not a new assessment.
     out += derive_measures(clinic, patient, out)
 
+    out = _collapse_lists(out)
     db.clear_resolved(con, clinic, patient)
     db.insert_resolved(con, out)
     return len(out)
+
+
+def _collapse_lists(rows):
+    """List fields are one row per value in memory (so derivations can cite each), but the
+    resolved table keys on (subject, field). Store them as one row holding a JSON array."""
+    lists = defaultdict(list)
+    keep = []
+    for r in rows:
+        if r[3] in LIST_FIELDS:
+            lists[(r[0], r[1], r[2], r[3])].append(r)
+        else:
+            keep.append(r)
+    for (c, p, s, f), rs in lists.items():
+        vals = [r[4] for r in rs]
+        ids = sorted({i for r in rs for i in r[6]})
+        docs = sorted({d for r in rs for d in r[5].replace("stated by ", "").split(", ")})
+        keep.append((c, p, s, f, json.dumps(vals), f"stated by {', '.join(docs)}", ids, "resolved"))
+    return keep
 
 
 def _get(res, subject, field):

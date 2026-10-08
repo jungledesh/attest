@@ -2,7 +2,7 @@
 
 An abstraction that turns scattered documents into facts with provenance. Every answer traces to a source.
 
-Built for the Backbone clinical-records exercise. The documents are one patient's month of outpatient behavioral health care, written by different people and systems, overlapping and sometimes contradicting. The code reads them once, keeps every claim with its file and line, resolves conflicts by stated rule, and answers questions by computing over the result.
+Built for the Backbone clinical-records. The documents are one patient's month of outpatient behavioral health care, written by different people and systems, overlapping and sometimes contradicting. The code reads them once, keeps every claim with its file and line, resolves conflicts by stated rule, and answers questions by computing over the result.
 
 ## How it works
 

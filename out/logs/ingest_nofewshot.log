@@ -1,0 +1,33 @@
+2026-10-08T22:26:28+00:00  start  31 files  model=claude-haiku-5-5  fewshot=False  db=out/attest_nofewshot.db
+2026-10-08T22:26:31+00:00  ok     BH-D101_group_content_2026-01-19.txt  BH-D101  19 claims  4355+862 tok  2.9s
+2026-10-08T22:26:34+00:00  ok     BH-D102_original_attendance_2026-01-19.txt  BH-D102  20 claims  4316+761 tok  2.5s
+2026-10-08T22:26:36+00:00  ok     BH-D103_attendance_correction_2026-01-20.txt  BH-D103  16 claims  4280+707 tok  2.5s
+2026-10-08T22:26:39+00:00  ok     BH-D104_resent_roster_received_2026-01-26.txt  BH-D104  21 claims  4332+750 tok  2.5s
+2026-10-08T22:26:41+00:00  ok     BH-D105_individual_2026-01-19.txt  BH-D105  17 claims  4358+678 tok  2.5s
+2026-10-08T22:26:45+00:00  ok     BH-D106_telehealth_2026-01-21.txt  BH-D106  23 claims  4461+914 tok  3.3s
+2026-10-08T22:26:48+00:00  ok     BH-D107_group_activity_records_2026-01-22_and_29.txt  BH-D107  23 claims  4439+904 tok  3.1s  flags=unmapped:extra_note
+2026-10-08T22:26:52+00:00  ok     BH-D108_final_attendance_and_cancellation_register.txt  BH-D108  43 claims  4519+1344 tok  4.3s
+2026-10-08T22:26:55+00:00  ok     BH-D109_care_coordination_2026-01-23.txt  BH-D109  16 claims  4298+648 tok  2.5s
+2026-10-08T22:26:57+00:00  ok     BH-D110_individual_primary_record_2026-01-26.txt  BH-D110  19 claims  4377+717 tok  2.5s
+2026-10-08T22:27:00+00:00  ok     BH-D111_individual_second_record_2026-01-26.txt  BH-D111  22 claims  4434+913 tok  3.4s
+2026-10-08T22:27:03+00:00  ok     BH-D112_draft_note_and_charge_extract_2026-01-27.txt  BH-D112  16 claims  4381+651 tok  2.9s
+2026-10-08T22:27:06+00:00  ok     BH-D113_family_therapy_2026-01-30.txt  BH-D113  21 claims  4380+842 tok  2.9s
+2026-10-08T22:27:09+00:00  ok     BH-D114_medication_management_2026-01-30.txt  BH-D114  16 claims  4359+655 tok  2.4s
+2026-10-08T22:27:11+00:00  ok     BH-D115_symptom_measure_review_2026-01-30.txt  BH-D115  16 claims  4357+693 tok  2.5s
+2026-10-08T22:27:16+00:00  ok     early_appointment_status_export.txt  BH-D006  63 claims  4406+1652 tok  5.3s
+2026-10-08T22:27:19+00:00  ok     early_group_attendance_roster.txt  BH-D005  29 claims  4326+912 tok  3.0s
+2026-10-08T22:27:22+00:00  ok     family_cofacilitator_jan09.txt  BH-D008  18 claims  4347+761 tok  2.7s
+2026-10-08T22:27:25+00:00  ok     family_primary_jan09.txt  BH-D007  19 claims  4417+775 tok  2.8s
+2026-10-08T22:27:27+00:00  ok     group_authorization_letter.txt  BH-D001  9 claims  4260+460 tok  2.0s
+2026-10-08T22:27:30+00:00  ok     group_cancellation_notice_jan15.txt  BH-D016  16 claims  4258+678 tok  2.5s
+2026-10-08T22:27:32+00:00  ok     group_facilitator_jan06.txt  BH-D004  19 claims  4303+695 tok  2.4s
+2026-10-08T22:27:34+00:00  ok     group_facilitator_jan12.txt  BH-D009  18 claims  4350+646 tok  2.4s
+2026-10-08T22:27:37+00:00  ok     imported_measure_summary_received_jan26.txt  BH-D014  17 claims  4287+661 tok  2.4s
+2026-10-08T22:27:39+00:00  ok     individual_therapy_jan14.txt  BH-D011  18 claims  4418+756 tok  2.6s
+2026-10-08T22:27:42+00:00  ok     intake_and_individual_jan05.txt  BH-D002  22 claims  4621+911 tok  3.1s
+2026-10-08T22:27:45+00:00  ok     medication_review_jan13.txt  BH-D010  18 claims  4384+745 tok  2.6s
+2026-10-08T22:27:47+00:00  ok     missed_visit_outreach_jan08.txt  BH-D015  14 claims  4285+589 tok  2.3s
+2026-10-08T22:27:50+00:00  ok     partner_collateral_jan16.txt  BH-D012  19 claims  4407+802 tok  2.8s
+2026-10-08T22:27:54+00:00  ok     signed_treatment_plan_jan05.txt  BH-D003  16 claims  4566+1110 tok  3.8s  flags=malformed:plan
+2026-10-08T22:27:57+00:00  ok     symptom_measure_review_jan16.txt  BH-D013  17 claims  4268+771 tok  2.8s
+2026-10-08T22:27:57+00:00  done   ok=31 skipped=0 unextracted=0 claims=640 tokens=135549+24963 wall=88.4s

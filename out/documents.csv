@@ -1,0 +1,567 @@
+doc_id,sha256,path,raw_text,ingested_at,flags
+BH-D101,05a234a8adc98e72a51ba9e82c13e5975ee5026f03bb03e66575015b22562fb6,documents/BH-D101_group_content_2026-01-19.txt,"Document ID: BH-D101
+HARBOR GROVE BEHAVIORAL HEALTH
+Skills group clinical record | Service date: January 19, 2026
+Group encounter: HG-E110 | Facilitator: Leah Chen, LCSW
+Patient chart: Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Scheduled group: 10:00–11:30. Nontherapeutic break: 10:45–11:00.
+
+Today's group addressed recognizing the sequence between a triggering situation, an anxious prediction, physical activation, and an avoidance response. The facilitator used a worked example involving an unanswered work email. Members then practiced describing the prediction without treating it as an established outcome, and selected a small approach behavior they could attempt during the week. The break was for restroom use and refreshments; there was no facilitated discussion, assigned therapeutic activity, or patient treatment during that interval.
+
+Rowan initially followed the exercise and identified postponing a message to a supervisor as a familiar pattern. When discussion turned to returning to the workplace, Rowan became visibly tense and said the amount of discussion felt difficult to manage. The facilitator offered grounding and arranged a same-day individual meeting with the treating clinician. Patient-specific arrival and departure are maintained on the attendance roster.
+
+Continue practicing brief coping skills before an approach task. Coordinate with the individual clinician regarding the group experience so that future attendance can be supported without assuming that participation in a group exercise reflects completion of the patient's own work task.
+
+Electronically signed: Leah Chen, LCSW | January 19, 2026, 12:08
+",2026-10-08T22:25:08+00:00,
+BH-D102,514ca20809f682607e91b924c6cef0bb22f43a3d12cedbd23ea5fa362910cce5,documents/BH-D102_original_attendance_2026-01-19.txt,"Document ID: BH-D102
+HARBOR GROVE BEHAVIORAL HEALTH
+Patient-specific attendance roster extract
+Service date: January 19, 2026 | Group encounter: HG-E110
+Patient: Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Location: Outpatient skills room B
+
+Scheduled opening: 10:00 | Scheduled closing: 11:30
+Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended
+Roster disposition: Final, signed
+
+This is the patient row from the facilitator's attendance sheet. Arrival and departure fields were entered at roster close. The room schedule appears above to identify the group and is retained with the attendance sheet. Group topics, exercises, and the scheduled break are recorded in the separate group clinical record.
+
+Rowan was present for the opening check-in. The patient identified anxiety about reconnecting with work and accepted an exercise handout. Staff arranged access to the individual clinician after Rowan requested additional help. No transportation assistance was requested. The patient retained the same outpatient chart identifier throughout the day's services.
+
+Administrative routing: scanned to the patient chart and sent to the clinical records queue. This roster is the original signed attendance entry for the listed service date. The staff member closing the roster certified the patient row as shown at the time of signing.
+
+Electronically signed: Leah Chen, LCSW | January 19, 2026, 12:14
+Document status: Final
+",2026-10-08T22:25:10+00:00,
+BH-D103,674440968b5d6d38d68b8b513cc7ac3b3516ddd97285bde1e4af69cb9f128bd9,documents/BH-D103_attendance_correction_2026-01-20.txt,"Document ID: BH-D103
+HARBOR GROVE BEHAVIORAL HEALTH
+Attendance correction | Entered January 20, 2026
+Patient: Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Applies to group encounter HG-E110, service date January 19, 2026
+
+Correction: Patient departure for HG-E110 is 11:15, replacing the original roster value of 11:30. Patient arrival remains 10:00.
+
+During review of the same-day transfer, the original group roster was found to retain the scheduled group closing time in Rowan's departure field. The room-transfer record shows Rowan leaving skills room B at 11:15 and being received by the individual clinician at 11:15. I reviewed that record with the receiving clinician and confirm the corrected departure time above. The group continued for other members until its scheduled close.
+
+This correction applies only to Rowan Mercer's departure field on the January 19 group attendance roster. It does not change the group service date, scheduled opening or closing, the break recorded in the group clinical note, or the separate individual appointment. The original signed roster is retained in the chart with this correction attached to its attendance entry.
+
+No additional clinical service was provided in making this correction. The group discussion and the individual clinician's assessment remain documented in their respective service records.
+
+Electronically signed: Leah Chen, LCSW | January 20, 2026, 08:42
+Correction status: Final
+",2026-10-08T22:25:12+00:00,
+BH-D104,f3f25065559f4e82b110b5c284df5c2c4f81c55c950721e7bd6a9c23a91241d5,documents/BH-D104_resent_roster_received_2026-01-26.txt,"Document ID: BH-D104
+HARBOR GROVE BEHAVIORAL HEALTH
+Records inbox cover sheet
+Received: January 26, 2026, 16:22 | Sender: Outpatient group records queue
+Subject: January 19 attendance copy
+Patient: Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+
+The attached attendance sheet was resent following a request for the original group roster. The transmitted packet contains the cover sheet and the original patient-specific roster extract. No correction sheet was included in this transmission. Intake staff indexed the received copy under the service date printed on the roster. The receipt date is the inbox processing date.
+
+ATTACHED ROSTER COPY
+Service date: January 19, 2026 | Group encounter: HG-E110
+Location: Outpatient skills room B
+Scheduled opening: 10:00 | Scheduled closing: 11:30
+Patient arrival: 10:00 | Patient departure: 11:30 | Status: Attended
+Original signature: Leah Chen, LCSW | January 19, 2026, 12:14
+Original disposition: Final, signed
+
+Attachment remarks retained from original: Rowan attended the opening check-in, accepted the exercise handout, and requested additional help from the individual clinician. Group content is recorded separately.
+
+Records intake: indexed by Ana Reed, records assistant, January 26, 2026, 16:31. This is a retransmission of the January 19 roster for HG-E110. The received copy contains no new clinician signature and records no additional visit.
+",2026-10-08T22:25:14+00:00,
+BH-D105,91fd8e8b1b3182207971dbecd77e3d2bd13e5f49608f4083e4a9245b8a2d8935,documents/BH-D105_individual_2026-01-19.txt,"Document ID: BH-D105
+HARBOR GROVE BEHAVIORAL HEALTH
+Individual psychotherapy | Encounter HG-E111
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+January 19, 2026 | In person
+Patient contact: 11:15–11:45 | Completed: 30 minutes
+Clinician: Mira Patel, LCSW
+
+This visit was added because Rowan became anxious during group and needed individual grounding and review of coping strategies. Rowan came directly from the group room. The patient described feeling overwhelmed when other members discussed workplace demands and worried that returning to work would expose difficulties keeping up. Rowan was able to identify muscle tension, rapid breathing, and an urge to leave as early signs of activation.
+
+Used paced breathing, orientation to the room, and a brief review of the patient's coping card. Rowan participated throughout the individual contact and reported that the immediate intensity of anxiety eased enough to discuss a next step. We narrowed the work-related task to drafting two sentences to a supervisor, without requiring that the message be sent today. Discussed allowing an incomplete draft to exist rather than abandoning the task because the wording felt imperfect.
+
+Rowan denied current suicidal thoughts and remained future oriented in discussing the next appointment. No acute safety concern was identified during this contact. Persistent avoidance and disrupted sleep continue to interfere with resuming a usual work routine. Continue the established outpatient plan and review how the smaller task went at the next individual visit.
+
+Electronically signed: Mira Patel, LCSW | January 19, 2026, 12:32
+",2026-10-08T22:25:17+00:00,
+BH-D106,09c946a2248a5a81b2c1dc85b7620babe57b72f1bd4bed3d49eba574be5ccd46,documents/BH-D106_telehealth_2026-01-21.txt,"Document ID: BH-D106
+HARBOR GROVE BEHAVIORAL HEALTH
+Individual psychotherapy | Encounter HG-E112 | Appointment HG-A112
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+January 21, 2026 | Video | Clinician: Mira Patel, LCSW
+
+Patient contact occurred 13:00–13:20 and 13:30–13:55. Connection was lost from 13:20–13:30; there was no therapeutic contact during that interval. Total patient psychotherapy contact: 45 minutes. The reconnection continued the same clinical encounter under original appointment HG-A112.
+
+Rowan reported drafting a short message about a possible gradual return to work but stopping before sending it. Explored the difference between uncertainty about the supervisor's response and evidence that a response would be negative. The patient identified checking the draft repeatedly as another way the task was being delayed. Practiced reading the draft once and choosing a planned time to send it.
+
+After the connection resumed, the discussion returned to the same task and to evening routines. Rowan described one night of improved sleep followed by a night of prolonged wakefulness. Discussed keeping the wind-down routine brief and repeatable. Rowan was engaged and able to restate the agreed task. No urgent safety concern was reported. Follow-up remains with the established outpatient team.
+
+Electronically signed: Mira Patel, LCSW | January 21, 2026, 15:04
+
+ATTACHED PLATFORM CONNECTION EXPORT
+Appointment ID | Call ID | Connected | Ended
+HG-A112 | VC-112A | January 21 13:00 | January 21 13:20
+HG-A112 | VC-112B | January 21 13:30 | January 21 13:55
+Second call reason: Rejoin original appointment after network disconnect.
+Exported January 21, 2026, 14:06; all times local.
+",2026-10-08T22:25:20+00:00,unmapped:extra
+BH-D107,c5953bcb242ef0143301019cf06964a4b759d432e26dc0e34f0ad1c2b819df70,documents/BH-D107_group_activity_records_2026-01-22_and_29.txt,"Document ID: BH-D107
+HARBOR GROVE BEHAVIORAL HEALTH
+Skills group activity record extract
+Chart routing: Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Facilitator: Leah Chen, LCSW
+
+January 22, 2026 | Encounter HG-E113
+Scheduled group 10:00–11:30. Nontherapeutic break 10:45–11:00.
+The session addressed translating a broad intention into one observable action. Members practiced reducing a complicated task to an action that could be completed in a few minutes and identifying the cue that would prompt it. Rowan joined the discussion after it had begun; the arrival field is maintained in the attendance register. Rowan used opening a work calendar as an example and described concern that seeing outstanding items would become overwhelming. Facilitator encouraged a limited, planned review period and a stopping point. The patient contributed an example to the discussion after the break.
+Signed: Leah Chen, LCSW | January 22, 2026, 12:06
+
+January 29, 2026 | Encounter HG-E118
+Scheduled group 10:00–11:30. Nontherapeutic break 10:45–11:00.
+The session reviewed setbacks when practicing approach behaviors. Members identified an initial effort, what made follow-through difficult, and one adjustment for the next attempt. Rowan reported opening the work calendar but delaying a follow-up conversation. The facilitator helped identify a specific question to ask rather than trying to anticipate every possible concern. Rowan participated in the paired rehearsal and accepted feedback about keeping the request brief.
+Signed: Leah Chen, LCSW | January 29, 2026, 12:11
+
+For both dates, the break was unstructured time without therapeutic activity or facilitator treatment. Patient arrival, departure, and attendance status are entered in the separate attendance register.
+",2026-10-08T22:25:23+00:00,
+BH-D108,805b2c69c7fa18ab31b618b4a313c39dcdbde570cc0890de2dfd52d77ca547e1,documents/BH-D108_final_attendance_and_cancellation_register.txt,"Document ID: BH-D108
+HARBOR GROVE BEHAVIORAL HEALTH
+Outpatient attendance and appointment disposition extract
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Extract prepared January 30, 2026, 17:10
+All times are local. Group rows contain actual patient arrival and departure fields; the scheduled interval identifies the booked appointment.
+
+Service date | Encounter | Service | Scheduled | Actual arrival | Actual departure | Final disposition
+January 22 | HG-E113 | Skills group | 10:00–11:30 | 10:30 | 11:30 | Attended, late arrival
+January 27 | HG-E116 | Skills group | 10:00–11:30 | — | — | No show; patient did not attend
+January 28 | HG-E117 | Individual | 14:00–14:45 | — | — | Patient cancelled before appointment
+January 29 | HG-E118 | Skills group | 10:00–11:30 | 10:00 | 11:30 | Attended
+
+January 22 attendance attestation: Rowan arrived at 10:30 and remained until the group closed. Signed: Leah Chen, LCSW, January 22, 12:09.
+
+January 27 attendance attestation: Final roster confirms Rowan was absent for the entire group. No patient treatment contact occurred. An outreach message inviting the patient to contact scheduling was left after the group; no clinical discussion occurred. Signed: Leah Chen, LCSW, January 27, 11:54.
+
+January 28 scheduling entry: Cancellation received from patient January 28, 08:12. Rowan reported a personal scheduling conflict. Appointment HG-E117 was cancelled before the scheduled start; no replacement appointment was booked within January 2026. Entered by Ana Reed, January 28, 08:18.
+
+January 29 attendance attestation: Rowan was present from opening through closing. Signed: Leah Chen, LCSW, January 29, 12:15.
+
+Register status: Final. Break details remain in the corresponding group activity records.
+",2026-10-08T22:25:28+00:00,
+BH-D109,069ea4112779b68e7ba7bc9d06a73a6ad6dbb8110d7a1e7dfd3307769c6305be,documents/BH-D109_care_coordination_2026-01-23.txt,"Document ID: BH-D109
+HARBOR GROVE BEHAVIORAL HEALTH
+Care coordination | Encounter HG-E114
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+January 23, 2026 | 09:00–09:20
+Participants: Mira Patel, LCSW, and Daniel Shaw, outside social worker
+Patient participation: None. No patient contact occurred.
+
+With the patient's existing release on file, discussed coordination of practical supports related to returning to work. The outside social worker reported that Rowan had asked for help understanding whom to contact about a gradual return schedule. We clarified the difference between the clinical treatment appointments and the social worker's assistance with gathering employer forms. Neither participant made an employment determination during this call.
+
+Reviewed the current approach of helping Rowan break a difficult task into a manageable first step. The outside social worker will provide the relevant contact information and offer assistance organizing documents if the patient requests it. I will continue to address avoidance and coping within scheduled therapy. No change to medication or psychotherapy frequency was made during the coordination call.
+
+This contact was between professionals only. Rowan did not join by telephone or video, and no psychotherapy was delivered to the patient during the call. A brief coordination summary will be available to the treating team so that the patient is not asked to repeat administrative information unnecessarily.
+
+Electronically signed: Mira Patel, LCSW | January 23, 2026, 10:02
+",2026-10-08T22:25:30+00:00,
+BH-D110,4b64c46a13b80c09ec46d1cbb7b577dbfe8027cb62366631c15efa8ec1a1f58b,documents/BH-D110_individual_primary_record_2026-01-26.txt,"Document ID: BH-D110
+HARBOR GROVE BEHAVIORAL HEALTH
+Individual psychotherapy | Encounter HG-E115 | Appointment HG-A115
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+January 26, 2026 | In person
+Clinicians: Mira Patel, LCSW; Nora Ellis, LCSW
+Actual patient psychotherapy contact: 09:00–09:50, 50 minutes.
+
+Rowan described sending a short message to the supervisor and receiving a request to discuss possible next steps. The reply reduced one uncertainty but also brought up worry about being asked for commitments the patient might not be able to meet. Rowan continued to postpone choosing a time for the conversation. Sleep remained uneven, with difficulty settling on nights when work-related thoughts became repetitive.
+
+We practiced a brief response that acknowledged the request and asked for a limited discussion of options. Used a role-play to identify when Rowan shifted from asking a question into apologizing or trying to explain every possible difficulty. Rowan was able to return to the main request with prompting. Nora Ellis participated directly in the clinical work and helped rehearse a grounding cue to use before sending the response.
+
+The patient remained attentive and collaborative, although hesitant about completing the task outside the office. No current suicidal ideation was reported. Continue work on avoidance and the bedtime routine. Discussed maintaining scheduled treatment contact during the return-to-work planning period and bringing the response draft to the next visit if the patient remained stuck.
+
+Electronically signed: Mira Patel, LCSW | January 26, 2026, 11:16
+Record status: Final
+",2026-10-08T22:25:33+00:00,
+BH-D111,d03451942797c3fb189a5083c80950887657a79d0d1da9bb7f74bda8731d9380,documents/BH-D111_individual_second_record_2026-01-26.txt,"Document ID: BH-D111
+HARBOR GROVE BEHAVIORAL HEALTH
+Participating clinician psychotherapy record
+Encounter HG-E115 | Appointment HG-A115 | Service date January 26, 2026
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Service: Individual psychotherapy, in person
+Actual patient psychotherapy contact: 09:10–09:50, 40 minutes.
+Clinician: Nora Ellis, LCSW, participating with Mira Patel, LCSW
+
+I participated directly in this individual encounter. Rowan entered the treatment room at 09:10, when we began the session. The full patient-contact interval for the encounter was 09:10–09:50. Rowan discussed difficulty moving from a supervisor's reply to arranging the next conversation. The patient anticipated becoming overwhelmed if several work issues were raised at once. We rehearsed requesting a brief initial conversation with a specific purpose, then pausing to ask a clarifying question if needed.
+
+Rowan recognized a tendency to keep editing a message after the essential point was already clear. I supported a grounding exercise using contact with the chair and feet on the floor, then helped the patient return to the planned wording. The patient could use the cue during the rehearsal but remained uncertain about using it independently when anxious. The discussion also addressed how repetitive planning at night affected settling for sleep.
+
+Clinical presentation remained consistent with ongoing anxiety, low mood, and functional difficulty around work demands. Rowan was engaged with the treatment team and described a wish to resume a steadier routine. Plan is to continue individual and group work under the existing outpatient plan. The session concluded with Rowan at 09:50.
+
+Electronically signed: Nora Ellis, LCSW | January 26, 2026, 12:03
+Record status: Final
+",2026-10-08T22:25:35+00:00,
+BH-D112,b4390ed6b672381f671aae23dbfa937d9c5585ca4b6db83cd811797e2a34505f,documents/BH-D112_draft_note_and_charge_extract_2026-01-27.txt,"Document ID: BH-D112
+HARBOR GROVE BEHAVIORAL HEALTH
+Administrative chart extract | Produced January 30, 2026, 17:25
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Service date January 27, 2026 | Encounter HG-E116
+
+SECTION A — AUTOGENERATED PROGRESS NOTE
+Creation time: January 27, 2026, 09:45
+Status: DRAFT — UNSIGNED — system populated from scheduled group template
+Scheduled service: Skills group, 10:00–11:30
+Template attendance text: Patient attended the full session and participated in the skills discussion.
+Template plan text: Continue outpatient skills group according to treatment plan.
+Clinician signature: None
+Manual clinical entry: None
+
+The text above appears in the draft document area. It was generated from the appointment template before the scheduled group. No clinician attestation or finalized patient-specific narrative appears in this draft.
+
+SECTION B — POSTED CHARGE EXTRACT
+Charge ID: CH-116 | Encounter: HG-E116
+Service date: January 27, 2026 | Posting date: January 27, 2026, 18:06
+Description: Group psychotherapy
+Quantity charged: 1 group session
+Charge status in this export: Posted
+
+The charge row was exported from the billing work queue. This administrative extract preserves the draft document fields and posted charge fields as they appeared on January 30. The signed group attendance register is maintained in the clinical attendance section of the chart.
+
+Prepared by: Ana Reed, records assistant | January 30, 2026, 17:25
+",2026-10-08T22:25:37+00:00,
+BH-D113,36764827bcb39caf2e9304c881f55e4acba9744a9792228bf36981f19a0feaf9,documents/BH-D113_family_therapy_2026-01-30.txt,"Document ID: BH-D113
+HARBOR GROVE BEHAVIORAL HEALTH
+Family psychotherapy | Encounter HG-E119
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+January 30, 2026 | In person | Clinician: Mira Patel, LCSW
+Therapist session interval: 13:00–13:45, 45 minutes.
+Partner only: 13:00–13:15. Rowan present with partner: 13:15–13:45, 30 minutes.
+
+Rowan's partner, Casey Mercer, arrived first. During the initial interval, Casey described uncertainty about when reminders helped and when they seemed to increase Rowan's sense of pressure. Rowan was not present for that portion. The discussion focused on Casey's observations and questions about supporting the agreed approach tasks.
+
+Rowan joined at 13:15 and participated through the end of the session. Together, they identified a recurring pattern in which a reminder about contacting work led to a lengthy discussion, followed by Rowan withdrawing from the task. Facilitated a rehearsal in which Casey first asked whether Rowan wanted company, practical help, or a later check-in. Rowan practiced requesting a specific kind of help and naming when a reminder felt overwhelming.
+
+Both participants agreed to try one brief check-in at a planned time rather than repeated questions across the evening. Rowan remained anxious about the work conversation but could explain the intended first step. The patient reported that having a limited plan felt more manageable. Continue the current outpatient treatment plan and revisit whether the agreed communication pattern was useful.
+
+Electronically signed: Mira Patel, LCSW | January 30, 2026, 14:18
+",2026-10-08T22:25:40+00:00,unmapped:extra
+BH-D114,9942bd886fcd2158bbd56914551519397d70eef7103b6d33ba2fa90cc424093c,documents/BH-D114_medication_management_2026-01-30.txt,"Document ID: BH-D114
+HARBOR GROVE BEHAVIORAL HEALTH
+Medication management | Encounter HG-E120
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+January 30, 2026 | 15:00–15:20 | Completed, 20 minutes
+Prescriber: Elena Ortiz, PMHNP
+
+Reviewed the patient's current medication regimen, adherence, tolerability, and interval symptoms. Rowan reported taking the medication as prescribed and did not describe a new adverse effect. Mood felt less persistently low than earlier in the month, although anxiety remained noticeable when anticipating contact with work. Sleep was still variable. Reviewed the patient's report alongside the symptom questionnaire available in the chart.
+
+Rowan was alert, organized in conversation, and able to describe the follow-up plan. The patient denied current suicidal thoughts. No new acute safety issue emerged in this visit. Discussed continuing the current medication regimen, monitoring sleep and tolerability, and contacting the clinic if a concerning change occurred before the next prescriber appointment. No medication change was made today.
+
+The service consisted of medication evaluation and management, including symptom review and medication counseling. No separately documented psychotherapy was provided. Ongoing psychotherapy goals and behavioral assignments remain with the treating therapist. Rowan agreed to continue attending scheduled outpatient follow-up and to bring questions about the medication regimen to the next medication appointment.
+
+Electronically signed: Elena Ortiz, PMHNP | January 30, 2026, 16:02
+Record status: Final
+",2026-10-08T22:25:42+00:00,
+BH-D115,4a3859fd81fc5afc5533e9add8718ce4b89492121bf68f812f73db92d319755e,documents/BH-D115_symptom_measure_review_2026-01-30.txt,"Document ID: BH-D115
+HARBOR GROVE BEHAVIORAL HEALTH
+Symptom questionnaire and chart review
+Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Questionnaire completed January 30, 2026, 12:42
+PHQ-9 total: 10. Item 9: 0.
+
+Rowan completed the questionnaire before the afternoon appointment. The patient continued to endorse sleep difficulty and trouble sustaining usual activities, with fewer days of pervasive low mood than reported at intake. The form was available to the treating clinician for review with the patient's account of functioning.
+
+Clinician review, January 30: Rowan shows partial improvement, with persistent avoidance and meaningful functional impact around returning to work. The patient has taken some initial steps, including drafting and sending a message, but continues to delay follow-up and becomes anxious when a task expands beyond a narrowly defined action. Sleep disruption remains an intermittent barrier to establishing a steadier daytime routine.
+
+Current assessment reflects both the symptom questionnaire and Rowan's reported functioning. Continued treatment is appropriate given the remaining difficulties with follow-through and work-related functioning. Recommend continuity of the established individual and group schedule and continued use of small, observable approach tasks. Family support may help the patient carry out the agreed tasks between appointments.
+
+This entry records questionnaire review within ongoing care and is not a separate treatment appointment. No additional patient-contact interval is claimed in this entry.
+
+Electronically signed: Mira Patel, LCSW | January 30, 2026, 16:20
+",2026-10-08T22:25:45+00:00,
+BH-D006,0bf056f3769e7daf39941514e6f3e1c40c99cbc00dbb4228ee0fac07d9f75f96,documents/early_appointment_status_export.txt,"Document ID: BH-D006
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Appointment desk
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Export run 2026-01-16, 16:50 local
+View: appointments January 5–16, 2026; times local
+
+Encounter | Date  | Appointment type       | Scheduled time | Status
+HG-E101   | Jan05 | Individual therapy     | 09:00–09:50    | Completed
+HG-E102   | Jan06 | Coping skills group    | 10:00–11:30    | Attended part
+HG-E103   | Jan08 | Individual therapy     | 11:00–11:45    | No show
+HG-E104   | Jan09 | Family therapy         | 14:00–14:45    | Completed
+HG-E105   | Jan12 | Coping skills group    | 10:00–11:30    | Completed
+HG-E106   | Jan13 | Medication management  | 09:00–09:25    | Completed
+HG-E107   | Jan14 | Individual therapy     | 11:00–11:45    | Completed
+HG-E108   | Jan15 | Coping skills group    | 10:00–11:30    | Clinic cancelled
+HG-E109   | Jan16 | Family collateral      | 14:00–14:40    | Completed
+
+Desk comments: HG-E103 remained unarrived at close of its appointment slot on January 8. Outreach was assigned to the individual therapist's support queue. HG-E108 was removed from the active room schedule after staff illness was reported. A cancellation message was released to all registered members. Appointment HG-E109 was retained as a partner collateral contact after Rowan could not attend.
+",2026-10-08T22:25:50+00:00,
+BH-D005,6f205f89f8d3dbd05094e647925bb3c5955f11e9fb44f255f8cdedc3edb49616,documents/early_group_attendance_roster.txt,"Document ID: BH-D005
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Group desk attendance extract
+Patient: Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Extract prepared 2026-01-12, 15:10 local by N. Ellis
+All times local. Patient entries shown below; other member rows omitted.
+
+Date       | Encounter | Scheduled slot | Patient arrived | Patient departed | Desk status
+2026-01-06 | HG-E102   | 10:00–11:30    | 10:15           | 11:15            | Attended part
+2026-01-12 | HG-E105   | 10:00–11:30    | 10:00           | 11:30            | Attended full
+
+January 6 desk note: Rowan called from the building entrance to say they were running behind after difficulty finding parking. Reception directed them to the group room after check-in. Rowan advised the facilitator that they would need to leave early for a previously arranged ride. Departure was marked when Rowan returned their visitor badge. Rowan did not re-enter the group room after departing.
+
+January 12 desk note: Rowan checked in before the group began and remained until the group was released. Their next printed appointment list was provided at checkout. No transport concern was reported at that time.
+
+The desk records arrival and departure when members enter or leave the scheduled group. Session activities and room breaks are documented in the facilitator's record. Prepared from the signed reception attendance sheet for the two dates listed.
+",2026-10-08T22:25:52+00:00,
+BH-D008,ad416fbda80683308baa15c433c7d1df7fe9221b9e8baf1f2189964bc0421aed,documents/family_cofacilitator_jan09.txt,"Document ID: BH-D008
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Family service
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Encounter HG-E104 | Date 2026-01-09 | 14:00–14:45 local
+Author: Leena Park, LPC, cofacilitator with Mara Voss, LCSW
+Participants: Rowan Mercer and Casey Mercer; both present for the full 45 minutes
+Signed 2026-01-10, 08:42 local
+
+Accompanying clinical entry for the family appointment facilitated with Mara Voss. My role was to assist with communication practice and observe how the couple responded when slowing down an anxious exchange. Rowan initially described partner reminders as evidence that they were falling behind. Casey explained that the reminders were an attempt to help, while also recognizing that repeated prompts increased tension.
+
+I asked each participant to reflect the other person's concern before moving to a solution. Rowan was able to state that Casey wanted reassurance that some preparation was happening. Casey reflected Rowan's wish to keep ownership of the return-to-work process. The rehearsal became less defensive with repetition. Both participants contributed ideas for a brief, predictable check-in.
+
+The couple selected an evening walk as an activity they could share without making it a discussion about progress. Rowan said this felt more acceptable than a lengthy review of unfinished tasks. The agreed home practice and ongoing treatment plan are recorded in Mara Voss's primary note for HG-E104.
+",2026-10-08T22:25:55+00:00,
+BH-D007,924dee06b05c0a841c3f86d0c394c7af39447db6c9ea7b643cc6eb3a3c40df6b,documents/family_primary_jan09.txt,"Document ID: BH-D007
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Family psychotherapy
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Encounter HG-E104 | 2026-01-09, 14:00–14:45 local
+Present: Rowan and partner, Casey Mercer
+Clinicians: Mara Voss, LCSW; cofacilitator Leena Park, LPC
+Patient-present family therapy duration: 45 minutes
+Mara Voss signed 2026-01-09, 16:24 local
+
+The appointment focused on patterns of support at home as Rowan attempts to rebuild a routine. Rowan described feeling watched when asked repeatedly whether they had contacted work. Casey described worry that giving Rowan space might leave them isolated. Both were able to acknowledge that their intentions differed from how the other person experienced the exchange.
+
+We mapped a recent morning interaction and paused at points where each person made assumptions. Rowan practiced asking for one specific kind of help, and Casey practiced reflecting the request before offering suggestions. Leena Park guided a short communication rehearsal while I observed and helped the pair identify language they could use during the next week.
+
+Rowan remained present and engaged throughout the visit. They became more animated when describing a shared evening walk and identified this as support that did not feel like pressure. Casey agreed to use a single planned check-in about work preparation instead of repeated reminders. Rowan agreed to say when they wanted practical assistance versus quiet company.
+
+Plan: try the planned check-in and review its effect at the next individual visit. Continue the small activity steps selected in treatment. Leena Park's accompanying entry is filed under encounter HG-E104.
+",2026-10-08T22:25:57+00:00,"malformed:encounters,unmapped:unparsed"
+BH-D001,d2240979a2de7d7782a34a6ca26e289ee829d01eea9932e4d61b3588c724ceb1,documents/group_authorization_letter.txt,"Document ID: BH-D001
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health
+Administrative correspondence received 2026-01-04, 15:26 local
+Member: Rowan Mercer | DOB: 1991-04-12 | MRN: HG-M042
+Authorization: HG-A260104-88
+
+To: Outpatient program authorization desk
+The requested group service authorization is approved for the period January 5, 2026 through January 30, 2026. Authorized quantity: 8 group sessions. One authorization unit represents one scheduled group session. The service description is outpatient therapeutic group work supporting the submitted behavioral health treatment plan. This letter does not authorize individual therapy, family therapy, or medication appointments under the group service quantity.
+
+The approved period permits the practice to arrange group appointments within the indicated dates. Scheduling remains the responsibility of Harbor Grove Behavioral Health and the member. Changes in appointment dates within the approved period may be made by the scheduling desk. 
+
+Administrative entry, N. Ellis, 2026-01-05, 08:05 local:
+Letter attached to the program account. Rowan was informed that the office would send a weekly appointment list. Scheduling staff will use the approved group quantity when arranging appointments. No service attendance record accompanies this letter.
+",2026-10-08T22:26:00+00:00,
+BH-D016,5f3375f11c857ad3e9917ad2eefffffd5ee0412e6ab56885901c1b5d5b2115f9,documents/group_cancellation_notice_jan15.txt,"Document ID: BH-D016
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Program operations
+Patient copy: Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Related encounter: HG-E108
+Notice entered 2026-01-15, 08:12 local by N. Ellis
+
+The coping skills group scheduled for January 15 from 10:00 to 11:30 is cancelled by the clinic because of staff illness. A covering facilitator is unavailable for this morning's group. The group room has been released from the schedule, and registered participants are being contacted before the planned start time.
+
+08:15: Portal notice delivered to Rowan's account. The notice states that the office initiated the cancellation and that the participant should not come to the group room this morning.
+
+08:37: Rowan called the desk and acknowledged receiving the notice. Staff confirmed that the family-related appointment on January 16 remained on the schedule and that later appointments would appear on the next weekly list. Rowan did not request a change to the remaining appointments during this call.
+
+11:35: Cancellation record closed. No group was held and no participants were seen for HG-E108. No replacement group was conducted in the January 15 slot. The telephone contact was limited to confirming the cancellation and upcoming appointment information.
+",2026-10-08T22:26:02+00:00,
+BH-D004,5edddc6b20937ecdadf834b331c399375d0889d12a8595eb4084f1da2d4f4a11,documents/group_facilitator_jan06.txt,"Document ID: BH-D004
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Coping skills group
+Service date 2026-01-06 | Group scheduled 10:00–11:30 local
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042 | Encounter HG-E102
+Facilitator: Leena Park, LPC
+Signed 2026-01-06, 12:02 local
+
+Group focus: recognizing early physical signs of anxiety and choosing a coping response before withdrawing from a task. Members used recent everyday situations to describe the relationship between thoughts, body sensations, and behavior. The facilitator demonstrated paced breathing, invited short practice rounds, and led discussion about using a skill during a manageable task rather than only after distress has peaked.
+
+The whole group took a break from 10:45 to 11:00. No therapy was conducted during that interval. Following the break, the facilitator resumed with a paired planning exercise and a group discussion of barriers to practice at home. 
+
+Rowan was quiet initially and responded when invited to identify a situation involving avoidance. They described delaying a reply to a work message because they feared being asked for a firm return date. Rowan practiced a breathing exercise and selected reading the message before deciding how to respond as a possible next step. Their participation was relevant to the topic, and they appeared receptive to peer suggestions. The patient attendance roster is maintained by the group desk.
+",2026-10-08T22:26:04+00:00,
+BH-D009,d30d18d0335d5d428acea2e5ee0334fbbafc10665133a462061a01c94baa09b7,documents/group_facilitator_jan12.txt,"Document ID: BH-D009
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Coping skills group
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042 | Encounter HG-E105
+Service date 2026-01-12 | Scheduled group 10:00–11:30 local
+Facilitator: Leena Park, LPC
+Signed 2026-01-12, 12:20 local
+
+Today's group addressed behavioral activation and the difference between an activity being possible and it feeling easy. Members reviewed how postponement can briefly reduce discomfort while making the next attempt feel harder. 
+
+Group break: 10:40–10:55; no therapeutic activity occurred during the break. The second portion of the group included creating an activity ladder, anticipating obstacles, and rehearsing a neutral response to a missed attempt. Members were encouraged to specify the next action in concrete terms, including when and where it could take place.
+
+Rowan contributed an example about leaving work messages unopened. They identified looking at one message as a lower step than replying to every outstanding message. They also described taking a walk with Casey over the weekend and noted that it helped the evening feel less dominated by worry. During the planning exercise, Rowan wrote down an action to try after breakfast and asked how to respond if the morning went poorly.
+
+The facilitator reinforced restarting with a smaller step and reviewing what interfered. Rowan listened to peers and offered a supportive comment to another member. The group closed with members naming their next practice attempt. Attendance is recorded on the group desk roster.
+",2026-10-08T22:26:07+00:00,
+BH-D014,85e2c780abded9efe663fd61ac6e6a7a56e5b30c9597b24f35f90076b6f7358b,documents/imported_measure_summary_received_jan26.txt,"Document ID: BH-D014
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Administrative import receipt
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Received into chart: 2026-01-26, 07:44 local
+Source: program measurement summary batch HG-MEAS-0126
+Import operator: N. Ellis
+
+The batch received this morning contains the following measurement summary for the outpatient episode. The source record identifies the patient portal submission retained by the treatment team.
+
+Measure | Result | Date completed | Source form
+PHQ-9   | 14     | 2026-01-16     | HG-Q116
+
+Source review excerpt, Mara Voss, LCSW: some improvement in depressive symptoms; ongoing avoidance of work communication and inconsistent sleep. Continue current therapeutic focus and review practical functioning at the next direct appointment. Original clinician review timestamp: January 16, 2026, 09:10 local.
+
+Import detail: copied result from the January 16 portal form. January 26 is the date the summary was received and filed. No newly completed patient questionnaire is included in this batch. The source form identifier and original completion date were retained in the imported row.
+
+ The measurement tab continues to hold the original patient submission. This receipt was entered by the administrative desk and does not document a visit with Rowan.
+",2026-10-08T22:26:09+00:00,
+BH-D011,8c2fbaf5bb4545cc4590b288d768ab893a4d727f6946bcc88339669d0629eb8a,documents/individual_therapy_jan14.txt,"Document ID: BH-D011
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Individual psychotherapy
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Encounter HG-E107 | Date 2026-01-14
+Patient-present session 11:00–11:45 local; completed, 45 minutes
+Clinician: Mara Voss, LCSW
+Signed 2026-01-14, 13:16 local
+
+Rowan reported completing several small activities since the prior individual appointment, including opening a work message and taking two short walks. They have not yet replied to the message and continue to imagine being asked questions they cannot answer. Rowan described the family appointment as helpful because the planned check-in with Casey reduced repeated reminders. Sleep remains interrupted, and getting started in the morning continues to require effort.
+
+The session focused on identifying the prediction behind the delayed reply and separating a brief acknowledgment from a commitment to a specific work schedule. We drafted a short response in Rowan's own words and practiced reading it aloud. Rowan noticed physical tension during the rehearsal but was able to remain with the task. They said the message seemed less overwhelming when it did not need to solve the entire return-to-work question.
+
+We reviewed the activity record and explored the missed appointment from the prior week without treating it as a reason to abandon the schedule. Rowan identified setting out appointment information the evening before as a helpful preparation step. Affect was more varied than at intake, although worry was evident when discussing employment.
+
+Plan: attempt the drafted acknowledgment, continue morning activity tracking, and practice the breathing skill before an avoided task. Rowan will review the result at the next individual visit. Maintain planned group participation and family involvement as available.
+",2026-10-08T22:26:12+00:00,
+BH-D002,7f5f7d4bbfc9b47a632fb33cca1b261999078d058cbd7601c63f6c6e5be3c747,documents/intake_and_individual_jan05.txt,"Document ID: BH-D002
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Outpatient psychotherapy
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Encounter HG-E101 | Service date 2026-01-05
+Clinician: Mara Voss, LCSW
+Patient-present individual therapy: 09:00–09:50 local; completed, 50 minutes.
+Signed 2026-01-05, 12:18 local
+
+Reason for care: Rowan describes several weeks of low mood, reduced interest in usual activities, fragmented sleep, and difficulty beginning ordinary tasks. Worry increases when thinking about returning to work after a recent leave. Rowan has been postponing email replies, avoiding conversations about the return date, and spending more time alone at home. They want a routine that makes the work transition feel manageable. The current outpatient episode is planned for January 5 through January 30, with review as treatment progresses.
+
+Rowan arrived independently and participated throughout the appointment. Speech was clear and organized. Affect was subdued but responsive, especially when discussing their partner's support. Rowan described waking in the night and then checking the time repeatedly. Daytime fatigue appears to make avoidance more likely. No immediate safety concern was identified in today's assessment; Rowan was able to discuss support contacts and ways to seek additional help if needed.
+
+PHQ-9 completed by Rowan on 2026-01-05: total score 18. The questionnaire is retained in the assessment tab. Clinical impressions are depressive symptoms with anxiety and behavioral avoidance. The score was reviewed alongside Rowan's account of sleep and daily functioning.
+
+Interventions: developed a shared description of the sleep, worry, and avoidance cycle; introduced behavioral activation; and practiced breaking one work-related task into a short, observable step. Rowan selected opening their work inbox for five minutes without requiring an immediate reply. We discussed setting a consistent morning anchor and recording the time they get out of bed. 
+
+Plan: participate in scheduled individual, group, and selected family appointments. Bring the activity record to the next individual appointment. Treatment goals and the proposed weekly schedule will be recorded in a separate plan. Rowan consented to involving their partner in a family visit focused on practical support.
+",2026-10-08T22:26:15+00:00,
+BH-D010,95debafd3a72e32fd806d7aa4b420b1984f9c565d2af3c0d807269ee71aa8482,documents/medication_review_jan13.txt,"Document ID: BH-D010
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Prescriber visit
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Encounter HG-E106 | Date 2026-01-13
+Actual visit 09:00–09:25 local; completed, 25 minutes
+Clinician: Elias Brenner, NP
+Signed 2026-01-13, 10:04 local
+
+Rowan attended for medication management. The visit addressed medication use, tolerability, adherence, and symptom response relevant to the current prescription plan. Rowan reported continuing sleep interruption and daytime tiredness. They described mood as somewhat less heavy on days with a planned activity but remained concerned about work communication. The medication list was reviewed with Rowan and reconciled with the active chart.
+
+Rowan denied a new medication-related concern requiring urgent intervention. We discussed practical adherence supports, the expected follow-up process, and when to contact the prescribing office about changes in symptoms or tolerability. Rowan was attentive, asked questions about the monitoring plan, and could restate the next steps. No new physical complaint was raised during this visit.
+
+Assessment: ongoing depressive and anxiety symptoms with sleep disruption. Rowan is engaged with the therapy program and intends to continue the scheduled appointments. Medication monitoring will continue during the outpatient episode, with later follow-up arranged according to clinical response.
+
+Service documented: medication review and management only. No separate psychotherapy component was provided or documented. Rowan was directed to bring activity and communication concerns to the treating therapist for continued work.
+",2026-10-08T22:26:17+00:00,
+BH-D015,4521a120a4d7a8f896d5fe9137a44f72719adc5cadbd839ef1b9d9646316b7c4,documents/missed_visit_outreach_jan08.txt,"Document ID: BH-D015
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Scheduling support log
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Related appointment: HG-E103, 2026-01-08, 11:00–11:45 local
+Entered by N. Ellis, 2026-01-08, 15:52 local
+
+11:12: Reception notified the clinician that Rowan had not checked in. There was no arrival call or cancellation message on the scheduling line. The appointment remained on the room schedule until its end time.
+
+11:45: Appointment marked no show. Rowan was not seen for the scheduled individual visit.
+
+13:20: Outbound call placed to the patient's recorded number. No answer; a brief callback request was left without clinical detail. The next scheduled appointment remained the family visit on January 9.
+
+15:36: Rowan returned the call. They said the morning had gotten away from them after a poor night of sleep and confirmed that they still intended to attend the next day's visit with Casey. Staff verified the appointment time and location and offered to resend the existing appointment list. Rowan requested the list through the portal.
+
+The callback addressed scheduling and contact information. No therapy intervention was conducted. The individual clinician was notified of the missed appointment so that barriers to attendance could be discussed at the next visit.
+",2026-10-08T22:26:19+00:00,
+BH-D012,432c973d1a4d505b49ba85c3c92dead5c2a70faca6b6dd66e87db92b95329fea,documents/partner_collateral_jan16.txt,"Document ID: BH-D012
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Family collateral
+Patient: Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Encounter HG-E109 | Date 2026-01-16 | 14:00–14:40 local
+Clinician: Mara Voss, LCSW
+Participant: Casey Mercer, partner. Rowan was absent for the entire contact.
+Signed 2026-01-16, 16:08 local
+
+Casey attended the arranged contact after Rowan advised the office that they could not participate. Existing consent for partner involvement was confirmed in the chart. This was a collateral discussion with Casey only, focused on observations at home and ways to support the treatment plan.
+
+Casey reported that Rowan had been getting out for short walks and seemed more willing to discuss the coming week. Mornings remain difficult, and Casey described Rowan becoming quiet when the conversation turns to work. The scheduled evening check-in has reduced unplanned reminders. Casey said it takes effort to resist offering multiple solutions but has noticed less argument when asking what kind of help Rowan wants.
+
+I gathered information about daily routine and reviewed supportive responses previously practiced in the family appointment. We discussed preserving Rowan's ownership of tasks while keeping practical support available. Casey will continue to offer a walk or shared meal and will use the agreed check-in rather than repeated progress questions.
+
+Rowan did not join in person, by telephone, or by video. No patient-present psychotherapy occurred during this contact. Information from Casey will be incorporated into the next direct clinical review with Rowan. No new treatment decision was made with Rowan during this appointment.
+",2026-10-08T22:26:21+00:00,
+BH-D003,3b3f50db40b348bdd9e3baeb64b67a11d5edaf12699954762bec9633ad79ad12,documents/signed_treatment_plan_jan05.txt,"Document ID: BH-D003
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Outpatient treatment plan
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Episode dates: 2026-01-05 through 2026-01-30
+Prepared by Mara Voss, LCSW; signed 2026-01-05, 13:05 local
+Patient agreement recorded 2026-01-05, 13:12 local
+
+Presenting needs: depressed mood, sleep disruption, anxiety about resuming work responsibilities, and avoidance of tasks and communication. Rowan wishes to improve follow-through without waiting for anxiety to disappear. Partner support is available but repeated reminders sometimes increase tension. The treatment team will combine individual practice, therapeutic group activities, and family work when Rowan is present.
+
+Local treatment participation goal: at least 3 therapy days and at least 150 minutes of patient-present therapy in each Monday–Sunday week. A therapy day is a calendar day on which Rowan participates in individual, group, or family psychotherapy. Patient-present individual, group, and family therapy contribute to the minute goal. Medication management, contacts with collateral informants only, and care coordination do not contribute. This is the program's individualized treatment-plan goal for Rowan.
+
+Goal 1: improve daily activity and task initiation. Rowan will select manageable activities, track attempts, and review barriers with the individual therapist. The team will emphasize completion of useful steps rather than judging the day by mood alone.
+
+Goal 2: improve coping with anxiety and disrupted sleep. Rowan will practice one grounding or paced-breathing exercise and establish a consistent morning routine. Group participation will provide opportunities to rehearse skills and hear alternative approaches.
+
+Goal 3: support a workable return to employment. Individual sessions will address avoided communication and gradual preparation. Family sessions may address how Rowan can request help and how the partner can offer support without taking over tasks.
+
+Review: assess participation, symptoms, and practical functioning during the episode. Adjust the schedule when clinically indicated or when access barriers arise.
+",2026-10-08T22:26:24+00:00,
+BH-D013,300a30dbe42be8dcfdf7ad644f23c583259611467ae32e944e8d7154c78b968e,documents/symptom_measure_review_jan16.txt,"Document ID: BH-D013
+SYNTHETIC TRAINING RECORD — Entirely fictional patient and organization.
+
+Harbor Grove Behavioral Health | Measurement review
+Rowan Mercer | DOB 1991-04-12 | MRN HG-M042
+Instrument: PHQ-9 | Patient portal form HG-Q116
+Completed by patient: 2026-01-16, 08:17 local
+Total score: 14
+Reviewed by Mara Voss, LCSW, 2026-01-16, 09:10 local
+
+The submitted score is lower than the intake score of 18 recorded on January 5. In the optional update field, Rowan wrote that getting out of the apartment had become a little easier, while thinking about work continued to make them want to put things off. Rowan also described sleep as inconsistent. No additional questionnaire was submitted with this update.
+
+Clinician review: the score and recent individual-session material suggest some improvement in depressive symptoms. Persistent avoidance, difficulty initiating work communication, and sleep disruption remain clinically relevant. Rowan has attempted small activities and communication practice but has not yet established a reliable routine. Continue the current therapeutic focus and review functioning alongside symptom change during the next direct appointment.
+
+This entry records review of the portal submission; no clinical appointment occurred at the time of review. The form remains attached to the measurement tab with its original completion date.
+",2026-10-08T22:26:26+00:00,

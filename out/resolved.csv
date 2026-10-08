@@ -1,0 +1,297 @@
+clinic,patient,subject,field,value,basis,claim_rows,status
+Harbor Grove Behavioral Health,HG-M042,HG-E101,arrival,09:00,stated by BH-D002,[503],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,encounter,HG-E101,"stated by BH-D002, BH-D006","[295, 497]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,patient_present,09:00–09:50,stated by BH-D002,[504],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,scheduled_end,09:50,"stated by BH-D002, BH-D006","[299, 502]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,scheduled_start,09:00,"stated by BH-D002, BH-D006","[298, 501]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,service_date,2026-01-05,"stated by BH-D002, BH-D006","[296, 498]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,service_type,individual,"stated by BH-D002, BH-D006","[297, 499]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,status,attended,"stated by BH-D002, BH-D006","[300, 500]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,summary:BH-D002,"Rowan Mercer attended an individual session for several weeks of low mood, reduced interest, fragmented sleep, and work-return worry with avoidance. Rowan participated throughout; the clinician introduced behavioral activation and a sleep/morning routine plan. No immediate safety concern was identified.",stated by BH-D002,[506],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,arrival,10:15,stated by BH-D005,[363],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,departure,11:15,stated by BH-D005,[364],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,encounter,HG-E102,"stated by BH-D004, BH-D005, BH-D006","[301, 358, 433]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,patient_present,10:15–11:15,stated by BH-D005,[366],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,scheduled_end,11:30,"stated by BH-D004, BH-D005, BH-D006","[305, 362, 437]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,scheduled_start,10:00,"stated by BH-D004, BH-D005, BH-D006","[304, 361, 436]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,service_date,2026-01-06,"stated by BH-D004, BH-D005, BH-D006","[302, 359, 434]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,service_type,group,"stated by BH-D004, BH-D005, BH-D006","[303, 360, 435]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,status,attended,clinical_note BH-D004 outranks lower sources: BH-D006 (scheduling_export) said attended_partial; BH-D005 (attendance_register) said attended_partial,"[306, 365, 438]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,summary:BH-D005,Patient arrived late after parking difficulty and left early for a previously arranged ride; did not re-enter the group room after departing.,stated by BH-D005,[367],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,summary:BH-D004,"Coping skills group focused on recognizing early physical signs of anxiety and choosing a coping response before withdrawing from a task. The facilitator demonstrated paced breathing and led discussion of using skills during manageable tasks. Rowan was quiet initially, identified an avoidance situation involving a delayed work reply, practiced breathing, and selected reading the message as a possible next step.",stated by BH-D004,[440],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,encounter,HG-E103,"stated by BH-D006, BH-D015","[307, 531]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,scheduled_end,11:45,"stated by BH-D006, BH-D015","[311, 535]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,scheduled_start,11:00,"stated by BH-D006, BH-D015","[310, 534]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,service_date,2026-01-08,"stated by BH-D006, BH-D015","[308, 532]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,service_type,individual,"stated by BH-D006, BH-D015","[309, 533]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,status,no_show,"stated by BH-D006, BH-D015","[312, 536]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,summary:BH-D015,"Rowan Mercer did not check in for the scheduled individual visit and no arrival or cancellation message was received; the appointment was marked no show at 11:45. Later that day, staff reached Rowan by phone, who said the morning got away from them after a poor night's sleep and confirmed intent to attend the next day's visit with Casey. The call addressed scheduling and contact information; no therapy intervention was conducted.",stated by BH-D015,[537],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,encounter,HG-E104,"stated by BH-D006, BH-D008","[313, 385]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,scheduled_end,14:45,"stated by BH-D006, BH-D008","[317, 389]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,scheduled_start,14:00,"stated by BH-D006, BH-D008","[316, 388]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,service_date,2026-01-09,"stated by BH-D006, BH-D008","[314, 386]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,service_type,family,"stated by BH-D006, BH-D008","[315, 387]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,status,attended,"stated by BH-D006, BH-D008","[318, 391]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,summary:BH-D008,"Family appointment facilitated by Leena Park, LPC, with Mara Voss, LCSW, to practice communication and slow down an anxious exchange about return-to-work preparation. Rowan Mercer and Casey Mercer both attended the full 45 minutes and rehearsed reflecting each other's concerns; both contributed ideas for a brief check-in. The couple chose a shared evening walk as an activity.",stated by BH-D008,[392],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,arrival,10:00,stated by BH-D005,[373],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,departure,11:30,stated by BH-D005,[374],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,encounter,HG-E105,"stated by BH-D005, BH-D006, BH-D009","[319, 368, 449]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,scheduled_end,11:30,"stated by BH-D005, BH-D006, BH-D009","[323, 372, 453]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,scheduled_start,10:00,"stated by BH-D005, BH-D006, BH-D009","[322, 371, 452]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,service_date,2026-01-12,"stated by BH-D005, BH-D006, BH-D009","[320, 369, 450]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,service_type,group,"stated by BH-D005, BH-D006, BH-D009","[321, 370, 451]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,status,attended,"stated by BH-D005, BH-D006, BH-D009","[324, 375, 454]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,summary:BH-D005,Patient checked in before the group began and remained until it was released; no transport concern was reported.,stated by BH-D005,[376],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,summary:BH-D009,"Coping skills group on behavioral activation and restarting after avoidance. Rowan gave an example about unopened work messages, described a weekend walk with Casey, and wrote an action to try after breakfast. The facilitator reinforced restarting with smaller steps.",stated by BH-D009,[456],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,encounter,HG-E106,"stated by BH-D006, BH-D010","[325, 519]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,scheduled_end,09:25,stated by BH-D006,[329],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,scheduled_start,09:00,stated by BH-D006,[328],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,service_date,2026-01-13,"stated by BH-D006, BH-D010","[326, 520]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,service_type,medication,"stated by BH-D006, BH-D010","[327, 521]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,status,attended,"stated by BH-D006, BH-D010","[330, 522]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,summary:BH-D010,"Prescriber medication-management visit for ongoing depressive and anxiety symptoms with sleep disruption, attended 09:00–09:25. Medication use, tolerability, adherence, and the medication list were reviewed and reconciled; no urgent medication concern was raised. No psychotherapy was provided; activity and work communication concerns were directed to the treating therapist.",stated by BH-D010,[524],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,encounter,HG-E107,"stated by BH-D006, BH-D011","[331, 478]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,patient_present,11:00–11:45,stated by BH-D011,[482],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,scheduled_end,11:45,"stated by BH-D006, BH-D011","[335, 484]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,scheduled_start,11:00,"stated by BH-D006, BH-D011","[334, 483]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,service_date,2026-01-14,"stated by BH-D006, BH-D011","[332, 479]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,service_type,individual,"stated by BH-D006, BH-D011","[333, 480]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,status,attended,"stated by BH-D006, BH-D011","[336, 481]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,summary:BH-D011,"Individual session focused on the prediction behind a delayed work-message reply, separating a brief acknowledgment from a specific work-schedule commitment, and rehearsing a drafted response. Rowan reported small completed activities, ongoing sleep disruption, and morning start difficulty; affect was more varied than at intake with worry about employment. Plan is to attempt the drafted acknowledgment, continue morning activity tracking, and practice a breathing skill before avoided tasks.",stated by BH-D011,[487],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,encounter,HG-E108,"stated by BH-D006, BH-D016","[337, 417]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,scheduled_end,11:30,"stated by BH-D006, BH-D016","[341, 421]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,scheduled_start,10:00,"stated by BH-D006, BH-D016","[340, 420]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,service_date,2026-01-15,"stated by BH-D006, BH-D016","[338, 418]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,service_type,group,"stated by BH-D006, BH-D016","[339, 419]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,status,clinic_cancelled,"stated by BH-D006, BH-D016","[342, 422]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,summary:BH-D016,"The coping skills group scheduled for January 15 from 10:00 to 11:30 was cancelled by the clinic due to staff illness, with no covering facilitator available. The patient was notified by portal and phone and acknowledged the cancellation; no group was held and no participants were seen for this encounter. The phone contact was limited to confirming the cancellation and upcoming appointments.",stated by BH-D016,[423],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,encounter,HG-E109,"stated by BH-D006, BH-D012","[343, 547]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,scheduled_end,14:40,"stated by BH-D006, BH-D012","[347, 552]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,scheduled_start,14:00,"stated by BH-D006, BH-D012","[346, 551]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,service_date,2026-01-16,"stated by BH-D006, BH-D012","[344, 548]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,service_type,collateral,"stated by BH-D006, BH-D012","[345, 549]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,status,patient_absent,clinical_note BH-D012 outranks lower sources: BH-D006 (scheduling_export) said attended,"[348, 550]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,summary:BH-D012,"Partner Casey Mercer attended a scheduled contact about Rowan Mercer, who was absent. Casey reported Rowan was taking short walks, mornings remain difficult, and the evening check-in has reduced reminders. Clinician and Casey reviewed daily routine and supportive responses, with no patient-present therapy and no new treatment decision.",stated by BH-D012,[553],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,arrival,10:00,"stated by BH-D102, BH-D103, BH-D104","[29, 46, 63]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,departure,11:15,"correction BH-D103 replaces BH-D102; BH-D104 is a retransmission of the pre-correction value, no new evidence","[30, 47, 64]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,encounter,HG-E110,"stated by BH-D101, BH-D102, BH-D103, BH-D104","[8, 24, 43, 58]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,scheduled_end,11:30,"stated by BH-D101, BH-D102, BH-D104","[12, 28, 62]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,scheduled_start,10:00,"stated by BH-D101, BH-D102, BH-D104","[11, 27, 61]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,service_date,2026-01-19,"stated by BH-D101, BH-D102, BH-D103, BH-D104","[9, 25, 44, 59]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,service_type,group,"stated by BH-D101, BH-D102, BH-D103, BH-D104","[10, 26, 45, 60]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,status,attended,"stated by BH-D101, BH-D102, BH-D104","[13, 31, 65]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,summary:BH-D101,"Skills group covered the sequence of trigger, anxious prediction, physical activation, and avoidance, using a worked example about an unanswered work email; members practiced describing predictions without treating them as established and chose a small approach behavior. The patient followed the exercise and named a familiar postponing pattern, then became visibly tense when discussion turned to returning to work and said the discussion felt difficult to manage; the facilitator offered grounding and arranged a same-day individual meeting with the treating clinician. The 10:45–11:00 break was for restroom use and refreshments with no therapy.",stated by BH-D101,[15],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,summary:BH-D102,Patient attended the group's opening check-in and identified anxiety about reconnecting with work. Patient accepted an exercise handout and was given access to the individual clinician at their request.,stated by BH-D102,[32],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,summary:BH-D104,"Patient attended the group opening check-in, accepted an exercise handout, and requested additional help from the individual clinician. Group content is recorded separately.",stated by BH-D104,[66],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,encounter,HG-E111,stated by BH-D105,[76],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,patient_present,in person,stated by BH-D105,[83],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,scheduled_end,11:45,stated by BH-D105,[81],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,scheduled_start,11:15,stated by BH-D105,[80],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,service_date,2026-01-19,stated by BH-D105,[77],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,service_type,individual,stated by BH-D105,[78],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,status,attended,stated by BH-D105,[79],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,summary:BH-D105,"Added individual visit after the patient became anxious during group and needed grounding and coping review. The patient identified activation signs, used paced breathing and a coping card, and narrowed a work-related task to drafting two sentences to a supervisor. The patient denied current suicidal thoughts and no acute safety concern was identified; avoidance and disrupted sleep continue to interfere with work routine.",stated by BH-D105,[84],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,encounter,HG-E112,stated by BH-D106,[94],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,scheduled_start,13:00,stated by BH-D106,[97],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,service_date,2026-01-21,stated by BH-D106,[95],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,service_type,individual,stated by BH-D106,[96],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,status,attended_partial,stated by BH-D106,[98],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,summary:BH-D106,"Video individual psychotherapy addressed the patient's delayed draft message about a possible gradual return to work, including checking the draft repeatedly; the patient practiced reading it once and choosing a planned time to send it. The session also discussed sleep and an evening wind-down routine after a mixed sleep report. Connection was lost 13:20–13:30 and the session continued after reconnecting; the patient was engaged and no urgent safety concern was reported.",stated by BH-D106,[102],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,arrival,10:30,stated by BH-D108,[143],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,departure,11:30,stated by BH-D108,[144],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,encounter,HG-E113,"stated by BH-D107, BH-D108","[114, 138]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,patient_present,10:30–11:30,stated by BH-D108,[147],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,scheduled_end,11:30,"stated by BH-D107, BH-D108","[118, 142]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,scheduled_start,10:00,"stated by BH-D107, BH-D108","[117, 141]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,service_date,2026-01-22,"stated by BH-D107, BH-D108","[115, 139]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,service_type,group,"stated by BH-D107, BH-D108","[116, 140]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,status,attended_partial,stated by BH-D108,[145],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,summary:BH-D107,"Group skills session on turning a broad intention into one observable action, with a cue to prompt it. Rowan joined after the discussion had begun and gave an example of opening a work calendar, with concern about becoming overwhelmed; the facilitator encouraged a limited, planned review period and a stopping point. The patient contributed an example after the break.",stated by BH-D107,[120],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,summary:BH-D108,"Skills group scheduled 10:00–11:30. Patient arrived late at 10:30 and remained until the group closed; final disposition attended, late arrival.",stated by BH-D108,[146],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,encounter,HG-E114,stated by BH-D109,[182],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,scheduled_end,09:20,stated by BH-D109,[186],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,scheduled_start,09:00,stated by BH-D109,[185],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,service_date,2026-01-23,stated by BH-D109,[183],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,service_type,coordination,stated by BH-D109,[184],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,status,attended,stated by BH-D109,[187],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,summary:BH-D109,"Professional-only care coordination call between Mira Patel, LCSW, and an outside social worker, Daniel Shaw, about practical supports for the patient's return to work, with a release on file. The patient did not participate and no psychotherapy was delivered; no medication or psychotherapy frequency change was made.",stated by BH-D109,[188],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,encounter,HG-E115,"stated by BH-D110, BH-D111","[198, 215]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,scheduled_end,09:50,stated by BH-D111,[219],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,scheduled_start,09:10,stated by BH-D111,[218],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,service_date,2026-01-26,"stated by BH-D110, BH-D111","[199, 216]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,service_type,individual,"stated by BH-D110, BH-D111","[200, 217]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,status,attended,"stated by BH-D110, BH-D111","[201, 220]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,summary:BH-D110,"Patient reviewed a request from a supervisor and worked on a brief response, with ongoing avoidance and sleep difficulty noted. Role-play and a grounding cue were rehearsed; no current suicidal ideation was reported. Treatment continues on avoidance and bedtime routine. Reason for visit is not stated.",stated by BH-D110,[203],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,summary:BH-D111,"Individual in-person psychotherapy addressing difficulty moving from a supervisor's reply to arranging the next conversation, with rehearsal of requesting a brief conversation and a grounding exercise. Patient remained uncertain about using the cue independently when anxious. Clinical presentation consistent with ongoing anxiety, low mood, and work-related functional difficulty; plan is to continue individual and group work under the existing outpatient plan.",stated by BH-D111,[222],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,encounter,HG-E116,"stated by BH-D108, BH-D112","[149, 232]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,scheduled_end,11:30,"stated by BH-D108, BH-D112","[153, 236]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,scheduled_start,10:00,"stated by BH-D108, BH-D112","[152, 235]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,service_date,2026-01-27,"stated by BH-D108, BH-D112","[150, 233]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,service_type,group,"stated by BH-D108, BH-D112","[151, 234]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,status,no_show,attendance_register BH-D108 outranks lower sources: BH-D112 (admin) said scheduled,"[154, 238]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,summary:BH-D108,"Skills group scheduled 10:00–11:30. Patient was absent for the entire group; no patient treatment contact occurred. An outreach message inviting the patient to contact scheduling was left after the group, with no clinical discussion.",stated by BH-D108,[155],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,summary:BH-D112,"Unsigned autogenerated draft from the scheduled group template; no clinician attestation or patient-specific narrative. Template text states the patient attended the full session, but this is not a clinician-confirmed record of attendance.",stated by BH-D112,[237],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,encounter,HG-E117,stated by BH-D108,[156],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,scheduled_end,14:45,stated by BH-D108,[160],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,scheduled_start,14:00,stated by BH-D108,[159],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,service_date,2026-01-28,stated by BH-D108,[157],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,service_type,individual,stated by BH-D108,[158],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,status,patient_cancelled,stated by BH-D108,[161],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,summary:BH-D108,"Individual appointment scheduled 14:00–14:45 was cancelled by the patient on January 28 at 08:12 due to a personal scheduling conflict, before the scheduled start. No replacement appointment was booked within January 2026.",stated by BH-D108,[162],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,arrival,10:00,stated by BH-D108,[168],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,departure,11:30,stated by BH-D108,[169],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,encounter,HG-E118,"stated by BH-D107, BH-D108","[121, 163]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,scheduled_end,11:30,"stated by BH-D107, BH-D108","[125, 167]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,scheduled_start,10:00,"stated by BH-D107, BH-D108","[124, 166]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,service_date,2026-01-29,"stated by BH-D107, BH-D108","[122, 164]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,service_type,group,"stated by BH-D107, BH-D108","[123, 165]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,status,attended,stated by BH-D108,[170],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,summary:BH-D107,"Group session reviewing setbacks in approach behaviors. Rowan reported opening the work calendar but delaying a follow-up conversation, and the facilitator helped identify a specific question to ask. Rowan took part in paired rehearsal and accepted feedback to keep the request brief.",stated by BH-D107,[127],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,summary:BH-D108,Skills group scheduled 10:00–11:30. Patient was present from opening through closing per attendance attestation.,stated by BH-D108,[171],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,encounter,HG-E119,stated by BH-D113,[248],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,scheduled_end,13:45,stated by BH-D113,[253],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,scheduled_start,13:00,stated by BH-D113,[252],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,service_date,2026-01-30,stated by BH-D113,[249],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,service_type,family,stated by BH-D113,[250],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,status,attended_partial,stated by BH-D113,[251],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,summary:BH-D113,"Family psychotherapy session with Rowan Mercer and partner Casey Mercer, in person, for 45 minutes. Casey discussed uncertainty about reminders about work tasks during the first 15 minutes without Rowan present; Rowan joined at 13:15 and the pair practiced a request-for-help pattern and agreed on one planned check-in. Rowan reported the limited plan felt more manageable; the clinician recommended continuing the current outpatient treatment plan.",stated by BH-D113,[256],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,encounter,HG-E120,stated by BH-D114,[266],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,scheduled_end,15:20,stated by BH-D114,[270],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,scheduled_start,15:00,stated by BH-D114,[269],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,service_date,2026-01-30,stated by BH-D114,[267],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,service_type,medication,stated by BH-D114,[268],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,status,attended,stated by BH-D114,[271],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,summary:BH-D114,"Medication management visit with prescriber Elena Ortiz, PMHNP. Patient reported taking medication as prescribed with no new adverse effect; mood was less persistently low but anxiety and variable sleep persisted. Patient denied current suicidal thoughts; no new acute safety issue; no medication change was made and the regimen was continued.",stated by BH-D114,[273],resolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,service_date,2026-01-30,stated by BH-D115,[282],resolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,service_type,other,stated by BH-D115,[283],resolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,status,attended,stated by BH-D115,[284],resolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,summary:BH-D115,"Questionnaire review within ongoing care for a symptom questionnaire completed January 30, 2026 before the afternoon appointment. Clinician review notes partial improvement, persistent avoidance, and functional impact around work, with continued treatment recommended. This entry is not a separate treatment appointment and claims no patient-contact interval.",stated by BH-D115,[285],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D002:0,completed_on,2026-01-05,stated by BH-D002,[509],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D002:0,score_name,PHQ-9,stated by BH-D002,[507],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D002:0,score_value,18,stated by BH-D002,[508],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D013:0,completed_on,2026-01-16,stated by BH-D013,[587],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D013:0,score_name,PHQ-9,stated by BH-D013,[585],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D013:0,score_value,14,stated by BH-D013,[586],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D013:0,source_form,HG-Q116,stated by BH-D013,[588],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D014:0,completed_on,2026-01-16,stated by BH-D014,[466],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D014:0,copy_of,HG-Q116,stated by BH-D014,[468],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D014:0,score_name,PHQ-9,stated by BH-D014,[464],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D014:0,score_value,14,stated by BH-D014,[465],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D014:0,source_form,HG-Q116,stated by BH-D014,[467],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D115:0,completed_on,2026-01-30,stated by BH-D115,[288],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D115:0,score_name,PHQ-9,stated by BH-D115,[286],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D115:0,score_value,10,stated by BH-D115,[287],resolved
+Harbor Grove Behavioral Health,HG-M042,plan:BH-D003,effective_from,2026-01-05,stated by BH-D003,[562],resolved
+Harbor Grove Behavioral Health,HG-M042,plan:BH-D003,effective_to,2026-01-30,stated by BH-D003,[563],resolved
+Harbor Grove Behavioral Health,HG-M042,plan:BH-D003,min_days_per_week,3,stated by BH-D003,[564],resolved
+Harbor Grove Behavioral Health,HG-M042,plan:BH-D003,min_minutes_per_week,150,stated by BH-D003,[565],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,minutes,50,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,minutes_with_breaks,50,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,minutes,45,roster 10:15–11:15; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,minutes_with_breaks,60,roster 10:15–11:15; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,minutes,0,status no_show: no patient-present therapy,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,minutes_with_breaks,0,status no_show,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,therapy_day,false,status no_show,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,minutes,45,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,minutes_with_breaks,45,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,minutes,75,roster 10:00–11:30; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,minutes_with_breaks,90,roster 10:00–11:30; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,minutes,25,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,minutes_with_breaks,25,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,minutes,45,contact intervals; limited to patient-present intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,minutes_with_breaks,45,contact intervals; limited to patient-present intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,minutes,0,status clinic_cancelled: no patient-present therapy,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,minutes_with_breaks,0,status clinic_cancelled,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,therapy_day,false,status clinic_cancelled,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,minutes,0,status patient_absent: no patient-present therapy,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,minutes_with_breaks,0,status patient_absent,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,therapy_day,false,status patient_absent,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,minutes,60,roster 10:00–11:15; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,minutes_with_breaks,75,roster 10:00–11:15; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,minutes,30,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,minutes_with_breaks,30,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,minutes,45,contact intervals; 0 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,minutes_with_breaks,45,contact intervals; 0 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,therapy_day,true,status attended_partial,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,minutes,45,roster 10:30–11:30; limited to patient-present intervals; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,minutes_with_breaks,60,roster 10:30–11:30; limited to patient-present intervals; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,therapy_day,true,status attended_partial,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,minutes,,arrival or departure not stated,[],unresolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,minutes_with_breaks,,arrival or departure not stated,[],unresolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,minutes,,contact intervals differ between documents: BH-D110 says 09:00–09:50; BH-D111 says 09:10–09:50,[],unresolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,minutes_range,40-50,min and max over the conflicting records,[],unresolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,minutes,0,status no_show: no patient-present therapy,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,minutes_with_breaks,0,status no_show,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,therapy_day,false,status no_show,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,minutes,0,status patient_cancelled: no patient-present therapy,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,minutes_with_breaks,0,status patient_cancelled,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,therapy_day,false,status patient_cancelled,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,minutes,75,roster 10:00–11:30; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,minutes_with_breaks,90,roster 10:00–11:30; 15 min nontherapeutic removed,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,minutes,30,contact intervals; limited to patient-present intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,minutes_with_breaks,30,contact intervals; limited to patient-present intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,therapy_day,true,status attended_partial,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,minutes,20,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,minutes_with_breaks,20,contact intervals,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,minutes,,arrival or departure not stated,[],unresolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,minutes_with_breaks,,arrival or departure not stated,[],unresolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,therapy_day,true,status attended,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,documents,"BH-D002,BH-D006",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,documents,"BH-D004,BH-D005,BH-D006",3 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E103,documents,"BH-D006,BH-D015",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,documents,"BH-D006,BH-D008",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,documents,"BH-D005,BH-D006,BH-D009",3 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,documents,"BH-D006,BH-D010",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,documents,"BH-D006,BH-D011",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E108,documents,"BH-D006,BH-D016",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E109,documents,"BH-D006,BH-D012",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,documents,"BH-D101,BH-D102,BH-D103,BH-D104",4 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,documents,BH-D105,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,documents,BH-D106,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,documents,"BH-D107,BH-D108",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E114,documents,BH-D109,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,documents,"BH-D110,BH-D111",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E116,documents,"BH-D108,BH-D112",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E117,documents,BH-D108,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,documents,"BH-D107,BH-D108",2 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,documents,BH-D113,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,documents,BH-D114,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D007:0,documents,BH-D007,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,enc:BH-D115:0,documents,BH-D115,1 document(s) describe this encounter,[],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D002:0,distinct,true,first record of this score on this date,[],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D013:0,distinct,true,first record of this score on this date,[],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D014:0,distinct,false,"copy of measure:BH-D013:0: same instrument and completion date, no new assessment",[],resolved
+Harbor Grove Behavioral Health,HG-M042,measure:BH-D115:0,distinct,true,first record of this score on this date,[],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E101,contact_interval,"[""09:00\u201309:50""]",stated by BH-D002,[505],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E102,nontherapeutic_interval,"[""10:45\u201311:00""]",stated by BH-D004,[439],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E104,contact_interval,"[""14:00\u201314:45""]",stated by BH-D008,[390],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E105,nontherapeutic_interval,"[""10:40\u201310:55""]",stated by BH-D009,[455],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E106,contact_interval,"[""09:00\u201309:25""]",stated by BH-D010,[523],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,contact_interval,"[""11:00\u201311:45""]",stated by BH-D011,[485],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E107,patient_present_interval,"[""11:00\u201311:45""]",stated by BH-D011,[486],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E110,nontherapeutic_interval,"[""10:45\u201311:00""]",stated by BH-D101,[14],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E111,contact_interval,"[""11:15\u201311:45""]",stated by BH-D105,[82],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,contact_interval,"[""13:00\u201313:20"", ""13:30\u201313:55""]",stated by BH-D106,"[99, 100]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E112,nontherapeutic_interval,"[""13:20\u201313:30""]",stated by BH-D106,[101],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,nontherapeutic_interval,"[""10:45\u201311:00""]",stated by BH-D107,[119],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E113,patient_present_interval,"[""10:30\u201311:30""]",stated by BH-D108,[148],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E115,contact_interval,"[""09:00\u201309:50"", ""09:10\u201309:50""]","stated by BH-D110, BH-D111","[202, 221]",resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E118,nontherapeutic_interval,"[""10:45\u201311:00""]",stated by BH-D107,[126],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,contact_interval,"[""13:00\u201313:45""]",stated by BH-D113,[254],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E119,patient_present_interval,"[""13:15\u201313:45""]",stated by BH-D113,[255],resolved
+Harbor Grove Behavioral Health,HG-M042,HG-E120,contact_interval,"[""15:00\u201315:20""]",stated by BH-D114,[272],resolved
+Harbor Grove Behavioral Health,HG-M042,plan:BH-D003,counting_type,"[""individual"", ""group"", ""family""]",stated by BH-D003,"[566, 567, 568]",resolved
+Harbor Grove Behavioral Health,HG-M042,plan:BH-D003,excluded_type,"[""medication"", ""collateral"", ""coordination""]",stated by BH-D003,"[569, 570, 571]",resolved
+Harbor Grove Behavioral Health,HG-M042,plan:BH-D003,goal,"[""improve daily activity and task initiation"", ""improve coping with anxiety and disrupted sleep"", ""support a workable return to employment""]",stated by BH-D003,"[572, 573, 574]",resolved

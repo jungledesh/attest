@@ -101,7 +101,7 @@
     "minutes": 50,
     "minutes_with_breaks": 50,
     "minutes_range": null,
-    "minutes_basis": "contact intervals clipped to roster 09:00\u201309:50; 0 min break or no-contact time removed",
+    "minutes_basis": "contact intervals",
     "documents": [
      "BH-D002",
      "BH-D006"
@@ -114,7 +114,7 @@
     "minutes": 45,
     "minutes_with_breaks": 60,
     "minutes_range": null,
-    "minutes_basis": "contact intervals clipped to roster 10:15\u201311:15; 15 min break or no-contact time removed",
+    "minutes_basis": "roster 10:15\u201311:15; 15 min nontherapeutic removed",
     "documents": [
      "BH-D004",
      "BH-D005",
@@ -128,10 +128,9 @@
     "minutes": 45,
     "minutes_with_breaks": 45,
     "minutes_range": null,
-    "minutes_basis": "contact intervals; limited to patient-present intervals",
+    "minutes_basis": "contact intervals",
     "documents": [
      "BH-D006",
-     "BH-D007",
      "BH-D008"
     ]
    },
@@ -142,7 +141,7 @@
     "minutes": 75,
     "minutes_with_breaks": 90,
     "minutes_range": null,
-    "minutes_basis": "contact intervals clipped to roster 10:00\u201311:30; 15 min break or no-contact time removed",
+    "minutes_basis": "roster 10:00\u201311:30; 15 min nontherapeutic removed",
     "documents": [
      "BH-D005",
      "BH-D006",
@@ -196,7 +195,7 @@
     "minutes": 45,
     "minutes_with_breaks": 45,
     "minutes_range": null,
-    "minutes_basis": "contact intervals; limited to patient-present intervals; 0 min nontherapeutic removed",
+    "minutes_basis": "contact intervals; 0 min nontherapeutic removed",
     "documents": [
      "BH-D106"
     ]
@@ -208,7 +207,7 @@
     "minutes": 45,
     "minutes_with_breaks": 60,
     "minutes_range": null,
-    "minutes_basis": "roster 10:30\u201311:30; 15 min nontherapeutic removed",
+    "minutes_basis": "roster 10:30\u201311:30; limited to patient-present intervals; 15 min nontherapeutic removed",
     "documents": [
      "BH-D107",
      "BH-D108"

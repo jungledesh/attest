@@ -84,10 +84,15 @@ def plan_in_effect(plans, day):
     return None
 
 
+def _doc_types(con):
+    return {r[0]: r[1] for r in con.execute("SELECT doc_id, value FROM claims WHERE field='doc_type' AND subject LIKE 'doc:%'")}
+
+
 def encounters(con, clinic, patient, start=None, end=None):
     """Every encounter with its resolved facts, filtered to the date range."""
     enc = _load_full(con, clinic, patient)
     plans = plan_rules(enc)
+    dtypes = _doc_types(con)
     out = []
     for s, e in enc.items():
         if s.startswith(("plan:", "measure:", "doc:")):
@@ -120,6 +125,13 @@ def encounters(con, clinic, patient, start=None, end=None):
             "therapy_day": _val(e, "therapy_day"),
             "eligible": eligible, "why": why,
             "documents": (_val(e, "documents") or "").split(",") if _val(e, "documents") else [],
+            "document_types": {d: dtypes.get(d) for d in ((_val(e, "documents") or "").split(",") if _val(e, "documents") else [])},
+            "arrival": _val(e, "arrival"), "departure": _val(e, "departure"),
+            "contact_intervals": _list_vals(e, "contact_interval"),
+            "patient_present_intervals": _list_vals(e, "patient_present_interval"),
+            "nontherapeutic_intervals": _list_vals(e, "nontherapeutic_interval"),
+            "departure_basis": (e.get("departure") or {}).get("basis"),
+            "status_basis": (e.get("status") or {}).get("basis"),
             "fields": {f: {"value": r["value"], "basis": r["basis"], "status": r["status"], "claim_rows": r["claim_rows"]}
                        for f, r in e.items() if f not in ("_lists",) and isinstance(r, dict)
                        and f in ("arrival", "departure", "status", "service_type", "minutes", "minutes_range", "documents")},

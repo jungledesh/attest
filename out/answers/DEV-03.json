@@ -1,0 +1,142 @@
+{
+ "question": "For each week, did the delivered therapy meet the goal documented in Rowan\u2019s treatment plan? State the goal, the relevant therapy-day and minute totals, and whether it was met, not met, or cannot be determined from the current record.",
+ "context": {
+  "clinic": "Harbor Grove Behavioral Health",
+  "patient": "HG-M042",
+  "start": "2026-01-05",
+  "end": "2026-01-30"
+ },
+ "result": {
+  "patient": "HG-M042",
+  "start": "2026-01-05",
+  "end": "2026-01-30",
+  "weeks": [
+   {
+    "week_start": "2026-01-05",
+    "week_end": "2026-01-11",
+    "therapy_days": 3,
+    "minutes_low": 140,
+    "minutes_high": 140,
+    "minutes_with_breaks": 155,
+    "hours_low": 2.33,
+    "hours_high": 2.33,
+    "encounters": [
+     "HG-E101",
+     "HG-E102",
+     "HG-E104"
+    ],
+    "unresolved": [],
+    "not_stated": [],
+    "goal": {
+     "min_days": 3,
+     "min_minutes": 150,
+     "subject": "plan:BH-D003"
+    },
+    "verdict": "not_met",
+    "reason": "3 days, 140 min (high bound) vs goal 3 days, 150 min",
+    "if_breaks_counted": "met if break time counted (155 min)"
+   },
+   {
+    "week_start": "2026-01-12",
+    "week_end": "2026-01-18",
+    "therapy_days": 2,
+    "minutes_low": 120,
+    "minutes_high": 120,
+    "minutes_with_breaks": 135,
+    "hours_low": 2.0,
+    "hours_high": 2.0,
+    "encounters": [
+     "HG-E105",
+     "HG-E107"
+    ],
+    "unresolved": [],
+    "not_stated": [],
+    "goal": {
+     "min_days": 3,
+     "min_minutes": 150,
+     "subject": "plan:BH-D003"
+    },
+    "verdict": "not_met",
+    "reason": "2 days, 120 min (high bound) vs goal 3 days, 150 min",
+    "if_breaks_counted": null
+   },
+   {
+    "week_start": "2026-01-19",
+    "week_end": "2026-01-25",
+    "therapy_days": 3,
+    "minutes_low": 180,
+    "minutes_high": 180,
+    "minutes_with_breaks": 210,
+    "hours_low": 3.0,
+    "hours_high": 3.0,
+    "encounters": [
+     "HG-E110",
+     "HG-E111",
+     "HG-E112",
+     "HG-E113"
+    ],
+    "unresolved": [],
+    "not_stated": [],
+    "goal": {
+     "min_days": 3,
+     "min_minutes": 150,
+     "subject": "plan:BH-D003"
+    },
+    "verdict": "met",
+    "reason": "3 days, 180 min (low bound) vs goal 3 days, 150 min",
+    "if_breaks_counted": null
+   },
+   {
+    "week_start": "2026-01-26",
+    "week_end": "2026-02-01",
+    "therapy_days": 3,
+    "minutes_low": 145,
+    "minutes_high": 155,
+    "minutes_with_breaks": 170,
+    "hours_low": 2.42,
+    "hours_high": 2.58,
+    "encounters": [
+     "HG-E115",
+     "HG-E118",
+     "HG-E119"
+    ],
+    "unresolved": [
+     {
+      "subject": "HG-E115",
+      "date": "2026-01-26",
+      "range": "40-50",
+      "basis": "contact intervals differ between documents: BH-D110 says 09:00\u201309:50; BH-D111 says 09:10\u201309:50"
+     }
+    ],
+    "not_stated": [],
+    "goal": {
+     "min_days": 3,
+     "min_minutes": 150,
+     "subject": "plan:BH-D003"
+    },
+    "verdict": "cannot_determine",
+    "reason": "minutes 145-155 straddle the 150 goal; unresolved: [{'subject': 'HG-E115', 'date': '2026-01-26', 'range': '40-50', 'basis': 'contact intervals differ between documents: BH-D110 says 09:00\u201309:50; BH-D111 says 09:10\u201309:50'}]",
+    "if_breaks_counted": null
+   }
+  ],
+  "plans": [
+   {
+    "subject": "plan:BH-D003",
+    "from": "2026-01-05",
+    "to": "2026-01-30",
+    "min_days": 3,
+    "min_minutes": 150,
+    "counting": [
+     "family",
+     "group",
+     "individual"
+    ],
+    "excluded": [
+     "collateral",
+     "coordination",
+     "medication"
+    ]
+   }
+  ]
+ }
+}

@@ -192,8 +192,12 @@ def log_pending_query(con, asked_at, question, sql):
 def read_only_select(con, sql, timeout_ms=5000):
     """Run a SELECT and nothing else. Used by the fallback path."""
     s = sql.strip().rstrip(";").strip()
-    if not s.lower().startswith("select") or ";" in s:
-        raise ValueError("only a single SELECT is allowed")
+    low = s.lower()
+    if not (low.startswith("select") or low.startswith("with")) or ";" in s:
+        raise ValueError("only a single SELECT (optionally with a WITH clause) is allowed")
+    for bad in (" insert ", " update ", " delete ", " drop ", " alter ", " create ", " attach ", " pragma "):
+        if bad in f" {low} ":
+            raise ValueError("only a read-only query is allowed")
     con.execute(f"PRAGMA busy_timeout={int(timeout_ms)}")
     cur = con.execute(s)
     cols = [d[0] for d in cur.description]

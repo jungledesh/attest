@@ -1,0 +1,257 @@
+{
+ "question": "How many therapy minutes and hours did Rowan actually receive during the review period, overall and for each Monday\u2013Sunday week? Show calculations or supporting detail, and report any conclusion the available documents do not settle.",
+ "context": {
+  "clinic": "Harbor Grove Behavioral Health",
+  "patient": "HG-M042",
+  "start": "2026-01-05",
+  "end": "2026-01-30"
+ },
+ "result": {
+  "patient": "HG-M042",
+  "start": "2026-01-05",
+  "end": "2026-01-30",
+  "weeks": [
+   {
+    "week_start": "2026-01-05",
+    "week_end": "2026-01-11",
+    "therapy_days": 3,
+    "minutes_low": 140,
+    "minutes_high": 140,
+    "minutes_with_breaks": 155,
+    "hours_low": 2.33,
+    "hours_high": 2.33,
+    "encounters": [
+     "HG-E101",
+     "HG-E102",
+     "HG-E104"
+    ],
+    "unresolved": [],
+    "not_stated": []
+   },
+   {
+    "week_start": "2026-01-12",
+    "week_end": "2026-01-18",
+    "therapy_days": 2,
+    "minutes_low": 120,
+    "minutes_high": 120,
+    "minutes_with_breaks": 135,
+    "hours_low": 2.0,
+    "hours_high": 2.0,
+    "encounters": [
+     "HG-E105",
+     "HG-E107"
+    ],
+    "unresolved": [],
+    "not_stated": []
+   },
+   {
+    "week_start": "2026-01-19",
+    "week_end": "2026-01-25",
+    "therapy_days": 3,
+    "minutes_low": 180,
+    "minutes_high": 180,
+    "minutes_with_breaks": 210,
+    "hours_low": 3.0,
+    "hours_high": 3.0,
+    "encounters": [
+     "HG-E110",
+     "HG-E111",
+     "HG-E112",
+     "HG-E113"
+    ],
+    "unresolved": [],
+    "not_stated": []
+   },
+   {
+    "week_start": "2026-01-26",
+    "week_end": "2026-02-01",
+    "therapy_days": 3,
+    "minutes_low": 145,
+    "minutes_high": 155,
+    "minutes_with_breaks": 170,
+    "hours_low": 2.42,
+    "hours_high": 2.58,
+    "encounters": [
+     "HG-E115",
+     "HG-E118",
+     "HG-E119"
+    ],
+    "unresolved": [
+     {
+      "subject": "HG-E115",
+      "date": "2026-01-26",
+      "range": "40-50",
+      "basis": "contact intervals differ between documents: BH-D110 says 09:00\u201309:50; BH-D111 says 09:10\u201309:50"
+     }
+    ],
+    "not_stated": []
+   }
+  ],
+  "total_minutes_low": 585,
+  "total_minutes_high": 595,
+  "total_hours_low": 9.75,
+  "total_hours_high": 9.92,
+  "total_minutes_with_breaks": 670,
+  "break_note": "minutes exclude intervals the documents mark as nontherapeutic; minutes_with_breaks keeps them. The plan says 'patient-present therapy' and does not say which to use.",
+  "per_encounter": [
+   {
+    "subject": "HG-E101",
+    "date": "2026-01-05",
+    "service_type": "individual",
+    "minutes": 50,
+    "minutes_with_breaks": 50,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals clipped to roster 09:00\u201309:50; 0 min break or no-contact time removed",
+    "documents": [
+     "BH-D002",
+     "BH-D006"
+    ]
+   },
+   {
+    "subject": "HG-E102",
+    "date": "2026-01-06",
+    "service_type": "group",
+    "minutes": 45,
+    "minutes_with_breaks": 60,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals clipped to roster 10:15\u201311:15; 15 min break or no-contact time removed",
+    "documents": [
+     "BH-D004",
+     "BH-D005",
+     "BH-D006"
+    ]
+   },
+   {
+    "subject": "HG-E104",
+    "date": "2026-01-09",
+    "service_type": "family",
+    "minutes": 45,
+    "minutes_with_breaks": 45,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals; limited to patient-present intervals",
+    "documents": [
+     "BH-D006",
+     "BH-D007",
+     "BH-D008"
+    ]
+   },
+   {
+    "subject": "HG-E105",
+    "date": "2026-01-12",
+    "service_type": "group",
+    "minutes": 75,
+    "minutes_with_breaks": 90,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals clipped to roster 10:00\u201311:30; 15 min break or no-contact time removed",
+    "documents": [
+     "BH-D005",
+     "BH-D006",
+     "BH-D009"
+    ]
+   },
+   {
+    "subject": "HG-E107",
+    "date": "2026-01-14",
+    "service_type": "individual",
+    "minutes": 45,
+    "minutes_with_breaks": 45,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals; limited to patient-present intervals",
+    "documents": [
+     "BH-D006",
+     "BH-D011"
+    ]
+   },
+   {
+    "subject": "HG-E110",
+    "date": "2026-01-19",
+    "service_type": "group",
+    "minutes": 60,
+    "minutes_with_breaks": 75,
+    "minutes_range": null,
+    "minutes_basis": "roster 10:00\u201311:15; 15 min nontherapeutic removed",
+    "documents": [
+     "BH-D101",
+     "BH-D102",
+     "BH-D103",
+     "BH-D104"
+    ]
+   },
+   {
+    "subject": "HG-E111",
+    "date": "2026-01-19",
+    "service_type": "individual",
+    "minutes": 30,
+    "minutes_with_breaks": 30,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals",
+    "documents": [
+     "BH-D105"
+    ]
+   },
+   {
+    "subject": "HG-E112",
+    "date": "2026-01-21",
+    "service_type": "individual",
+    "minutes": 45,
+    "minutes_with_breaks": 45,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals; limited to patient-present intervals; 0 min nontherapeutic removed",
+    "documents": [
+     "BH-D106"
+    ]
+   },
+   {
+    "subject": "HG-E113",
+    "date": "2026-01-22",
+    "service_type": "group",
+    "minutes": 45,
+    "minutes_with_breaks": 60,
+    "minutes_range": null,
+    "minutes_basis": "roster 10:30\u201311:30; 15 min nontherapeutic removed",
+    "documents": [
+     "BH-D107",
+     "BH-D108"
+    ]
+   },
+   {
+    "subject": "HG-E115",
+    "date": "2026-01-26",
+    "service_type": "individual",
+    "minutes": null,
+    "minutes_with_breaks": null,
+    "minutes_range": "40-50",
+    "minutes_basis": "contact intervals differ between documents: BH-D110 says 09:00\u201309:50; BH-D111 says 09:10\u201309:50",
+    "documents": [
+     "BH-D110",
+     "BH-D111"
+    ]
+   },
+   {
+    "subject": "HG-E118",
+    "date": "2026-01-29",
+    "service_type": "group",
+    "minutes": 75,
+    "minutes_with_breaks": 90,
+    "minutes_range": null,
+    "minutes_basis": "roster 10:00\u201311:30; 15 min nontherapeutic removed",
+    "documents": [
+     "BH-D107",
+     "BH-D108"
+    ]
+   },
+   {
+    "subject": "HG-E119",
+    "date": "2026-01-30",
+    "service_type": "family",
+    "minutes": 30,
+    "minutes_with_breaks": 30,
+    "minutes_range": null,
+    "minutes_basis": "contact intervals; limited to patient-present intervals",
+    "documents": [
+     "BH-D113"
+    ]
+   }
+  ]
+ }
+}

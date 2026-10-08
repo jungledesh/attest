@@ -1,0 +1,221 @@
+{
+ "question": "Reconstruct the care on January 19 and January 21. How many therapy contacts and patient therapy minutes occurred on each date, and how do the attendance records, clinical notes, later documents, and telehealth records affect your answer?",
+ "context": {
+  "clinic": "Harbor Grove Behavioral Health",
+  "patient": "HG-M042",
+  "start": "2026-01-05",
+  "end": "2026-01-30"
+ },
+ "result": {
+  "patient": "HG-M042",
+  "dates": [
+   {
+    "patient": "HG-M042",
+    "date": "2026-01-19",
+    "therapy_contacts": 2,
+    "therapy_minutes": 90,
+    "therapy_minutes_with_breaks": 105,
+    "encounters": [
+     {
+      "subject": "HG-E110",
+      "date": "2026-01-19",
+      "service_type": "group",
+      "status": "attended",
+      "minutes": 60,
+      "minutes_status": "resolved",
+      "minutes_basis": "roster 10:00\u201311:15; 15 min nontherapeutic removed",
+      "minutes_with_breaks": 75,
+      "minutes_range": null,
+      "therapy_day": "true",
+      "eligible": true,
+      "why": "counts toward plan",
+      "documents": [
+       "BH-D101",
+       "BH-D102",
+       "BH-D103",
+       "BH-D104"
+      ],
+      "document_types": {
+       "BH-D101": "clinical_note",
+       "BH-D102": "attendance_register",
+       "BH-D103": "correction",
+       "BH-D104": "retransmission"
+      },
+      "arrival": "10:00",
+      "departure": "11:15",
+      "contact_intervals": [],
+      "patient_present_intervals": [],
+      "nontherapeutic_intervals": [
+       "10:45\u201311:00"
+      ],
+      "departure_basis": "correction BH-D103 replaces BH-D102; BH-D104 is a retransmission of the pre-correction value, no new evidence",
+      "status_basis": "stated by BH-D101, BH-D102, BH-D104",
+      "fields": {
+       "arrival": {
+        "value": "10:00",
+        "basis": "stated by BH-D102, BH-D103, BH-D104",
+        "status": "resolved",
+        "claim_rows": "[29, 44, 62]"
+       },
+       "departure": {
+        "value": "11:15",
+        "basis": "correction BH-D103 replaces BH-D102; BH-D104 is a retransmission of the pre-correction value, no new evidence",
+        "status": "resolved",
+        "claim_rows": "[30, 45, 63]"
+       },
+       "documents": {
+        "value": "BH-D101,BH-D102,BH-D103,BH-D104",
+        "basis": "4 document(s) describe this encounter",
+        "status": "resolved",
+        "claim_rows": "[]"
+       },
+       "minutes": {
+        "value": "60",
+        "basis": "roster 10:00\u201311:15; 15 min nontherapeutic removed",
+        "status": "resolved",
+        "claim_rows": "[]"
+       },
+       "service_type": {
+        "value": "group",
+        "basis": "stated by BH-D101, BH-D102, BH-D103, BH-D104",
+        "status": "resolved",
+        "claim_rows": "[10, 26, 43, 59]"
+       },
+       "status": {
+        "value": "attended",
+        "basis": "stated by BH-D101, BH-D102, BH-D104",
+        "status": "resolved",
+        "claim_rows": "[13, 31, 64]"
+       }
+      }
+     },
+     {
+      "subject": "HG-E111",
+      "date": "2026-01-19",
+      "service_type": "individual",
+      "status": "attended",
+      "minutes": 30,
+      "minutes_status": "resolved",
+      "minutes_basis": "contact intervals",
+      "minutes_with_breaks": 30,
+      "minutes_range": null,
+      "therapy_day": "true",
+      "eligible": true,
+      "why": "counts toward plan",
+      "documents": [
+       "BH-D105"
+      ],
+      "document_types": {
+       "BH-D105": "clinical_note"
+      },
+      "arrival": null,
+      "departure": null,
+      "contact_intervals": [
+       "11:15\u201311:45"
+      ],
+      "patient_present_intervals": [],
+      "nontherapeutic_intervals": [],
+      "departure_basis": null,
+      "status_basis": "stated by BH-D105",
+      "fields": {
+       "documents": {
+        "value": "BH-D105",
+        "basis": "1 document(s) describe this encounter",
+        "status": "resolved",
+        "claim_rows": "[]"
+       },
+       "minutes": {
+        "value": "30",
+        "basis": "contact intervals",
+        "status": "resolved",
+        "claim_rows": "[]"
+       },
+       "service_type": {
+        "value": "individual",
+        "basis": "stated by BH-D105",
+        "status": "resolved",
+        "claim_rows": "[77]"
+       },
+       "status": {
+        "value": "attended",
+        "basis": "stated by BH-D105",
+        "status": "resolved",
+        "claim_rows": "[78]"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "patient": "HG-M042",
+    "date": "2026-01-21",
+    "therapy_contacts": 1,
+    "therapy_minutes": 45,
+    "therapy_minutes_with_breaks": 45,
+    "encounters": [
+     {
+      "subject": "HG-E112",
+      "date": "2026-01-21",
+      "service_type": "individual",
+      "status": "attended_partial",
+      "minutes": 45,
+      "minutes_status": "resolved",
+      "minutes_basis": "contact intervals; limited to patient-present intervals; 0 min nontherapeutic removed",
+      "minutes_with_breaks": 45,
+      "minutes_range": null,
+      "therapy_day": "true",
+      "eligible": true,
+      "why": "counts toward plan",
+      "documents": [
+       "BH-D106"
+      ],
+      "document_types": {
+       "BH-D106": "clinical_note"
+      },
+      "arrival": null,
+      "departure": null,
+      "contact_intervals": [
+       "13:00\u201313:20",
+       "13:30\u201313:55"
+      ],
+      "patient_present_intervals": [
+       "13:00\u201313:20",
+       "13:30\u201313:55"
+      ],
+      "nontherapeutic_intervals": [
+       "13:20\u201313:30"
+      ],
+      "departure_basis": null,
+      "status_basis": "stated by BH-D106",
+      "fields": {
+       "documents": {
+        "value": "BH-D106",
+        "basis": "1 document(s) describe this encounter",
+        "status": "resolved",
+        "claim_rows": "[]"
+       },
+       "minutes": {
+        "value": "45",
+        "basis": "contact intervals; limited to patient-present intervals; 0 min nontherapeutic removed",
+        "status": "resolved",
+        "claim_rows": "[]"
+       },
+       "service_type": {
+        "value": "individual",
+        "basis": "stated by BH-D106",
+        "status": "resolved",
+        "claim_rows": "[94]"
+       },
+       "status": {
+        "value": "attended_partial",
+        "basis": "stated by BH-D106",
+        "status": "resolved",
+        "claim_rows": "[95]"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

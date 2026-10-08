@@ -1,0 +1,342 @@
+{
+ "question": "For January 5\u201330, 2026, how many therapy sessions did Rowan attend, by service type and in total, and on how many distinct days? Provide a reviewable abstraction with source support and explain records that could lead to duplicate or ineligible counts.",
+ "context": {
+  "clinic": "Harbor Grove Behavioral Health",
+  "patient": "HG-M042",
+  "start": "2026-01-05",
+  "end": "2026-01-30"
+ },
+ "result": {
+  "patient": "HG-M042",
+  "clinic": "Harbor Grove Behavioral Health",
+  "start": "2026-01-05",
+  "end": "2026-01-30",
+  "total": 12,
+  "by_type": {
+   "individual": 5,
+   "group": 5,
+   "family": 2
+  },
+  "distinct_days": 11,
+  "counted": [
+   {
+    "subject": "HG-E101",
+    "date": "2026-01-05",
+    "service_type": "individual",
+    "status": "attended",
+    "minutes": 50,
+    "documents": [
+     "BH-D002",
+     "BH-D006"
+    ]
+   },
+   {
+    "subject": "HG-E102",
+    "date": "2026-01-06",
+    "service_type": "group",
+    "status": "attended",
+    "minutes": 45,
+    "documents": [
+     "BH-D004",
+     "BH-D005",
+     "BH-D006"
+    ]
+   },
+   {
+    "subject": "HG-E104",
+    "date": "2026-01-09",
+    "service_type": "family",
+    "status": "attended",
+    "minutes": 45,
+    "documents": [
+     "BH-D006",
+     "BH-D007",
+     "BH-D008"
+    ]
+   },
+   {
+    "subject": "HG-E105",
+    "date": "2026-01-12",
+    "service_type": "group",
+    "status": "attended",
+    "minutes": 75,
+    "documents": [
+     "BH-D005",
+     "BH-D006",
+     "BH-D009"
+    ]
+   },
+   {
+    "subject": "HG-E107",
+    "date": "2026-01-14",
+    "service_type": "individual",
+    "status": "attended",
+    "minutes": 45,
+    "documents": [
+     "BH-D006",
+     "BH-D011"
+    ]
+   },
+   {
+    "subject": "HG-E110",
+    "date": "2026-01-19",
+    "service_type": "group",
+    "status": "attended",
+    "minutes": 60,
+    "documents": [
+     "BH-D101",
+     "BH-D102",
+     "BH-D103",
+     "BH-D104"
+    ]
+   },
+   {
+    "subject": "HG-E111",
+    "date": "2026-01-19",
+    "service_type": "individual",
+    "status": "attended",
+    "minutes": 30,
+    "documents": [
+     "BH-D105"
+    ]
+   },
+   {
+    "subject": "HG-E112",
+    "date": "2026-01-21",
+    "service_type": "individual",
+    "status": "attended_partial",
+    "minutes": 45,
+    "documents": [
+     "BH-D106"
+    ]
+   },
+   {
+    "subject": "HG-E113",
+    "date": "2026-01-22",
+    "service_type": "group",
+    "status": "attended_partial",
+    "minutes": 45,
+    "documents": [
+     "BH-D107",
+     "BH-D108"
+    ]
+   },
+   {
+    "subject": "HG-E115",
+    "date": "2026-01-26",
+    "service_type": "individual",
+    "status": "attended",
+    "minutes": null,
+    "documents": [
+     "BH-D110",
+     "BH-D111"
+    ]
+   },
+   {
+    "subject": "HG-E118",
+    "date": "2026-01-29",
+    "service_type": "group",
+    "status": "attended",
+    "minutes": 75,
+    "documents": [
+     "BH-D107",
+     "BH-D108"
+    ]
+   },
+   {
+    "subject": "HG-E119",
+    "date": "2026-01-30",
+    "service_type": "family",
+    "status": "attended_partial",
+    "minutes": 30,
+    "documents": [
+     "BH-D113"
+    ]
+   }
+  ],
+  "excluded": [
+   {
+    "subject": "HG-E103",
+    "date": "2026-01-08",
+    "service_type": "individual",
+    "status": "no_show",
+    "why": "status no_show",
+    "documents": [
+     "BH-D006",
+     "BH-D015"
+    ]
+   },
+   {
+    "subject": "HG-E106",
+    "date": "2026-01-13",
+    "service_type": "medication",
+    "status": "attended",
+    "why": "medication is excluded by the treatment plan (plan:BH-D003)",
+    "documents": [
+     "BH-D006",
+     "BH-D010"
+    ]
+   },
+   {
+    "subject": "HG-E108",
+    "date": "2026-01-15",
+    "service_type": "group",
+    "status": "clinic_cancelled",
+    "why": "status clinic_cancelled",
+    "documents": [
+     "BH-D006",
+     "BH-D016"
+    ]
+   },
+   {
+    "subject": "HG-E109",
+    "date": "2026-01-16",
+    "service_type": "collateral",
+    "status": "patient_absent",
+    "why": "collateral is excluded by the treatment plan (plan:BH-D003)",
+    "documents": [
+     "BH-D006",
+     "BH-D012"
+    ]
+   },
+   {
+    "subject": "HG-E114",
+    "date": "2026-01-23",
+    "service_type": "coordination",
+    "status": "attended",
+    "why": "coordination is excluded by the treatment plan (plan:BH-D003)",
+    "documents": [
+     "BH-D109"
+    ]
+   },
+   {
+    "subject": "HG-E116",
+    "date": "2026-01-27",
+    "service_type": "group",
+    "status": "no_show",
+    "why": "status no_show",
+    "documents": [
+     "BH-D108",
+     "BH-D112"
+    ]
+   },
+   {
+    "subject": "HG-E117",
+    "date": "2026-01-28",
+    "service_type": "individual",
+    "status": "patient_cancelled",
+    "why": "status patient_cancelled",
+    "documents": [
+     "BH-D108"
+    ]
+   },
+   {
+    "subject": "HG-E120",
+    "date": "2026-01-30",
+    "service_type": "medication",
+    "status": "attended",
+    "why": "medication is excluded by the treatment plan (plan:BH-D003)",
+    "documents": [
+     "BH-D114"
+    ]
+   },
+   {
+    "subject": "enc:BH-D115:0",
+    "date": "2026-01-30",
+    "service_type": "coordination",
+    "status": "attended",
+    "why": "coordination is excluded by the treatment plan (plan:BH-D003)",
+    "documents": [
+     "BH-D115"
+    ]
+   }
+  ],
+  "multi_document": [
+   {
+    "subject": "HG-E101",
+    "date": "2026-01-05",
+    "documents": [
+     "BH-D002",
+     "BH-D006"
+    ]
+   },
+   {
+    "subject": "HG-E102",
+    "date": "2026-01-06",
+    "documents": [
+     "BH-D004",
+     "BH-D005",
+     "BH-D006"
+    ]
+   },
+   {
+    "subject": "HG-E104",
+    "date": "2026-01-09",
+    "documents": [
+     "BH-D006",
+     "BH-D007",
+     "BH-D008"
+    ]
+   },
+   {
+    "subject": "HG-E105",
+    "date": "2026-01-12",
+    "documents": [
+     "BH-D005",
+     "BH-D006",
+     "BH-D009"
+    ]
+   },
+   {
+    "subject": "HG-E107",
+    "date": "2026-01-14",
+    "documents": [
+     "BH-D006",
+     "BH-D011"
+    ]
+   },
+   {
+    "subject": "HG-E110",
+    "date": "2026-01-19",
+    "documents": [
+     "BH-D101",
+     "BH-D102",
+     "BH-D103",
+     "BH-D104"
+    ]
+   },
+   {
+    "subject": "HG-E113",
+    "date": "2026-01-22",
+    "documents": [
+     "BH-D107",
+     "BH-D108"
+    ]
+   },
+   {
+    "subject": "HG-E115",
+    "date": "2026-01-26",
+    "documents": [
+     "BH-D110",
+     "BH-D111"
+    ]
+   },
+   {
+    "subject": "HG-E118",
+    "date": "2026-01-29",
+    "documents": [
+     "BH-D107",
+     "BH-D108"
+    ]
+   }
+  ],
+  "unresolved": [
+   {
+    "subject": "HG-E115",
+    "date": "2026-01-26",
+    "basis": "contact intervals differ between documents: BH-D110 says 09:00\u201309:50; BH-D111 says 09:10\u201309:50",
+    "range": "40-50"
+   }
+  ]
+ }
+}

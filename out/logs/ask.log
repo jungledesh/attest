@@ -1,0 +1,22 @@
+2026-10-08T22:21:02+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-08T22:21:02+00:00  Q DEV-01: For January 5–30, 2026, how many therapy sessions did Rowan attend, by service type and in
+2026-10-08T22:21:03+00:00  route  sessions  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.05s
+2026-10-08T22:21:14+00:00  answer sessions  function=2ms  model=12302ms  tokens=3889+2846
+2026-10-08T22:21:14+00:00  Q DEV-02: How many therapy minutes and hours did Rowan actually receive during the review period, ov
+2026-10-08T22:21:15+00:00  route  minutes_by_week  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.23s
+2026-10-08T22:21:25+00:00  answer minutes_by_week  function=4ms  model=10918ms  tokens=3962+2524
+2026-10-08T22:21:25+00:00  Q DEV-03: For each week, did the delivered therapy meet the goal documented in Rowan’s treatment pla
+2026-10-08T22:21:26+00:00  route  plan_check  params={'patient': None, 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.34s
+2026-10-08T22:21:36+00:00  answer plan_check  function=5ms  model=10784ms  tokens=2971+2209
+2026-10-08T22:21:36+00:00  Q DEV-04: Reconstruct the care on January 19 and January 21. How many therapy contacts and patient t
+2026-10-08T22:21:37+00:00  route  day  params={'patient': 'HG-M042', 'start': None, 'end': None, 'dates': ['2026-01-19', '2026-01-21']}  1.14s
+2026-10-08T22:21:45+00:00  answer day  function=3ms  model=9055ms  tokens=3702+2060
+2026-10-08T22:21:45+00:00  Q DEV-05: Summarize the documented symptom course during the episode and the reason for the addition
+2026-10-08T22:21:46+00:00  route  timeline  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  0.91s
+2026-10-08T22:22:01+00:00  answer timeline  function=2ms  model=15996ms  tokens=7721+3867
+2026-10-08T22:22:03+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-08T22:22:03+00:00  Q Q: Which clinicians signed documents for this patient, and how many each?
+2026-10-08T22:22:04+00:00  route  none  params={'patient': None, 'start': None, 'end': None, 'dates': None}  0.92s
+2026-10-08T22:22:33+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-08T22:22:33+00:00  Q Q: Which clinicians signed documents for this patient, and how many each?
+2026-10-08T22:22:34+00:00  route  none  params={'patient': None, 'start': None, 'end': None, 'dates': None}  0.95s

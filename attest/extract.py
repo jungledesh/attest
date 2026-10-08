@@ -9,7 +9,7 @@ import os
 import time
 
 MODEL = os.environ.get("ATTEST_MODEL", "claude-haiku-5-5")
-TEMPERATURE = 0
+# Current API exposes no temperature; sampling is the provider default. Stability is measured, not assumed.
 
 DOC_TYPES = ["clinical_note", "attendance_register", "scheduling_export", "correction",
              "retransmission", "treatment_plan", "measure", "billing", "draft", "admin"]
@@ -64,7 +64,7 @@ Rules:
 - Copy times as HH:MM. Copy ranges as HH:MM–HH:MM. Copy dates as YYYY-MM-DD.
 - One document may describe several encounters (a schedule export, an attendance register). Return one encounters item per appointment the document describes. Use the document's encounter ID (for example HG-E110) when it gives one.
 - header.doc_type is one of: {", ".join(DOC_TYPES)}. A correction document is "correction". A resent or retransmitted copy of an earlier document is "retransmission". An unsigned auto-generated note or a billing extract is "draft" or "billing". A cover sheet, scheduling log, authorization letter, or import receipt is "admin".
-- header.corrects_doc: the document ID this one corrects, when it says so. header.copy_of: the document ID this one is a copy or retransmission of, when it says so.
+- header.corrects_doc and header.copy_of: the other document's ID (a value shaped like BH-D102), only when the text states that other ID. Never this document's own ID. Never a description. If no other ID is given, omit the field; the shared encounter ID is the link.
 - header.unsigned: "true" when the document has no clinician signature.
 - service_type is one of: {", ".join(SERVICE_TYPES)}. Medication management is "medication". A contact with a family member where the patient was absent is "collateral". A call between professionals with no patient is "coordination".
 - status is one of: {", ".join(STATUSES)}.
@@ -72,8 +72,9 @@ Rules:
 - patient_present_intervals: when the patient was present for only part of the service, the part they were present for.
 - nontherapeutic_intervals: breaks or other intervals the document says had no therapy.
 - summary: two or three sentences on what the document says happened clinically for this encounter, including the stated reason for the visit if given. Facts only, no interpretation.
-- plan: only for a treatment plan. counting_types and excluded_types list the service types the plan says do or do not count toward its goal.
-- measures: any questionnaire score the document states. If the document says the score is copied or imported from an earlier form, set copy_of to that form or document and keep the original completion date.
+- plan: required when doc_type is treatment_plan. Fill min_days_per_week and min_minutes_per_week from the stated participation goal. counting_types and excluded_types list the service types the plan says do or do not count toward that goal. effective_from and effective_to are the episode or plan dates. Do not put these in extra.
+- measures: required whenever the document states a questionnaire score (for example a PHQ-9 total). One item per score. If the document says the score is copied or imported from an earlier form, set copy_of to that form or document and keep the original completion date. Do not put scores in extra.
+- status from a draft, template, or unsigned document is still recorded as status. The reader decides its weight, not you.
 - extra: any other stated fact that does not fit a slot. about: the encounter ID or "document".
 """
 
@@ -108,17 +109,49 @@ TOOL = {"name": "record_document", "description": "Record the filled form for th
         "input_schema": SCHEMA}
 
 
+def _as_tool_turns(pairs):
+    """Few-shot pairs -> real tool_use / tool_result turns so the model mimics a tool call, not text."""
+    out = []
+    for i, (user, assistant) in enumerate(pairs):
+        out.append({"role": "user", "content": user["content"]})
+        out.append({"role": "assistant", "content": [{"type": "tool_use", "id": f"toolu_fs{i}",
+                                                       "name": TOOL["name"], "input": json.loads(assistant["content"])}]})
+        out.append({"role": "user", "content": [{"type": "tool_result", "tool_use_id": f"toolu_fs{i}", "content": "recorded"}]})
+    return out
+
+
+FEWSHOT += [
+    {"role": "user", "content": "1: Document ID: ZZ-D920\n2: NORTHSHORE COUNSELING | Outpatient treatment plan\n3: Patient: Sam Doe | MRN: NS-M017\n4: Episode dates: 2026-03-02 through 2026-03-27\n5: Signed: Ana Ruiz, LCSW, 2026-03-02 13:05\n6: \n7: Participation goal: at least 2 therapy days and at least 120 minutes of patient-present therapy in each Monday–Sunday week. Individual and group therapy count. Medication visits do not.\n8: \n9: Goal 1: resume a morning routine.\n10: PHQ-9 completed by patient 2026-03-02: total 16."},
+    {"role": "assistant", "content": json.dumps({
+        "header": {"doc_id": {"value": "ZZ-D920", "line": 1}, "clinic": {"value": "Northshore Counseling", "line": 2},
+                   "patient_name": {"value": "Sam Doe", "line": 3}, "mrn": {"value": "NS-M017", "line": 3},
+                   "doc_type": {"value": "treatment_plan", "line": 2}, "signed_by": {"value": "Ana Ruiz, LCSW", "line": 5},
+                   "signed_at": {"value": "2026-03-02 13:05", "line": 5}},
+        "encounters": [],
+        "plan": {"effective_from": {"value": "2026-03-02", "line": 4}, "effective_to": {"value": "2026-03-27", "line": 4},
+                 "min_days_per_week": {"value": "2", "line": 7}, "min_minutes_per_week": {"value": "120", "line": 7},
+                 "counting_types": [{"value": "individual", "line": 7}, {"value": "group", "line": 7}],
+                 "excluded_types": [{"value": "medication", "line": 7}],
+                 "goals": [{"value": "resume a morning routine", "line": 9}]},
+        "measures": [{"score_name": {"value": "PHQ-9", "line": 10}, "score_value": {"value": "16", "line": 10},
+                      "completed_on": {"value": "2026-03-02", "line": 10}}],
+        "extra": []})},
+]
+
+FEWSHOT_TURNS = _as_tool_turns([(FEWSHOT[0], FEWSHOT[1]), (FEWSHOT[2], FEWSHOT[3]), (FEWSHOT[4], FEWSHOT[5])])
+
+
 def number_lines(text):
     return "\n".join(f"{i}: {ln}" for i, ln in enumerate(text.splitlines(), start=1))
 
 
 def call_model(client, text, fewshot=True):
     """Returns (form_dict, tokens_in, tokens_out, seconds)."""
-    msgs = list(FEWSHOT) if fewshot else []
+    msgs = list(FEWSHOT_TURNS) if fewshot else []
     msgs.append({"role": "user", "content": number_lines(text)})
     t0 = time.time()
     resp = client.messages.create(
-        model=MODEL, max_tokens=4000, temperature=TEMPERATURE, system=SYSTEM,
+        model=MODEL, max_tokens=4000, system=SYSTEM,
         tools=[TOOL], tool_choice={"type": "tool", "name": "record_document"}, messages=msgs)
     dt = time.time() - t0
     form = None
@@ -128,7 +161,21 @@ def call_model(client, text, fewshot=True):
             break
     if form is None:
         raise ValueError("model returned no form")
+    form = _unwrap(form)
     return form, resp.usage.input_tokens, resp.usage.output_tokens, dt
+
+
+def _unwrap(form):
+    """If the model returned the whole form as one JSON string, parse it."""
+    h = form.get("header")
+    if isinstance(h, str):
+        try:
+            inner = json.loads(h)
+            if isinstance(inner, dict) and "header" in inner:
+                return inner
+        except json.JSONDecodeError:
+            pass
+    return form
 
 
 def _v(item):
@@ -138,10 +185,47 @@ def _v(item):
     return str(item).strip(), None
 
 
+def _obj(x, flags, what):
+    """An item that should be a dict. A JSON string is parsed; anything else is kept as raw text."""
+    if isinstance(x, dict):
+        return x
+    if isinstance(x, str):
+        try:
+            y = json.loads(x)
+            if isinstance(y, dict):
+                return y
+        except json.JSONDecodeError:
+            pass
+    flags.append(f"malformed:{what}")
+    return {"unparsed": {"value": str(x), "line": None}}
+
+
+def _lst(x, flags, what):
+    """An item that should be a list. A JSON string is parsed; a lone dict is wrapped."""
+    if isinstance(x, list):
+        return x
+    if x is None:
+        return []
+    if isinstance(x, dict):
+        return [x]
+    if isinstance(x, str):
+        try:
+            y = json.loads(x)
+            if isinstance(y, list):
+                return y
+            if isinstance(y, dict):
+                return [y]
+        except json.JSONDecodeError:
+            pass
+    flags.append(f"malformed:{what}")
+    return [{"unparsed": {"value": str(x), "line": None}}]
+
+
 def flatten(form, fallback_doc_id):
     """Form -> (doc_id, clinic, patient, rows, flags). rows: (subject, field, value, line)."""
     rows, flags = [], []
-    header = form.get("header", {}) or {}
+    form = _obj(form, flags, "form")
+    header = _obj(form.get("header", {}) or {}, flags, "header")
     doc_id = _v(header.get("doc_id"))[0] if header.get("doc_id") else fallback_doc_id
     clinic = _v(header.get("clinic"))[0] if header.get("clinic") else "unknown"
     patient = _v(header.get("mrn"))[0] if header.get("mrn") else "unknown"
@@ -158,7 +242,8 @@ def flatten(form, fallback_doc_id):
         else:
             rows.append((doc_subject, f"unmapped:{k}", val, line)); flags.append(f"unmapped:{k}")
 
-    for i, enc in enumerate(form.get("encounters", []) or []):
+    for i, enc in enumerate(_lst(form.get("encounters"), flags, "encounters")):
+        enc = _obj(enc, flags, "encounter")
         eid = _v(enc.get("encounter"))[0] if enc.get("encounter") else f"enc:{doc_id}:{i}"
         for k, item in enc.items():
             if k in ("contact_intervals", "patient_present_intervals", "nontherapeutic_intervals",) and isinstance(item, list):
@@ -177,6 +262,7 @@ def flatten(form, fallback_doc_id):
 
     plan = form.get("plan") or {}
     if plan:
+        plan = _obj(plan, flags, "plan")
         ps = f"plan:{doc_id}"
         for k, item in plan.items():
             if isinstance(item, list):
@@ -189,14 +275,16 @@ def flatten(form, fallback_doc_id):
             if val:
                 rows.append((ps, k if k in PLAN_FIELDS else f"unmapped:{k}", val, line))
 
-    for i, m in enumerate(form.get("measures", []) or []):
+    for i, m in enumerate(_lst(form.get("measures"), flags, "measures")):
+        m = _obj(m, flags, "measure")
         ms = f"measure:{doc_id}:{i}"
         for k, item in m.items():
             val, line = _v(item)
             if val:
                 rows.append((ms, k if k in MEASURE_FIELDS else f"unmapped:{k}", val, line))
 
-    for x in form.get("extra", []) or []:
+    for x in _lst(form.get("extra"), flags, "extra"):
+        x = _obj(x, flags, "extra")
         about = x.get("about") or "document"
         subj = doc_subject if about == "document" else about
         rows.append((subj, f"extra:{x.get('field','')}", str(x.get("value", "")), x.get("line")))

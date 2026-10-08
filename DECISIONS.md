@@ -2,11 +2,9 @@
 
 Notes from the design phase. To be polished into the README later.
 
-Time spent: ~15 min on what and why, ~45 min on how.
-
 ---
 
-## 1. What and why (15 min)
+## 1. What and why
 
 - Task in one line: read 31 clinical text files once, pull out facts with their source line, store them so they survive restarts and new files, answer questions by computing over the stored facts, name every conflict and gap.
 - Not a RAG exercise. Brief, FAQ: "think beyond a standard vector-search-and-answer pipeline."

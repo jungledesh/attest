@@ -55,13 +55,13 @@
         "value": "10:00",
         "basis": "stated by BH-D102, BH-D103, BH-D104",
         "status": "resolved",
-        "claim_rows": "[29, 44, 62]"
+        "claim_rows": "[29, 46, 63]"
        },
        "departure": {
         "value": "11:15",
         "basis": "correction BH-D103 replaces BH-D102; BH-D104 is a retransmission of the pre-correction value, no new evidence",
         "status": "resolved",
-        "claim_rows": "[30, 45, 63]"
+        "claim_rows": "[30, 47, 64]"
        },
        "documents": {
         "value": "BH-D101,BH-D102,BH-D103,BH-D104",
@@ -79,13 +79,13 @@
         "value": "group",
         "basis": "stated by BH-D101, BH-D102, BH-D103, BH-D104",
         "status": "resolved",
-        "claim_rows": "[10, 26, 43, 59]"
+        "claim_rows": "[10, 26, 45, 60]"
        },
        "status": {
         "value": "attended",
         "basis": "stated by BH-D101, BH-D102, BH-D104",
         "status": "resolved",
-        "claim_rows": "[13, 31, 64]"
+        "claim_rows": "[13, 31, 65]"
        }
       }
      },
@@ -134,13 +134,13 @@
         "value": "individual",
         "basis": "stated by BH-D105",
         "status": "resolved",
-        "claim_rows": "[77]"
+        "claim_rows": "[78]"
        },
        "status": {
         "value": "attended",
         "basis": "stated by BH-D105",
         "status": "resolved",
-        "claim_rows": "[78]"
+        "claim_rows": "[79]"
        }
       }
      }
@@ -160,7 +160,7 @@
       "status": "attended_partial",
       "minutes": 45,
       "minutes_status": "resolved",
-      "minutes_basis": "contact intervals; limited to patient-present intervals; 0 min nontherapeutic removed",
+      "minutes_basis": "contact intervals; 0 min nontherapeutic removed",
       "minutes_with_breaks": 45,
       "minutes_range": null,
       "therapy_day": "true",
@@ -178,10 +178,7 @@
        "13:00\u201313:20",
        "13:30\u201313:55"
       ],
-      "patient_present_intervals": [
-       "13:00\u201313:20",
-       "13:30\u201313:55"
-      ],
+      "patient_present_intervals": [],
       "nontherapeutic_intervals": [
        "13:20\u201313:30"
       ],
@@ -196,7 +193,7 @@
        },
        "minutes": {
         "value": "45",
-        "basis": "contact intervals; limited to patient-present intervals; 0 min nontherapeutic removed",
+        "basis": "contact intervals; 0 min nontherapeutic removed",
         "status": "resolved",
         "claim_rows": "[]"
        },
@@ -204,13 +201,13 @@
         "value": "individual",
         "basis": "stated by BH-D106",
         "status": "resolved",
-        "claim_rows": "[94]"
+        "claim_rows": "[96]"
        },
        "status": {
         "value": "attended_partial",
         "basis": "stated by BH-D106",
         "status": "resolved",
-        "claim_rows": "[95]"
+        "claim_rows": "[98]"
        }
       }
      }

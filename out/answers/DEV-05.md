@@ -2,57 +2,55 @@
 
 **Question.** Summarize the documented symptom course during the episode and the reason for the additional individual contact on January 19. Which symptom assessments are distinct, and what conclusions about progress can and cannot be supported?
 
-**Patient:** HG-M042
+**Patient HG-M042: symptom course, the January 19 contact, and progress conclusions**
 
-## Symptom course during the episode
+**Symptom course during the episode**
 
-The only distinct, dated symptom measures are three PHQ-9 totals:
+- **January 5 (BH-D002, HG-E101):** Individual session for several weeks of low mood, reduced interest, fragmented sleep, and work-return worry with avoidance. Behavioral activation and a sleep/morning routine plan were introduced. No immediate safety concern was identified. PHQ-9 recorded as 18.
+- **January 13 (BH-D010, HG-E106):** Medication visit for ongoing depressive and anxiety symptoms with sleep disruption. No urgent medication concern was raised.
+- **January 14 (BH-D011, HG-E107):** Affect was described as more varied than at intake, with worry about employment and ongoing sleep disruption and morning start difficulty.
+- **January 16 (BH-D013, HG-Q116; BH-D012, HG-E109):** PHQ-9 recorded as 14. Casey Mercer reported short walks, difficult mornings, and fewer evening reminders needed. Rowan was absent from this contact.
+- **January 19 (see below):** Anxiety during group, requiring grounding and coping review.
+- **January 26 (BH-D110 and BH-D111, HG-E115):** Ongoing avoidance, sleep difficulty, anxiety, low mood, and work-related functional difficulty. Uncertainty about using the grounding cue independently.
+- **January 30 (BH-D114, HG-E120; BH-D115):** PHQ-9 recorded as 10. Mood was described as less persistently low, but anxiety and variable sleep persisted. The clinician review (BH-D115) notes partial improvement, persistent avoidance, and functional impact around work.
 
-| Date | Score | Source | Status |
-|---|---|---|---|
-| 2026-01-05 | 18 | BH-D002 (completed at individual session HG-E101; no source form listed) | Distinct |
-| 2026-01-16 | 14 | BH-D013 (source form HG-Q116) | Distinct |
-| 2026-01-30 | 10 | BH-D115 (no source form listed) | Distinct |
+**Reason for the additional individual contact on January 19**
 
-The narrative documentation describes the following course:
+The contact was an added individual visit (BH-D105, HG-E111). The stated reason was that the patient became anxious during group and needed grounding and coping review. The visit covered activation signs, paced breathing, and a coping card, and narrowed a work task to drafting two sentences to a supervisor. The patient denied current suicidal thoughts, and no acute safety concern was identified.
 
-- **2026-01-05 (HG-E101, BH-D002):** Several weeks of low mood, reduced interest, fragmented sleep, and work-return worry with avoidance. No immediate safety concern.
-- **2026-01-13 (HG-E106, BH-D010):** Ongoing sleep interruption and daytime tiredness. Mood somewhat less heavy on planned-activity days. Ongoing depressive and anxiety symptoms.
-- **2026-01-14 (HG-E107, BH-D011):** Several small activities completed. Interrupted sleep and morning initiation difficulty persist. Affect more varied than at intake.
-- **2026-01-16 (HG-E109, BH-D012, collateral):** Per partner, Rowan takes short walks and is more willing to discuss the coming week. Mornings are still difficult. No patient-present contact.
-- **2026-01-19 (HG-E111, BH-D105):** Acute anxiety in group (see below). Persistent avoidance and disrupted sleep continue to interfere with work routine. No suicidal thoughts reported.
-- **2026-01-26 (HG-E115, BH-D110 and BH-D111):** Sleep remains uneven. No current suicidal ideation reported. Clinical presentation consistent with ongoing anxiety, low mood, and work-related functional difficulty.
-- **2026-01-30 (HG-E120, BH-D114):** Mood "less persistently low," anxiety with anticipated work contact, variable sleep. Denied current suicidal thoughts. No medication change.
-- **2026-01-30 (BH-D115, clinician review of questionnaire):** Partial improvement, with persistent avoidance, sleep disruption, and work-related functional impact.
+The group records (BH-D101, BH-D102, BH-D104; HG-E110) describe the same trigger. The patient became visibly tense when the discussion turned to returning to work and said it felt difficult to manage. BH-D101 states the facilitator offered grounding and arranged a same-day individual meeting. BH-D102 and BH-D104 state that the patient requested additional help or access to the individual clinician. The records differ on who initiated the request. The output does not resolve this.
 
-## Reason for the additional individual contact on 2026-01-19
+**Distinct and copied symptom assessments**
 
-- The group session (HG-E110, BH-D101) covered trigger, anxious prediction, physical activation, and avoidance. Rowan became visibly tense when the discussion turned to returning to the workplace and said it felt difficult to manage. The facilitator offered grounding and arranged a same-day individual meeting.
-- The group attendance records (BH-D102 and BH-D104) state that Rowan requested additional help from the individual clinician.
-- The individual visit (HG-E111, BH-D105) was added because Rowan became anxious during group and needed grounding and review of coping strategies. Rowan came directly from the group room. Anxiety eased enough to narrow a work task to drafting two sentences to a supervisor.
+| Date | Measure | Score | Status | Source |
+|---|---|---|---|---|
+| 2026-01-05 | PHQ-9 | 18 | Distinct (BH-D002:0) | No source form listed |
+| 2026-01-16 | PHQ-9 | 14 | Distinct (BH-D013:0) | HG-Q116 |
+| 2026-01-16 | PHQ-9 | 14 | Copy of BH-D013:0 (BH-D014:0), not distinct | HG-Q116 |
+| 2026-01-30 | PHQ-9 | 10 | Distinct (BH-D115:0) | No source form listed |
 
-## Distinct versus copied symptom assessments
+- Three distinct PHQ-9 assessments are supported: January 5, January 16, and January 30.
+- The January 16 score of 14 appears twice, but the second entry (BH-D014) is a copy of BH-D013 with the same instrument and completion date. It should be counted once.
 
-- **Distinct:** BH-D002 (18, 2026-01-05), BH-D013 (14, 2026-01-16), and BH-D115 (10, 2026-01-30). Each is the first record of that score on its date.
-- **Copied, not independent:** BH-D014 (14, 2026-01-16). The record states it is a copy of BH-D013, with the same instrument and completion date and no new assessment. It is excluded from the distinct series.
-- No PHQ-9 or other distinct measure is recorded on 2026-01-19.
+**Progress conclusions**
 
-## Progress conclusions
+Supported:
+- The three distinct PHQ-9 scores (18, 14, 10) are lower on each successive distinct date.
+- The January 30 clinician review and medication visit both describe partial or less persistent low mood, with anxiety, avoidance, and sleep difficulty continuing.
 
-**Supported by the output:**
-- The three distinct PHQ-9 totals, in date order, are 18, 14, and 10. The sequence is lower over time. This is the only measure-based evidence of change.
-- The 2026-01-30 clinician review (BH-D115) documents partial improvement, with persistent avoidance, sleep disruption, and work-related impact.
-- Narrative notes from 2026-01-14 through 2026-01-30 describe reduced low mood in places, but persistent sleep disruption, avoidance, and work-related difficulty.
+Not supported:
+- The output does not support a conclusion of full remission or of resolved symptoms. The clinician review itself records persistent avoidance and functional impact.
+- The output does not give item-level PHQ-9 data, so it cannot show which symptoms changed.
+- The output contains no anxiety measure, so improvement in anxiety cannot be assessed from scores.
+- The duplicated January 16 entry must not be counted as a second assessment or as confirmation of the same score.
+- The January 27 autogenerated draft (BH-D112) states the patient attended the full group. It is unsigned and not a clinician-confirmed record, so it cannot be used as evidence of attendance or progress.
 
-**Not supported by the output:**
-- The output does not state whether the change between the three scores is clinically meaningful. It does not give a threshold or a response or remission determination.
-- The 2026-01-16 score cannot be counted twice. BH-D014 adds no independent confirmation of the 14.
-- The score series has three points with uneven gaps and no measure on 2026-01-19, the date of the acute anxiety episode. It cannot show course around that event.
-- The 2026-01-16 collateral account (BH-D012) is a partner report and is not a patient-reported assessment.
-- The output does not support a conclusion that the work-return difficulties have resolved.
+**Unresolved items and what would settle them**
 
-## Unresolved items
+1. **Source form for the January 5 and January 30 PHQ-9 scores:** Both entries list no source form. The original questionnaire forms for BH-D002 and BH-D115 would settle this.
+2. **Who initiated the January 19 individual contact:** BH-D101 says the facilitator arranged it, while BH-D102 and BH-D104 say the patient requested it. The group and individual visit records, or the clinician's note on the request, would settle this.
+3. **Group content for January 19:** BH-D104 states group content is recorded separately. That record was not provided in the output.
+4. **Attendance on January 27 (BH-D112 versus BH-D108/HG-E116):** The autogenerated draft conflicts with the no-show entry. A clinician-signed attendance record would settle this.
+5. **Clinical significance of the score changes:** The output does not say whether the change from 18 to 10 meets any threshold. A clinician interpretation or a standard reference for PHQ-9 change would be needed.
 
-1. **Posted charge for 2026-01-27 (HG-E116):** The output records a no-show (BH-D108). The unsigned draft BH-D112 says the patient attended the full session, and posted charge CH-116 shows one group session. The output states that BH-D112 is not a clinical record of attendance. The charge remains posted. This would be settled by a billing review and correction of CH-116 against the attendance record.
-2. **Reused document identifiers:** The same identifiers appear under different encounters. BH-D005 appears for 2026-01-06 (HG-E102) and 2026-01-12 (HG-E105). BH-D107 appears for 2026-01-22 (HG-E113) and 2026-01-29 (HG-E118). BH-D108 appears for 2026-01-22 (HG-E113), 2026-01-27 (HG-E116), and 2026-01-28 (HG-E117). The output does not resolve these. They would need to be checked against the source system to confirm which record each identifier refers to.
-3. **Source forms:** BH-D002 and BH-D115 have no source form listed (null). The output does not say whether a source form exists for either score. This would be settled by locating the completed questionnaire for each date.
+No low and high value range is given in the output.

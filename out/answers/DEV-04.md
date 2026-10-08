@@ -2,31 +2,31 @@
 
 **Question.** Reconstruct the care on January 19 and January 21. How many therapy contacts and patient therapy minutes occurred on each date, and how do the attendance records, clinical notes, later documents, and telehealth records affect your answer?
 
-**Reconstruction for HG-M042**
+**Summary for HG-M042**
 
-| Date | Therapy contacts | Therapy minutes | Therapy minutes with breaks |
-|---|---|---|---|
-| 2026-01-19 | 2 | 90 | 105 |
-| 2026-01-21 | 1 | 45 | 45 |
+| Date | Therapy contacts | Therapy minutes | Minutes with breaks | Encounters |
+|---|---|---|---|---|
+| 2026-01-19 | 2 | 90 | 105 | HG-E110 (group, 60 min), HG-E111 (individual, 30 min) |
+| 2026-01-21 | 1 | 45 | 45 | HG-E112 (individual, 45 min) |
 
-**January 19, 2026**
+**2026-01-19**
 
-- **HG-E110 (group, attended): 60 minutes.** The roster shows 10:00 to 11:15, which is 75 minutes. The output removes a 15-minute nontherapeutic interval (10:45–11:00), leaving 60 minutes. With breaks, the encounter is 75 minutes. Arrival 10:00 is stated by BH-D102, BH-D103 and BH-D104. Departure 11:15 comes from the correction BH-D103, which replaces the value in the attendance register BH-D102. The retransmission BH-D104 repeats the pre-correction value and adds no new evidence. Supporting documents are the clinical note BH-D101, the attendance register BH-D102, the correction BH-D103 and the retransmission BH-D104.
-- **HG-E111 (individual, attended): 30 minutes.** The only source is the clinical note BH-D105. Its contact interval is 11:15–11:45. No arrival or departure time is recorded, and there are no breaks, so the with-breaks figure is also 30.
-- **Total for the day:** 2 contacts, 90 therapy minutes (60 + 30), and 105 minutes with breaks (75 + 30). The difference from the therapy total is the 15 nontherapeutic minutes in HG-E110.
+- **HG-E110 (group, attended):** 10:00–11:15 per the roster, with a 15-minute nontherapeutic interval (10:45–11:00) removed, giving 60 therapy minutes and 75 with breaks. Four documents describe it: clinical note BH-D101, attendance register BH-D102, correction BH-D103, and retransmission BH-D104. The correction BH-D103 replaces the register's departure time (BH-D102). BH-D104 repeats the pre-correction value and adds no new evidence, so the 11:15 departure rests on BH-D103. Arrival (10:00) is stated consistently by BH-D102, BH-D103, and BH-D104.
+- **HG-E111 (individual, attended):** Contact interval 11:15–11:45, giving 30 minutes (same with breaks). Only clinical note BH-D105 describes it; no attendance register or correction is listed.
 
-**January 21, 2026**
+**2026-01-21**
 
-- **HG-E112 (individual, attended_partial): 45 minutes.** The only source is the clinical note BH-D106. The contact intervals are 13:00–13:20 and 13:30–13:55. The nontherapeutic interval 13:20–13:30 is shown, but the output records 0 nontherapeutic minutes removed. The minutes are limited to the patient-present intervals, and the with-breaks figure equals the therapy figure.
+- **HG-E112 (individual, attended_partial):** Two contact intervals, 13:00–13:20 and 13:30–13:55, total 45 minutes. Only clinical note BH-D106 describes it. The output lists a nontherapeutic interval of 13:20–13:30, but states "0 min nontherapeutic removed" and reports 45 minutes with breaks. The 10-minute gap is therefore not reflected in the with-breaks figure, and the basis wording does not match the interval listed. The output does not settle this.
 
-**Effect of the record types**
+**Effect of the source types**
 
-- **Attendance records:** The register BH-D102 gave the original group departure time. The correction BH-D103 replaced it, so the group minutes rest on the correction, not the register.
-- **Clinical notes:** BH-D101 (group), BH-D105 (individual on 19 January) and BH-D106 (individual on 21 January) are the sole sources for their encounters' service type and status. BH-D105 and BH-D106 are each the only document for their encounter.
-- **Later documents:** The correction BH-D103 is the controlling later document. The retransmission BH-D104 is later but adds no change.
-- **Telehealth records:** The output contains no telehealth records and no telehealth indicator for any encounter, so the output cannot show whether any contact was telehealth. The counts above are not adjusted for telehealth.
+- **Attendance records:** The register (BH-D102) gives the 11:15 departure for HG-E110, which the later correction (BH-D103) replaces. The register is therefore superseded on that field.
+- **Clinical notes:** BH-D101, BH-D105, and BH-D106 supply the service type, status, and contact intervals used for the minute counts.
+- **Later documents:** BH-D103 (correction) sets the final departure time. BH-D104 (retransmission) restates the pre-correction value and does not change the count.
+- **Telehealth records:** None appear in the output. No telehealth effect on either date can be assessed from the output.
 
 **Unresolved items**
 
-- The output lists no unresolved fields. Every field is marked resolved, and the minutes_range value is null for both encounters, so no low and high range is given.
-- The output does not address telehealth status. Settling this would require the telehealth records for HG-E110, HG-E111 and HG-E112.
+- The output marks every field as resolved and gives no range for either date, so no low/high values are reported.
+- The HG-E112 nontherapeutic interval (13:20–13:30) conflicts with the "0 min removed" basis and the 45-minute with-breaks figure. Settling this would require the source clinical note BH-D106 to state whether the 10-minute gap counts as a break or as nontherapeutic time.
+- Telehealth records for either date are not in the output. Confirming whether any of these encounters was telehealth would require those records.

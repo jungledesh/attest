@@ -90,40 +90,52 @@ Measured on the supplied documents (`out/benchmarks.md`):
 - Cost at Haiku 5.5 list price on submission day ($0.10 in, $0.50 out per million): ingest $0.031, five questions $0.008.
 - Estimate: 1,000,000 documents at 2.74 s each is 32 days single-threaded, about 1 day on 32 workers if rate limits allow. Assumptions stated in `benchmarks.md`.
 
-## Design decision tested: few-shot examples in the extraction prompt
+## Design decision tested: worked examples in the extraction prompt
 
-Full ingest twice, identical except for the three invented examples (`--no-fewshot`).
+The question: does the extraction prompt need worked examples (few-shot), or do the schema and rules suffice? Examples cost tokens on every call.
 
-| | With | Without |
+The test: ingest all 31 documents twice into separate databases, identical except for the three invented examples (`--no-fewshot` removes them).
+
+| | With examples | Without |
 |---|---|---|
-| Input tokens | 206K | 136K |
-| Plan goal extracted | yes | no plan rows |
-| Jan 19 encounter | one, correction applied | split in two; correction applied to one |
+| Input tokens | 206K | 136K (34% fewer) |
+| Treatment plan extracted | yes: goal, counting types | no plan rows at all |
+| Jan 19 group | one encounter; correction applied | split into two; correction applied to one, the other kept the wrong time |
 | Unresolved fields | 6 | 29 |
 
-Learned: the model follows the shape it is shown, not the shape it is told. A 34% token saving is not worth losing the plan.
+Learned: the model copies the shape it has seen filled in, not the shape it has been told about. Without a filled `plan` example it put the goal in `extra`; without a multi-encounter example it invented encounter IDs. The plan drives three of the five questions, so the token saving is not worth it. Examples stay.
 
 ## Observed limitation and next step
 
-Extraction varies run to run; the API exposes no temperature. Five fresh ingests gave 590 to 619 claims. Three drifts seen:
+The limitation: the model does not read a document the same way twice. The API exposes no temperature setting, so this cannot be pinned by configuration.
 
-- A misread label: one run tagged a missed group as `collateral`. No number moved; the reason would have been wrong. Led to the rule that scheduling facts are decided by vote, not by the witness ladder.
-- A status drift: one run marked a partner-only visit `attended`. Plan excludes it regardless; totals held.
-- A malformed reply, about one document in thirty. Code repairs the two common shapes and retries once; a document that still fails is kept raw and flagged.
+What we saw, over five fresh ingests of the same 31 files (590 to 619 claims):
 
-The five answers' numbers were the same on every run.
+- A wrong label. One run tagged a missed group session as `collateral`.
+- A wrong status. One run marked a partner-only visit as `attended`.
+- A garbled reply, about one document in thirty: a section returned as a string, or cut off a character early.
 
-Next: extract each document three times, diff the fixed slots, measure per-field agreement. Low-agreement fields get a second call at ingest; disagreement goes to the resolver as a conflict.
+Why it did not change an answer: the five answers' numbers were identical on every run. Excluded encounters stay excluded whatever their label, because eligibility comes from the plan rows. Garbled replies are repaired in code, retried once, and flagged if still bad. The first slip also led to a rule change: scheduling facts are decided by vote across documents, not by source rank.
 
-Also: the fallback produced valid SQL on its first unseen question but queried the wrong table and returned zero rows, and said so. The provisional label is doing real work.
+Next: measure it. Extract each document three times, compare the fixed slots, and record a per-field agreement rate. Fields that disagree often get a second model call at ingest; when the two calls disagree, that becomes a conflict for the resolver, the same as two documents disagreeing.
+
+A second limitation: on its first unseen question, the fallback wrote a valid query against the wrong table, returned zero rows, and said so. The provisional label and the saved query are the safeguard; a reviewer fixes the table and promotes the query to a function.
 
 ## First bottleneck at a million documents
 
-The sequential model call per document, `attest/ingest.py`, `ingest_file`. 2.74 s each; a million is 32 days on one thread.
+What breaks: ingest. `attest/ingest.py` sends documents to the model one at a time and waits about 2.7 s for each. A million documents in a single line is 32 days.
 
-- Change: worker pool over the file list, provider batch endpoints, the existing hash cache for re-reviews.
-- Next: SQLite's single writer, which parallel ingest hits at once. Postgres; the swap is confined to `db.py`.
-- Full order of what breaks next: `DESIGN.md` section 10.
+Why: the loop in `main` is sequential. Nothing else in the pipeline is slow. Resolve is milliseconds per patient; questions read an indexed table.
+
+The change, in order:
+
+- Run documents in parallel. A pool of workers over the file list. The hash check and the insert are already per document and independent. 32 workers brings 32 days to about one, if the provider's rate limit allows.
+- Use the provider's batch endpoint where available. Built for bulk, usually cheaper.
+- Keep the hash cache. A document seen before is never sent again, so re-reviews cost no model calls.
+
+What breaks next: the database. SQLite allows one writer at a time, so parallel workers queue on it. The fix is Postgres with the same tables and SQL. Every SQL statement lives in `attest/db.py`, so the swap touches one file.
+
+After that: collection-wide questions scan every patient; a weekly summary table maintained at resolve time makes them one read per patient-week. Full order, with code locations, in `DESIGN.md` section 10.
 
 ## Model and tooling
 

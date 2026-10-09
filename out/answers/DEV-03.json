@@ -25,6 +25,14 @@
      "HG-E102",
      "HG-E104"
     ],
+    "documents": [
+     "BH-D002",
+     "BH-D004",
+     "BH-D005",
+     "BH-D006",
+     "BH-D007",
+     "BH-D008"
+    ],
     "unresolved": [],
     "not_stated": [],
     "goal": {
@@ -48,6 +56,12 @@
     "encounters": [
      "HG-E105",
      "HG-E107"
+    ],
+    "documents": [
+     "BH-D005",
+     "BH-D006",
+     "BH-D009",
+     "BH-D011"
     ],
     "unresolved": [],
     "not_stated": [],
@@ -75,6 +89,16 @@
      "HG-E112",
      "HG-E113"
     ],
+    "documents": [
+     "BH-D101",
+     "BH-D102",
+     "BH-D103",
+     "BH-D104",
+     "BH-D105",
+     "BH-D106",
+     "BH-D107",
+     "BH-D108"
+    ],
     "unresolved": [],
     "not_stated": [],
     "goal": {
@@ -99,6 +123,13 @@
      "HG-E115",
      "HG-E118",
      "HG-E119"
+    ],
+    "documents": [
+     "BH-D107",
+     "BH-D108",
+     "BH-D110",
+     "BH-D111",
+     "BH-D113"
     ],
     "unresolved": [
      {

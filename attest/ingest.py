@@ -51,13 +51,24 @@ def ingest_file(con, client, path, fewshot, log):
 
     form, tin, tout, dt = None, 0, 0, 0.0
     err = None
+    best = None  # (form, flags) from a malformed attempt, kept if both attempts are malformed
     for attempt in (1, 2):
         try:
-            form, tin, tout, dt = extract.call_model(client, text, fewshot=fewshot)
-            break
+            f, i, o, d = extract.call_model(client, text, fewshot=fewshot)
+            tin += i; tout += o; dt += d
         except Exception as e:  # invalid form, API error
             err = f"{type(e).__name__}: {e}"
             log(f"retry  {path.name}  attempt {attempt} failed: {err}")
+            continue
+        flags = extract.flatten(f, path.stem)[4]
+        if any(x.startswith("malformed:") for x in flags):
+            best = f
+            log(f"retry  {path.name}  attempt {attempt} returned a malformed section: {','.join(flags)}")
+            continue
+        form = f
+        break
+    if form is None and best is not None:
+        form = best  # both attempts malformed; keep the blob and the flag rather than lose the document
     if form is None:
         guess = text.splitlines()[0].replace("Document ID:", "").strip() if text else path.stem
         db.insert_document(con, guess, sha, path, text, _now(), flags="unextracted")

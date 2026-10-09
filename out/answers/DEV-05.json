@@ -26,7 +26,7 @@
     "doc": "BH-D002",
     "service_type": "individual",
     "status": "attended",
-    "text": "Rowan Mercer attended an individual session for several weeks of low mood, reduced interest, fragmented sleep, and work-return worry with avoidance. Rowan participated throughout; the clinician introduced behavioral activation and a sleep/morning routine plan. No immediate safety concern was identified."
+    "text": "Rowan Mercer attended an individual session for several weeks of low mood, reduced interest, fragmented sleep, and work-return worry with avoidance. Behavioral activation and a short work-task step were introduced; no immediate safety concern was identified. PHQ-9 total was 18."
    },
    {
     "kind": "summary",
@@ -35,16 +35,7 @@
     "doc": "BH-D004",
     "service_type": "group",
     "status": "attended",
-    "text": "Coping skills group focused on recognizing early physical signs of anxiety and choosing a coping response before withdrawing from a task. The facilitator demonstrated paced breathing and led discussion of using skills during manageable tasks. Rowan was quiet initially, identified an avoidance situation involving a delayed work reply, practiced breathing, and selected reading the message as a possible next step."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-06",
-    "subject": "HG-E102",
-    "doc": "BH-D005",
-    "service_type": "group",
-    "status": "attended",
-    "text": "Patient arrived late after parking difficulty and left early for a previously arranged ride; did not re-enter the group room after departing."
+    "text": "Coping skills group focused on recognizing early physical signs of anxiety and choosing a coping response before withdrawing from a task. Rowan Mercer participated, identified an avoidance situation involving a delayed work message, practiced paced breathing, and selected reading the message before responding as a possible next step."
    },
    {
     "kind": "summary",
@@ -53,7 +44,16 @@
     "doc": "BH-D015",
     "service_type": "individual",
     "status": "no_show",
-    "text": "Rowan Mercer did not check in for the scheduled individual visit and no arrival or cancellation message was received; the appointment was marked no show at 11:45. Later that day, staff reached Rowan by phone, who said the morning got away from them after a poor night's sleep and confirmed intent to attend the next day's visit with Casey. The call addressed scheduling and contact information; no therapy intervention was conducted."
+    "text": "Patient did not check in for scheduled individual visit and was not seen; no arrival call or cancellation was received. Later callback addressed scheduling and contact information only; no therapy was conducted."
+   },
+   {
+    "kind": "summary",
+    "date": "2026-01-09",
+    "subject": "HG-E104",
+    "doc": "BH-D007",
+    "service_type": "family",
+    "status": "attended",
+    "text": "Family psychotherapy session with Rowan Mercer and partner Casey Mercer, focused on patterns of support at home as Rowan works to rebuild a routine. The pair mapped a recent interaction, practiced specific help requests and reflective responses, and agreed on a planned check-in about work preparation."
    },
    {
     "kind": "summary",
@@ -62,16 +62,7 @@
     "doc": "BH-D008",
     "service_type": "family",
     "status": "attended",
-    "text": "Family appointment facilitated by Leena Park, LPC, with Mara Voss, LCSW, to practice communication and slow down an anxious exchange about return-to-work preparation. Rowan Mercer and Casey Mercer both attended the full 45 minutes and rehearsed reflecting each other's concerns; both contributed ideas for a brief check-in. The couple chose a shared evening walk as an activity."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-12",
-    "subject": "HG-E105",
-    "doc": "BH-D005",
-    "service_type": "group",
-    "status": "attended",
-    "text": "Patient checked in before the group began and remained until it was released; no transport concern was reported."
+    "text": "Family session with Rowan Mercer and Casey Mercer, facilitated by Leena Park, LPC, with Mara Voss, LCSW. Focus was on communication practice when slowing down an anxious exchange about the return-to-work process; both participants reflected each other's concerns and agreed on a brief predictable check-in and a shared evening walk."
    },
    {
     "kind": "summary",
@@ -80,7 +71,7 @@
     "doc": "BH-D009",
     "service_type": "group",
     "status": "attended",
-    "text": "Coping skills group on behavioral activation and restarting after avoidance. Rowan gave an example about unopened work messages, described a weekend walk with Casey, and wrote an action to try after breakfast. The facilitator reinforced restarting with smaller steps."
+    "text": "Group coping skills session on behavioral activation, activity ladders, obstacle anticipation, and rehearsing responses to missed attempts. Patient participated actively, identifying avoidance patterns and planning a concrete next action."
    },
    {
     "kind": "summary",
@@ -89,7 +80,7 @@
     "doc": "BH-D010",
     "service_type": "medication",
     "status": "attended",
-    "text": "Prescriber medication-management visit for ongoing depressive and anxiety symptoms with sleep disruption, attended 09:00\u201309:25. Medication use, tolerability, adherence, and the medication list were reviewed and reconciled; no urgent medication concern was raised. No psychotherapy was provided; activity and work communication concerns were directed to the treating therapist."
+    "text": "Medication management visit for ongoing depressive and anxiety symptoms with sleep disruption. Rowan reported continuing sleep interruption, daytime tiredness, and work communication concerns; the medication list was reviewed and reconciled, and adherence and monitoring were discussed. No urgent medication concern was raised; no separate psychotherapy was provided."
    },
    {
     "kind": "summary",
@@ -98,7 +89,7 @@
     "doc": "BH-D011",
     "service_type": "individual",
     "status": "attended",
-    "text": "Individual session focused on the prediction behind a delayed work-message reply, separating a brief acknowledgment from a specific work-schedule commitment, and rehearsing a drafted response. Rowan reported small completed activities, ongoing sleep disruption, and morning start difficulty; affect was more varied than at intake with worry about employment. Plan is to attempt the drafted acknowledgment, continue morning activity tracking, and practice a breathing skill before avoided tasks."
+    "text": "Individual psychotherapy session focused on identifying the prediction behind a delayed work-message reply and separating a brief acknowledgment from a commitment to a specific work schedule. The clinician and patient drafted and rehearsed a short response; patient reported completing several small activities, ongoing interrupted sleep, and effort with morning routines. Plan: attempt the drafted acknowledgment, continue morning activity tracking, and practice a breathing skill before avoided tasks."
    },
    {
     "kind": "summary",
@@ -107,7 +98,7 @@
     "doc": "BH-D016",
     "service_type": "group",
     "status": "clinic_cancelled",
-    "text": "The coping skills group scheduled for January 15 from 10:00 to 11:30 was cancelled by the clinic due to staff illness, with no covering facilitator available. The patient was notified by portal and phone and acknowledged the cancellation; no group was held and no participants were seen for this encounter. The phone contact was limited to confirming the cancellation and upcoming appointments."
+    "text": "Coping skills group scheduled for January 15 was cancelled by the clinic due to staff illness; no group was held and no participants were seen. No replacement group was conducted in the slot."
    },
    {
     "kind": "measure",
@@ -135,8 +126,8 @@
     "subject": "HG-E109",
     "doc": "BH-D012",
     "service_type": "collateral",
-    "status": "patient_absent",
-    "text": "Partner Casey Mercer attended a scheduled contact about Rowan Mercer, who was absent. Casey reported Rowan was taking short walks, mornings remain difficult, and the evening check-in has reduced reminders. Clinician and Casey reviewed daily routine and supportive responses, with no patient-present therapy and no new treatment decision."
+    "status": "attended",
+    "text": "Family collateral contact with partner Casey Mercer only, after the patient advised they could not participate. Casey reported home observations and strategies to support the treatment plan; no patient-present psychotherapy occurred."
    },
    {
     "kind": "summary",
@@ -145,16 +136,7 @@
     "doc": "BH-D101",
     "service_type": "group",
     "status": "attended",
-    "text": "Skills group covered the sequence of trigger, anxious prediction, physical activation, and avoidance, using a worked example about an unanswered work email; members practiced describing predictions without treating them as established and chose a small approach behavior. The patient followed the exercise and named a familiar postponing pattern, then became visibly tense when discussion turned to returning to work and said the discussion felt difficult to manage; the facilitator offered grounding and arranged a same-day individual meeting with the treating clinician. The 10:45\u201311:00 break was for restroom use and refreshments with no therapy."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-19",
-    "subject": "HG-E110",
-    "doc": "BH-D102",
-    "service_type": "group",
-    "status": "attended",
-    "text": "Patient attended the group's opening check-in and identified anxiety about reconnecting with work. Patient accepted an exercise handout and was given access to the individual clinician at their request."
+    "text": "Skills group on recognizing the sequence of trigger, anxious prediction, physical activation, and avoidance, using a worked example and practice selecting a small approach behavior. Rowan Mercer followed the exercise initially but became visibly tense when discussion turned to returning to the workplace and said it felt difficult to manage; the facilitator offered grounding and arranged a same-day individual meeting with the treating clinician."
    },
    {
     "kind": "summary",
@@ -163,7 +145,7 @@
     "doc": "BH-D104",
     "service_type": "group",
     "status": "attended",
-    "text": "Patient attended the group opening check-in, accepted an exercise handout, and requested additional help from the individual clinician. Group content is recorded separately."
+    "text": "Rowan attended the opening check-in, accepted the exercise handout, and requested additional help from the individual clinician. Group content is recorded separately."
    },
    {
     "kind": "summary",
@@ -172,7 +154,7 @@
     "doc": "BH-D105",
     "service_type": "individual",
     "status": "attended",
-    "text": "Added individual visit after the patient became anxious during group and needed grounding and coping review. The patient identified activation signs, used paced breathing and a coping card, and narrowed a work-related task to drafting two sentences to a supervisor. The patient denied current suicidal thoughts and no acute safety concern was identified; avoidance and disrupted sleep continue to interfere with work routine."
+    "text": "Individual visit added because the patient became anxious during group and needed grounding and review of coping strategies. Patient reported feeling overwhelmed by workplace demands discussed in group and worry about returning to work. Work was narrowed to drafting two sentences to a supervisor, with no requirement to send today. Patient denied current suicidal thoughts; no acute safety concern identified."
    },
    {
     "kind": "summary",
@@ -181,7 +163,7 @@
     "doc": "BH-D106",
     "service_type": "individual",
     "status": "attended_partial",
-    "text": "Video individual psychotherapy addressed the patient's delayed draft message about a possible gradual return to work, including checking the draft repeatedly; the patient practiced reading it once and choosing a planned time to send it. The session also discussed sleep and an evening wind-down routine after a mixed sleep report. Connection was lost 13:20\u201313:30 and the session continued after reconnecting; the patient was engaged and no urgent safety concern was reported."
+    "text": "Individual video psychotherapy addressed the patient's hesitation about sending a message about a possible gradual return to work, including checking the draft repeatedly, and practiced choosing a planned time to send it. Sleep routine was discussed after a mixed night of sleep. Connection was lost for 10 minutes and resumed under the same appointment; the patient was engaged and restated the agreed task with no urgent safety concern reported."
    },
    {
     "kind": "summary",
@@ -189,17 +171,8 @@
     "subject": "HG-E113",
     "doc": "BH-D107",
     "service_type": "group",
-    "status": "attended_partial",
-    "text": "Group skills session on turning a broad intention into one observable action, with a cue to prompt it. Rowan joined after the discussion had begun and gave an example of opening a work calendar, with concern about becoming overwhelmed; the facilitator encouraged a limited, planned review period and a stopping point. The patient contributed an example after the break."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-22",
-    "subject": "HG-E113",
-    "doc": "BH-D108",
-    "service_type": "group",
-    "status": "attended_partial",
-    "text": "Skills group scheduled 10:00\u201311:30. Patient arrived late at 10:30 and remained until the group closed; final disposition attended, late arrival."
+    "status": "attended",
+    "text": "Skills group addressed translating a broad intention into one observable action; members practiced reducing a complicated task to a completable action and identifying a prompting cue. Patient used opening a work calendar as an example and voiced concern that seeing outstanding items would be overwhelming; facilitator encouraged a limited, planned review period and a stopping point. Patient contributed an example after the break."
    },
    {
     "kind": "summary",
@@ -208,7 +181,7 @@
     "doc": "BH-D109",
     "service_type": "coordination",
     "status": "attended",
-    "text": "Professional-only care coordination call between Mira Patel, LCSW, and an outside social worker, Daniel Shaw, about practical supports for the patient's return to work, with a release on file. The patient did not participate and no psychotherapy was delivered; no medication or psychotherapy frequency change was made."
+    "text": "Professional-only care coordination call between Mira Patel, LCSW, and outside social worker Daniel Shaw, with a release on file, about practical supports for a gradual return to work. No patient contact occurred, no employment determination was made, and no change to medication or psychotherapy frequency was made."
    },
    {
     "kind": "summary",
@@ -217,7 +190,7 @@
     "doc": "BH-D110",
     "service_type": "individual",
     "status": "attended",
-    "text": "Patient reviewed a request from a supervisor and worked on a brief response, with ongoing avoidance and sleep difficulty noted. Role-play and a grounding cue were rehearsed; no current suicidal ideation was reported. Treatment continues on avoidance and bedtime routine. Reason for visit is not stated."
+    "text": "Individual psychotherapy addressing the patient's hesitation to respond to a supervisor's request for next-step discussion, with rehearsal of a brief response and a grounding cue. Sleep remained uneven and avoidance and bedtime routine continued as focus areas. No current suicidal ideation was reported."
    },
    {
     "kind": "summary",
@@ -226,16 +199,7 @@
     "doc": "BH-D111",
     "service_type": "individual",
     "status": "attended",
-    "text": "Individual in-person psychotherapy addressing difficulty moving from a supervisor's reply to arranging the next conversation, with rehearsal of requesting a brief conversation and a grounding exercise. Patient remained uncertain about using the cue independently when anxious. Clinical presentation consistent with ongoing anxiety, low mood, and work-related functional difficulty; plan is to continue individual and group work under the existing outpatient plan."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-27",
-    "subject": "HG-E116",
-    "doc": "BH-D108",
-    "service_type": "group",
-    "status": "no_show",
-    "text": "Skills group scheduled 10:00\u201311:30. Patient was absent for the entire group; no patient treatment contact occurred. An outreach message inviting the patient to contact scheduling was left after the group, with no clinical discussion."
+    "text": "Individual in-person psychotherapy addressing difficulty moving from a supervisor's reply to arranging the next conversation, with anticipatory overwhelm about work issues. Rehearsed a specific, brief conversation request and a grounding exercise; patient remained uncertain about using the cue independently when anxious. Presentation consistent with ongoing anxiety, low mood, and functional difficulty around work demands; plan to continue individual and group work."
    },
    {
     "kind": "summary",
@@ -244,16 +208,7 @@
     "doc": "BH-D112",
     "service_type": "group",
     "status": "no_show",
-    "text": "Unsigned autogenerated draft from the scheduled group template; no clinician attestation or patient-specific narrative. Template text states the patient attended the full session, but this is not a clinician-confirmed record of attendance."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-28",
-    "subject": "HG-E117",
-    "doc": "BH-D108",
-    "service_type": "individual",
-    "status": "patient_cancelled",
-    "text": "Individual appointment scheduled 14:00\u201314:45 was cancelled by the patient on January 28 at 08:12 due to a personal scheduling conflict, before the scheduled start. No replacement appointment was booked within January 2026."
+    "text": "Unsigned auto-generated template draft only; no clinician-documented session content. Charge CH-116 for group psychotherapy (1 group session) posted 2026-01-27 18:06."
    },
    {
     "kind": "summary",
@@ -262,16 +217,7 @@
     "doc": "BH-D107",
     "service_type": "group",
     "status": "attended",
-    "text": "Group session reviewing setbacks in approach behaviors. Rowan reported opening the work calendar but delaying a follow-up conversation, and the facilitator helped identify a specific question to ask. Rowan took part in paired rehearsal and accepted feedback to keep the request brief."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-29",
-    "subject": "HG-E118",
-    "doc": "BH-D108",
-    "service_type": "group",
-    "status": "attended",
-    "text": "Skills group scheduled 10:00\u201311:30. Patient was present from opening through closing per attendance attestation."
+    "text": "Skills group reviewed setbacks when practicing approach behaviors; members identified an initial effort, follow-through difficulties, and an adjustment. Patient reported opening the work calendar but delaying a follow-up conversation; facilitator helped identify a specific question to ask. Patient participated in paired rehearsal and accepted feedback about keeping requests brief."
    },
    {
     "kind": "measure",
@@ -290,7 +236,7 @@
     "doc": "BH-D113",
     "service_type": "family",
     "status": "attended_partial",
-    "text": "Family psychotherapy session with Rowan Mercer and partner Casey Mercer, in person, for 45 minutes. Casey discussed uncertainty about reminders about work tasks during the first 15 minutes without Rowan present; Rowan joined at 13:15 and the pair practiced a request-for-help pattern and agreed on one planned check-in. Rowan reported the limited plan felt more manageable; the clinician recommended continuing the current outpatient treatment plan."
+    "text": "Patient's partner Casey attended first and discussed uncertainty about when reminders helped or increased Rowan's pressure; Rowan was not present for the first 15 minutes. Rowan joined at 13:15 and, with Casey, identified a pattern of reminders about contacting work leading to withdrawal, rehearsed requesting a specific kind of help, and agreed to one planned check-in. Rowan remained anxious but could explain the first step and found a limited plan more manageable. Plan: continue current outpatient treatment plan and revisit the communication pattern."
    },
    {
     "kind": "summary",
@@ -299,16 +245,7 @@
     "doc": "BH-D114",
     "service_type": "medication",
     "status": "attended",
-    "text": "Medication management visit with prescriber Elena Ortiz, PMHNP. Patient reported taking medication as prescribed with no new adverse effect; mood was less persistently low but anxiety and variable sleep persisted. Patient denied current suicidal thoughts; no new acute safety issue; no medication change was made and the regimen was continued."
-   },
-   {
-    "kind": "summary",
-    "date": "2026-01-30",
-    "subject": "enc:BH-D115:0",
-    "doc": "BH-D115",
-    "service_type": "other",
-    "status": "attended",
-    "text": "Questionnaire review within ongoing care for a symptom questionnaire completed January 30, 2026 before the afternoon appointment. Clinician review notes partial improvement, persistent avoidance, and functional impact around work, with continued treatment recommended. This entry is not a separate treatment appointment and claims no patient-contact interval."
+    "text": "Medication management follow-up for Rowan Mercer. Regimen, adherence, tolerability, and interval symptoms reviewed; patient denied current suicidal thoughts and no new acute safety issue emerged. No medication change made; continue current regimen with monitoring. No separately documented psychotherapy was provided."
    }
   ],
   "distinct_measures": [
@@ -354,6 +291,36 @@
     "basis": "copy of measure:BH-D013:0: same instrument and completion date, no new assessment",
     "source_form": "HG-Q116"
    }
-  ]
+  ],
+  "progress": {
+   "trends": [
+    {
+     "instrument": "PHQ-9",
+     "n_distinct": 3,
+     "first": 18,
+     "first_date": "2026-01-05",
+     "last": 10,
+     "last_date": "2026-01-30",
+     "change": -8,
+     "days": 25,
+     "direction": "decreased",
+     "subjects": [
+      "measure:BH-D002:0",
+      "measure:BH-D013:0",
+      "measure:BH-D115:0"
+     ]
+    }
+   ],
+   "supported": [
+    "PHQ-9 decreased from 18 (2026-01-05) to 10 (2026-01-30) across 3 distinct assessments over 25 days",
+    "1 measure record(s) are copies of an earlier form and are not counted as new assessments",
+    "22 clinical summaries describe the course in words; these are clinician accounts, not measurements"
+   ],
+   "not_supported": [
+    "change in any domain other than what PHQ-9 measures: it is the only instrument on record",
+    "item-level or symptom-specific change: only total scores are recorded",
+    "a cause for any change: the record does not link scores to specific interventions"
+   ]
+  }
  }
 }

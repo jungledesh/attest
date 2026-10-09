@@ -2,33 +2,39 @@
 
 **Question.** How many therapy minutes and hours did Rowan actually receive during the review period, overall and for each Monday–Sunday week? Show calculations or supporting detail, and report any conclusion the available documents do not settle.
 
-**Overall, review period 2026-01-05 to 2026-01-30**
+**Answer**
 
-- Therapy minutes (break intervals excluded): **585 low to 595 high**. The range comes only from HG-E115 (see unresolved item).
-- Therapy hours: **9.75 low to 9.92 high**.
-- Minutes including nontherapeutic intervals: **670**.
+Rowan received 585 to 595 therapy minutes (9.75 to 9.92 hours) from 2026-01-05 to 2026-01-30, excluding nontherapeutic breaks. The range comes solely from HG-E115 (2026-01-26), whose contact interval differs between BH-D110 and BH-D111. Including breaks, the total is 670 minutes.
 
-**By Monday–Sunday week**
+**Evidence**
 
-| Week (Mon–Sun) | Therapy days | Minutes (low–high) | Hours (low–high) | Minutes with breaks | Encounters |
-|---|---|---|---|---|---|
-| 2026-01-05 to 01-11 | 3 | 140–140 | 2.33–2.33 | 155 | HG-E101 (50), HG-E102 (45), HG-E104 (45) |
-| 2026-01-12 to 01-18 | 2 | 120–120 | 2.00–2.00 | 135 | HG-E105 (75), HG-E107 (45) |
-| 2026-01-19 to 01-25 | 3 | 180–180 | 3.00–3.00 | 210 | HG-E110 (60), HG-E111 (30), HG-E112 (45), HG-E113 (45) |
-| 2026-01-26 to 02-01 | 3 | 145–155 | 2.42–2.58 | 170 | HG-E115 (40–50), HG-E118 (75), HG-E119 (30) |
+Weekly totals (Monday–Sunday, excluding breaks; minutes with breaks in parentheses):
 
-The week totals are the sum of the encounter minutes listed above. Hours are minutes divided by 60, rounded to two decimals. For week 4, the low is 75 + 30 + 40 = 145 and the high is 75 + 30 + 50 = 155.
+| Week | Therapy days | Minutes | Hours | Encounters (minutes) |
+|---|---|---|---|---|
+| 2026-01-05 to 01-11 | 3 | 140 (155) | 2.33 | HG-E101 (50), HG-E102 (45), HG-E104 (45) |
+| 2026-01-12 to 01-18 | 2 | 120 (135) | 2.00 | HG-E105 (75), HG-E107 (45) |
+| 2026-01-19 to 01-25 | 3 | 180 (210) | 3.00 | HG-E110 (60), HG-E111 (30), HG-E112 (45), HG-E113 (45) |
+| 2026-01-26 to 02-01 | 3 | 145–155 (170) | 2.42–2.58 | HG-E115 (40–50), HG-E118 (75), HG-E119 (30) |
 
-**Basis for the minutes**
+Overall: 585–595 minutes (9.75–9.92 hours); 670 minutes with breaks.
 
-- Most encounters are counted from contact intervals or from the group roster, with nontherapeutic intervals removed. For example, HG-E102 (group, 2026-01-06) is 45 minutes from a 10:15–11:15 roster with 15 nontherapeutic minutes removed. Its with-breaks figure is 60.
-- HG-E107 and HG-E113 are limited to patient-present intervals, as stated in the output.
-- HG-E112 has no nontherapeutic minutes removed.
+Encounter detail:
 
-**Unresolved items**
+- HG-E101, 01-05, individual, 50 min. BH-D002, BH-D006. Contact intervals. No break removed.
+- HG-E102, 01-06, group, 45 min (60 with breaks). BH-D004, BH-D005, BH-D006. Clipped to roster 10:15–11:15; 15 min break removed.
+- HG-E104, 01-09, family, 45 min. BH-D006, BH-D007, BH-D008. Patient-present intervals only.
+- HG-E105, 01-12, group, 75 min (90 with breaks). BH-D005, BH-D006, BH-D009. Clipped to roster 10:00–11:30; 15 min break removed.
+- HG-E107, 01-14, individual, 45 min. BH-D006, BH-D011. Contact intervals.
+- HG-E110, 01-19, group, 60 min (75 with breaks). BH-D101–BH-D104. Roster 10:00–11:15; 15 min removed.
+- HG-E111, 01-19, individual, 30 min. BH-D105. Contact intervals.
+- HG-E112, 01-21, individual, 45 min. BH-D106. Patient-present intervals; no nontherapeutic time.
+- HG-E113, 01-22, group, 45 min (60 with breaks). BH-D107, BH-D108. Clipped to roster 10:30–11:30; 15 min removed.
+- HG-E115, 01-26, individual, 40–50 min. BH-D110 (09:00–09:50, 50 min); BH-D111 (09:10–09:50, 40 min).
+- HG-E118, 01-29, group, 75 min (90 with breaks). BH-D107, BH-D108. Roster 10:00–11:30; 15 min removed.
+- HG-E119, 01-30, family, 30 min. BH-D113. Patient-present intervals; no nontherapeutic time.
 
-1. **HG-E115, 2026-01-26 (individual).** The output gives 40–50 minutes, not a single figure. BH-D110 records the session as 09:00–09:50, while BH-D111 records 09:10–09:50. The two documents disagree on the start time. Confirming the actual start time against the source session record would settle the value. Until then, the week 4 and overall totals remain a range.
+**Unresolved**
 
-2. **Which total to use.** The output says the plan refers to "patient-present therapy" but does not define whether nontherapeutic breaks count. It therefore reports both figures: 585–595 minutes excluding breaks and 670 minutes including them. The documents do not settle which measure is intended.
-
-3. **Week 4 extends past the review end.** The review period ends 2026-01-30, but the week runs to 2026-02-01. The output lists no encounters on 2026-01-31 or 2026-02-01, so no minutes are added for those dates.
+- HG-E115 (2026-01-26): 40 to 50 minutes. BH-D110 records 09:00–09:50; BH-D111 records 09:10–09:50. The start time in the source record would settle it. This range causes the week 4 range (145–155 minutes, 2.42–2.58 hours) and the overall range (585–595 minutes, 9.75–9.92 hours).
+- Break handling: the plan says "patient-present therapy" and does not state whether breaks count. The figures above exclude breaks (585–595 minutes). Including breaks gives 670 minutes. The plan's definition would settle which total applies.

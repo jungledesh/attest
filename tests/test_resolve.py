@@ -96,3 +96,41 @@ def test_documents_per_encounter_listed():
     r = _setup([("A", "clinical_note"), ("B", "clinical_note")],
                [("A", "E9", "status", "attended", 1), ("B", "E9", "status", "attended", 1)])
     assert r[("E9", "documents")]["value"] == "A,B"
+
+
+def test_lower_rank_source_breaks_tie_between_equal_notes():
+    r = _setup([("A", "clinical_note"), ("B", "clinical_note"), ("X", "scheduling_export")],
+               [("A", "E10", "service_type", "group", 4), ("B", "E10", "service_type", "family", 8),
+                ("X", "E10", "service_type", "family", 18), ("A", "E10", "status", "attended", 5)])
+    st = r[("E10", "service_type")]
+    assert st["value"] == "family" and st["status"] == "resolved" and "2 of 3" in st["basis"]
+
+
+def test_still_tied_stays_unresolved():
+    r = _setup([("A", "clinical_note"), ("B", "clinical_note")],
+               [("A", "E11", "service_type", "group", 4), ("B", "E11", "service_type", "family", 8)])
+    assert r[("E11", "service_type")]["status"] == "unresolved"
+
+
+def test_conflict_range_uses_each_documents_own_present_interval():
+    r = _setup([("A", "clinical_note"), ("B", "clinical_note")],
+               [("A", "E12", "contact_interval", "09:00–09:50", 7), ("B", "E12", "contact_interval", "09:10–09:50", 7),
+                ("B", "E12", "patient_present_interval", "09:10–09:50", 7),
+                ("A", "E12", "status", "attended", 7), ("B", "E12", "status", "attended", 7)])
+    assert r[("E12", "minutes_range")]["value"] == "40-50"
+
+
+def test_scheduling_fact_is_one_vote_per_document_not_ladder():
+    # register misreads the type; draft has it right; 1:1 tie stays unresolved instead of ladder-picking the register
+    r = _setup([("G", "attendance_register"), ("D", "draft")],
+               [("G", "E13", "service_type", "collateral", 16), ("D", "E13", "service_type", "group", 10),
+                ("G", "E13", "status", "no_show", 10), ("D", "E13", "status", "attended", 12)])
+    assert r[("E13", "service_type")]["status"] == "unresolved"
+    assert r[("E13", "status")]["value"] == "no_show"          # presence still follows the ladder
+
+
+def test_scheduling_fact_majority_wins_across_ranks():
+    r = _setup([("G", "attendance_register"), ("D", "draft"), ("X", "scheduling_export")],
+               [("G", "E14", "service_type", "collateral", 16), ("D", "E14", "service_type", "group", 10),
+                ("X", "E14", "service_type", "group", 18)])
+    assert r[("E14", "service_type")]["value"] == "group"

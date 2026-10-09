@@ -23,7 +23,7 @@ _VL = {"type": "array", "items": _V}
 
 HEADER_FIELDS = ["doc_id", "clinic", "patient_name", "mrn", "doc_type", "signed_by", "signed_at",
                  "corrects_doc", "copy_of", "unsigned"]
-ENCOUNTER_FIELDS = ["encounter", "service_date", "service_type", "scheduled_start", "scheduled_end",
+ENCOUNTER_FIELDS = ["encounter", "service_date", "service_type", "modality", "scheduled_start", "scheduled_end",
                     "arrival", "departure", "contact_intervals", "patient_present_intervals",
                     "nontherapeutic_intervals", "status", "patient_present", "summary"]
 PLAN_FIELDS = ["effective_from", "effective_to", "min_days_per_week", "min_minutes_per_week",
@@ -38,7 +38,7 @@ SCHEMA = {
         "encounters": {"type": "array", "items": {
             "type": "object",
             "properties": {
-                "encounter": _V, "service_date": _V, "service_type": _V,
+                "encounter": _V, "service_date": _V, "service_type": _V, "modality": _V,
                 "scheduled_start": _V, "scheduled_end": _V, "arrival": _V, "departure": _V,
                 "contact_intervals": _VL, "patient_present_intervals": _VL,
                 "nontherapeutic_intervals": _VL,
@@ -56,26 +56,26 @@ SCHEMA = {
     "required": ["header", "encounters", "extra"],
 }
 
-SYSTEM = f"""You read one clinical or administrative document and fill a form. You return only the form.
+SYSTEM = f"""Read one clinical or administrative document. Fill the form. Return only the form.
 
-Rules:
 - Every value carries the line number it came from. Lines are numbered in the input.
-- Omit any field the document does not state. Never return empty strings, 0, or null for a missing fact.
-- Copy times as HH:MM. Copy ranges as HH:MM–HH:MM. Copy dates as YYYY-MM-DD.
-- One document may describe several encounters (a schedule export, an attendance register). Return one encounters item per appointment the document describes. Use the document's encounter ID (for example HG-E110) when it gives one.
-- header.doc_type is one of: {", ".join(DOC_TYPES)}. A correction document is "correction". A resent or retransmitted copy of an earlier document is "retransmission". An unsigned auto-generated note or a billing extract is "draft" or "billing". A cover sheet, scheduling log, authorization letter, or import receipt is "admin".
-- header.corrects_doc and header.copy_of: the other document's ID (a value shaped like BH-D102), only when the text states that other ID. Never this document's own ID. Never a description. If no other ID is given, omit the field; the shared encounter ID is the link.
-- header.unsigned: "true" when the document has no clinician signature.
-- service_type is one of: {", ".join(SERVICE_TYPES)}. Medication management is "medication". A contact with a family member where the patient was absent is "collateral". A call between professionals with no patient is "coordination".
-- status is one of: {", ".join(STATUSES)}.
-- contact_intervals: the intervals the service actually ran with the patient (a video call that dropped and rejoined has two).
-- patient_present_intervals: when the patient was present for only part of the service, the part they were present for.
+- Omit a field the document does not state. Never return "", 0, or null for a missing fact.
+- Times as HH:MM. Ranges as HH:MM–HH:MM. Dates as YYYY-MM-DD.
+- One document may describe several encounters. One encounters item per appointment. Use the document's own encounter ID when given.
+- header.doc_type, one of: {", ".join(DOC_TYPES)}. A resent copy of an earlier document is "retransmission". An unsigned auto-generated note is "draft". A charge extract is "billing". Cover sheets, scheduling logs, authorization letters, import receipts are "admin".
+- header.corrects_doc / header.copy_of: the other document's ID, only when the text states it. Never this document's own ID. Never a description.
+- header.unsigned: "true" when no clinician signed.
+- service_type, one of: {", ".join(SERVICE_TYPES)}. Medication management is "medication". Family member seen without the patient is "collateral". Professionals only, no patient, is "coordination".
+- status, one of: {", ".join(STATUSES)}.
+- modality: in_person, video, or telephone, when stated.
+- contact_intervals: when the service ran with the patient. A dropped and rejoined call has two.
+- patient_present_intervals: the part the patient was present for, when partial.
 - nontherapeutic_intervals: breaks or other intervals the document says had no therapy.
-- summary: two or three sentences on what the document says happened clinically for this encounter, including the stated reason for the visit if given. Facts only, no interpretation.
-- plan: required when doc_type is treatment_plan. Fill min_days_per_week and min_minutes_per_week from the stated participation goal. counting_types and excluded_types list the service types the plan says do or do not count toward that goal. effective_from and effective_to are the episode or plan dates. Do not put these in extra.
-- measures: required whenever the document states a questionnaire score (for example a PHQ-9 total). One item per score. If the document says the score is copied or imported from an earlier form, set copy_of to that form or document and keep the original completion date. Do not put scores in extra.
-- status from a draft, template, or unsigned document is still recorded as status. The reader decides its weight, not you.
-- extra: any other stated fact that does not fit a slot. about: the encounter ID or "document".
+- summary: two or three sentences on what happened clinically, with the stated reason for the visit. Facts only.
+- plan: required for a treatment plan. min_days_per_week and min_minutes_per_week from the stated goal; counting_types and excluded_types as the plan lists them; effective_from and effective_to from the plan or episode dates. Not in extra.
+- measures: required for every questionnaire score stated. One item per score. If the document says the score is copied from an earlier form, set copy_of and keep the original completion date. Not in extra.
+- A status from a draft or unsigned document is still recorded as status.
+- extra: any other stated fact. about: the encounter ID or "document".
 """
 
 FEWSHOT = [
@@ -185,40 +185,72 @@ def _v(item):
     return str(item).strip(), None
 
 
+def _loads_repaired(text):
+    """json.loads, and if that fails, append the closing brackets the text is missing (outside strings)
+    and try once more. Repairs a reply cut off a character or two early. Returns None when still invalid."""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    text = text.rstrip()
+    while text and text[-1] in "]}":   # drop the trailing closers; they are re-derived below
+        text = text[:-1].rstrip()
+    stack, in_str, esc = [], False, False
+    for ch in text:
+        if in_str:
+            if esc: esc = False
+            elif ch == "\\": esc = True
+            elif ch == '"': in_str = False
+            continue
+        if ch == '"': in_str = True
+        elif ch in "{[": stack.append("}" if ch == "{" else "]")
+        elif ch in "}]" and stack: stack.pop()
+    fixed = text + ('"' if in_str else "") + "".join(reversed(stack))
+    try:
+        return json.loads(fixed)
+    except json.JSONDecodeError:
+        return None
+
+
 def _obj(x, flags, what):
     """An item that should be a dict. A JSON string is parsed; anything else is kept as raw text."""
     if isinstance(x, dict):
         return x
     if isinstance(x, str):
-        try:
-            y = json.loads(x)
-            if isinstance(y, dict):
-                return y
-        except json.JSONDecodeError:
-            pass
+        y = _loads_repaired(x)
+        if isinstance(y, dict):
+            return y
     flags.append(f"malformed:{what}")
     return {"unparsed": {"value": str(x), "line": None}}
 
 
 def _lst(x, flags, what):
-    """An item that should be a list. A JSON string is parsed; a lone dict is wrapped."""
-    if isinstance(x, list):
-        return x
+    """An item that should be a list of dicts. Tolerates: a JSON string for the list, a lone dict,
+    and list elements that are themselves JSON strings (of a dict or of a list). Flattens one level."""
     if x is None:
         return []
-    if isinstance(x, dict):
-        return [x]
-    if isinstance(x, str):
-        try:
-            y = json.loads(x)
-            if isinstance(y, list):
-                return y
-            if isinstance(y, dict):
-                return [y]
-        except json.JSONDecodeError:
-            pass
-    flags.append(f"malformed:{what}")
-    return [{"unparsed": {"value": str(x), "line": None}}]
+    if isinstance(x, (dict, str)):
+        x = [x]
+    if not isinstance(x, list):
+        flags.append(f"malformed:{what}")
+        return [{"unparsed": {"value": str(x), "line": None}}]
+    out = []
+    for el in x:
+        if isinstance(el, str):
+            parsed = _loads_repaired(el)
+            if parsed is None:
+                flags.append(f"malformed:{what}")
+                out.append({"unparsed": {"value": el, "line": None}})
+                continue
+            el = parsed
+        if isinstance(el, list):
+            out.extend(e for e in el if isinstance(e, dict))
+        elif isinstance(el, dict):
+            out.append(el)
+        else:
+            flags.append(f"malformed:{what}")
+            out.append({"unparsed": {"value": str(el), "line": None}})
+    return out
 
 
 def flatten(form, fallback_doc_id):

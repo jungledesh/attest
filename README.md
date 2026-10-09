@@ -2,7 +2,7 @@
 
 An abstraction that turns scattered documents into facts with provenance. Every answer traces to a source.
 
-Built for the Backbone clinical-records exercise. The documents are one patient's month of outpatient behavioral health care, written by different people and systems, overlapping and sometimes contradicting. The code reads them once, keeps every claim with its file and line, resolves conflicts by stated rule, and answers questions by computing over the result.
+Built for the Backbone clinical-records exercise: 31 documents on one patient's month of outpatient care, written by different people and systems, overlapping and sometimes contradicting.
 
 ## How it works
 
@@ -22,109 +22,117 @@ documents/*.txt
 [4] answer    model picks a function and fills its blanks; prose with citations
 ```
 
-Nothing is overwritten. A correction adds a row; the original stays. Numbers come from code, never from the model. The model reads documents at ingest and writes prose at the end. In between it does not touch the data.
-
-Why these choices: `DECISIONS.md`. How each stage works: `DESIGN.md`.
+- Nothing is overwritten. A correction adds a row; the original stays.
+- Numbers come from code. The model reads documents at ingest and writes prose at the end. In between it does not touch the data.
+- Why these choices: `DECISIONS.md`. How each stage works: `DESIGN.md`.
 
 ## Run
 
+Python 3.10+. Use a virtual environment; a Homebrew or distro Python refuses `pip install` into itself.
+
 ```
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env            # add ANTHROPIC_API_KEY
 
-python -m attest.ingest documents/          # once; re-run is safe, skips seen files
+python -m attest.ingest documents/          # once; re-run skips seen files
 python -m attest.resolve                    # once; re-run is safe
-python -m attest.ask questions.json         # answers all; writes out/answers/
-python -m attest.ask "How many group sessions did HG-M042 attend in week 2?"
-python -m attest.bench                      # timing, tokens, db size -> out/benchmarks.md
+python -m attest.ask questions.json         # writes out/answers/
+python -m attest.ask "How many group sessions did patient M017 attend in week 2?"
+python -m attest.bench                      # out/benchmarks.md
+python -m attest.export                     # out/*.csv
 pytest
 ```
 
-New documents: drop them in `documents/`, run ingest and resolve again. Only new files are processed. A new question that fits no function gets a labeled, provisional answer from a generated read-only query, saved to `pending_queries` for review.
+- The abstraction ships built (`out/attest.db`). Ask questions at once. To rebuild from scratch, delete it first.
+- New documents: drop into `documents/`, run ingest and resolve. Only new files are processed.
+- A question that fits no function gets a provisional answer from a generated read-only query, labeled, saved to `pending_queries` for review.
+- Dollar cost: set `ATTEST_PRICE_IN_PER_M` and `ATTEST_PRICE_OUT_PER_M` (USD per million tokens) before `bench`.
 
 ## Layout
 
 ```
 attest/         the package; db.py is the only file with SQL in it
-tests/          30 tests: interval math, extraction flattening, resolution rules, compute functions
+tests/          38 tests: interval math, extraction, resolution rules, compute functions
 documents/      the 31 supplied files
 questions.json  the 5 supplied questions
-out/            the abstraction (attest.db, claims.csv, resolved.csv, documents.csv),
-                answers (out/answers/DEV-0x.md prose + .json receipt), logs, benchmarks.md,
-                and attest_nofewshot.db from the design-decision test
+out/            attest.db, claims.csv, resolved.csv, documents.csv, answers/, logs/, benchmarks.md,
+                attest_nofewshot.db from the design-decision test
 ```
 
 ## Results
 
-Answers: `out/answers/`. Each `.md` is the prose; the matching `.json` is the function output it was written from, so every number can be checked against the rows.
+Answers in `out/answers/`: `.md` is the prose, `.json` is the function output it was written from.
 
-Headline numbers, computed in `attest/compute.py` from `out/attest.db`:
+- 12 therapy sessions on 11 days: 5 individual, 5 group, 2 family. 9 encounters excluded, each with its reason.
+- Minutes by Monday–Sunday week: 140 / 120 / 180 / 145–155. Total 585–595 (9.75–9.92 h); 670 with break time.
+- Plan goal (BH-D003 line 12): 3 days and 150 min per week. Week 1 not met (140; 155 if breaks counted). Week 2 not met. Week 3 met. Week 4 cannot be determined: two signed notes for Jan 26 give 09:00 and 09:10 start times, so 145–155 straddles 150.
+- Jan 19: 2 contacts, 90 min. Departure 11:15 from correction BH-D103; BH-D104 is a retransmission of the pre-correction roster. Jan 21: 1 contact, 45 min across two video legs.
+- Three distinct PHQ-9 scores: 18, 14, 10. The Jan 26 import is a copy of the Jan 16 form.
 
-- 12 therapy sessions on 11 distinct days (5 individual, 5 group, 2 family). 9 encounters excluded and listed with the reason: 2 medication, 1 collateral, 2 coordination, 2 no-show, 1 clinic cancellation, 1 patient cancellation.
-- Minutes by Monday–Sunday week: 140 / 120 / 180 / 145–155. Total 585–595 (9.75–9.92 h). With break time counted: 670.
-- Plan goal (BH-D003 line 12): 3 therapy days and 150 minutes per week. Week 1 not met (140; met if breaks counted, 155). Week 2 not met (2 days, 120). Week 3 met (180). Week 4 cannot be determined: 145–155 straddles 150 because two signed notes for Jan 26 give different start times (BH-D110 09:00, BH-D111 09:10).
-- Jan 19: 2 contacts, 90 minutes. Departure 11:15 from correction BH-D103, which replaces roster BH-D102; BH-D104 (received Jan 26) is a retransmission of the pre-correction roster and adds nothing. Jan 21: 1 contact, 45 minutes across two video legs under one appointment.
-- Three distinct PHQ-9 scores: 18 (Jan 5), 14 (Jan 16), 10 (Jan 30). The Jan 26 import (BH-D014) is a copy of the Jan 16 form, not a fourth assessment.
-
-Tracing a number: `out/resolved.csv` has the value, the rule that won in plain words, and `claim_rows`. Those IDs index `out/claims.csv`, which has the document and line. `out/documents.csv` has the raw text.
+Tracing a number: `resolved.csv` has the value, the rule that won, and `claim_rows`. Those index `claims.csv`, which has document and line. `documents.csv` has the raw text.
 
 ## Benchmarks
 
-Measured, from `out/benchmarks.md`:
+Measured on the supplied documents (`out/benchmarks.md`):
 
 | Item | Measured |
 |---|---|
-| Full ingest, 31 documents | 81.0 s wall, 2.61 s per document (min 1.89, max 4.80) |
-| Ingest tokens | 206,074 in, 21,649 out (6,648 + 698 per document) |
-| Re-ingest, unchanged folder | 0 model calls; about 2 s including Python start |
-| Resolve | 15 ms for 1 patient, 590 claims -> 296 resolved rows, 6 unresolved |
-| Question, function part | 2–4 ms each |
-| Question, model part | 8–14 s each (route 1 s + prose 7–13 s) |
-| Question tokens, all 5 | 21,711 in, 11,116 out |
-| Database | 380 KB, 12.3 KB per document, raw text included |
+| Full ingest, 31 documents | 84.9 s, 2.74 s per document (min 1.83, max 5.02) |
+| Ingest tokens | 201,920 in, 21,741 out |
+| Re-ingest, unchanged folder | 0 model calls, 0.4 s |
+| Resolve | 4 ms, 619 claims to 327 resolved rows, 8 unresolved |
+| Question, code | 1–4 ms |
+| Question, model | 5–11 s |
+| Question tokens, all 5 | 22,133 in, 10,612 out |
+| Database | 476 KB, 15.4 KB per document, raw text included |
 
-Cost: tokens are logged per call in the `runs` table. `bench.py` multiplies by `ATTEST_PRICE_IN_PER_M` / `ATTEST_PRICE_OUT_PER_M` when set. Not set here, so no dollar figure is claimed; at any current Haiku-class price the full run is well under one dollar.
+- Cost at Haiku 5.5 list price on submission day ($0.10 in, $0.50 out per million): ingest $0.031, five questions $0.008.
+- Estimate: 1,000,000 documents at 2.74 s each is 32 days single-threaded, about 1 day on 32 workers if rate limits allow. Assumptions stated in `benchmarks.md`.
 
-Estimates, each with its assumption, are in `out/benchmarks.md`. The main one: 1,000,000 documents at the measured 2.61 s each is 30 days of model calls single-threaded, about 1 day with 32 parallel workers if the provider's rate limit allows.
+## Design decision tested: few-shot examples in the extraction prompt
 
-## One design decision tested: few-shot examples in the extraction prompt
+Full ingest twice, identical except for the three invented examples (`--no-fewshot`).
 
-Ran the full ingest twice into separate databases, identical except for the three made-up examples in the prompt (`--no-fewshot`).
-
-| | With examples | Without |
+| | With | Without |
 |---|---|---|
-| Input tokens | 206K | 136K (34% fewer) |
-| Treatment plan goal extracted | yes (150 min, 3 days, counting types) | no plan rows at all |
-| Jan 19 encounter identity | one subject, correction applied, 60 min | two subjects for the same encounter; correction applied to one, the other kept 11:30 and 90 min |
-| Jan 16 presence | patient_absent (clinical note wins) | attended |
+| Input tokens | 206K | 136K |
+| Plan goal extracted | yes | no plan rows |
+| Jan 19 encounter | one, correction applied | split in two; correction applied to one |
 | Unresolved fields | 6 | 29 |
 
-Learned: the model follows the shape it is shown, not the shape it is told. Without an example of a multi-encounter register it invents encounter IDs; without an example of a filled `plan` section it puts the goal in `extra`. The 34% token saving is not worth losing the plan. Earlier in the build, examples written as plain text instead of real tool calls made the model return the whole form as a string, which is the same lesson.
+Learned: the model follows the shape it is shown, not the shape it is told. A 34% token saving is not worth losing the plan.
 
-## Observed limitation and what to investigate next
+## Observed limitation and next step
 
-Extraction is not byte-stable. Extracting BH-D106 twice gave 20 and 22 claim rows; 16 identical. The differences were in `extra` and `summary` wording, plus one run adding `arrival 13:00` and `departure 13:55` for a video visit (the first and last call times). The core fields that drive the numbers agreed, and the minutes came out 45 both times. But a drift like that arrival/departure pair could change a `minutes_with_breaks` figure on another document.
+Extraction varies run to run; the API exposes no temperature. Five fresh ingests gave 590 to 619 claims. Three drifts seen:
 
-The API in use exposes no temperature parameter, so this cannot be pinned by setting.
+- A misread label: one run tagged a missed group as `collateral`. No number moved; the reason would have been wrong. Led to the rule that scheduling facts are decided by vote, not by the witness ladder.
+- A status drift: one run marked a partner-only visit `attended`. Plan excludes it regardless; totals held.
+- A malformed reply, about one document in thirty. Code repairs the two common shapes and retries once; a document that still fails is kept raw and flagged.
 
-Next: extract every document three times, diff the fixed-slot claims, and measure a per-field agreement rate. Fields under some threshold get a second opinion at ingest (two calls, keep agreement, flag disagreement as a claim conflict for the resolver). That turns an unmeasured risk into a number and a rule.
+The five answers' numbers were the same on every run.
 
-A second limitation: the fallback path produced valid SQL on its first unseen question but queried `resolved` for a field that lives only in `claims`, so it returned zero rows and said so. The label "provisional, unreviewed" is doing real work. The fix is to promote reviewed queries to functions, which is the designed loop.
+Next: extract each document three times, diff the fixed slots, measure per-field agreement. Low-agreement fields get a second call at ingest; disagreement goes to the resolver as a conflict.
+
+Also: the fallback produced valid SQL on its first unseen question but queried the wrong table and returned zero rows, and said so. The provisional label is doing real work.
 
 ## First bottleneck at a million documents
 
-The model call per document in `attest/ingest.py`, `ingest_file`, called sequentially from `main`. Measured 2.61 s per document; a million documents is 30 days on one thread. Change: a worker pool over the file list (the hash check and the insert are already per-document and independent), provider batch endpoints where available, and the existing hash cache so re-reviews cost nothing. The second bottleneck is SQLite's single writer, which parallel ingest hits immediately; the swap to Postgres is confined to `attest/db.py`. The full order of what breaks next, with the code location and the change for each, is `DESIGN.md` section 10.
+The sequential model call per document, `attest/ingest.py`, `ingest_file`. 2.74 s each; a million is 32 days on one thread.
+
+- Change: worker pool over the file list, provider batch endpoints, the existing hash cache for re-reviews.
+- Next: SQLite's single writer, which parallel ingest hits at once. Postgres; the swap is confined to `db.py`.
+- Full order of what breaks next: `DESIGN.md` section 10.
 
 ## Model and tooling
 
-- Model: `claude-haiku-5-5` for extraction, routing, and prose. Forced tool call with a JSON schema for extraction and routing; free text for prose. No temperature setting is exposed by the API version used (anthropic SDK 1.12), so sampling is the provider default.
-- Storage: SQLite, one file. Same schema and SQL on Postgres; the connection lives in `db.py`.
-- Coding assistance: Claude (Anthropic) was used throughout for design discussion, code, and this README, driven and reviewed by the author. The design was decided in conversation before any code was written; `DECISIONS.md` is that record. Grok and Gemini were each asked once to review the design docs; two of their points (few-shot examples, strict field names) were adopted, two (that the dataset had 7 files and no treatment plan) were wrong and discarded.
-- Runtime: about 3 minutes end to end on the supplied data (81 s ingest, 15 ms resolve, about 60 s for five questions, mostly model time).
+- Model: `claude-haiku-5-5` for extraction, routing, prose. Forced tool call with a JSON schema for the first two. No temperature setting in the API version used (anthropic SDK 1.12).
+- Storage: SQLite, one file. Same schema on Postgres.
+- Coding assistance: Claude (Anthropic) throughout, for design discussion, code, and this README, driven and reviewed by the author. Design decided before code; `DECISIONS.md` is the record. Grok and Gemini each reviewed the design docs once; two points adopted, two wrong and discarded.
+- Runtime: about 3 minutes end to end (85 s ingest, 4 ms resolve, about 50 s for five questions).
 
 ## Known incomplete work
 
-- One patient in the data. Multi-patient code paths (`consecutive_below`, the `(clinic, patient)` key) are built and tested on hand-made data, not on a real second patient.
-- `plan_change` returns "no plan change on record" for this dataset; the before/after computation is written but exercised only in tests.
-- Cost in dollars is not computed without price env vars, by choice.
-- `extra` and `unmapped` fields are stored and exported but not used by any function.
+- One patient in the data. Multi-patient paths and `plan_change` are tested on invented fixtures, not a real second patient.
+- `extra` and `unmapped` fields are stored and exported, not used by any function.

@@ -2,28 +2,47 @@
 
 **Question.** For January 5–30, 2026, how many therapy sessions did Rowan attend, by service type and in total, and on how many distinct days? Provide a reviewable abstraction with source support and explain records that could lead to duplicate or ineligible counts.
 
-**Result for HG-M042, Harbor Grove Behavioral Health, January 5–30, 2026**
+**Answer**
 
-| Service type | Sessions counted | Encounters |
-|---|---|---|
-| Individual | 5 | HG-E101, HG-E107, HG-E111, HG-E112, HG-E115 |
-| Group | 5 | HG-E102, HG-E105, HG-E110, HG-E113, HG-E118 |
-| Family | 2 | HG-E104, HG-E119 |
-| **Total** | **12** | |
+Rowan attended 12 counted therapy sessions from January 5 to 30, 2026: 5 individual, 5 group, and 2 family. The sessions fall on 11 distinct days. The count for HG-E115 (January 26) is unresolved because the source documents give different contact intervals.
 
-The 12 counted entries across 11 distinct dates. The type counts (5 + 5 + 2) match the total of 12. Distinct days are 11 because HG-E110 (group) and HG-E111 (individual) both fall on 2026-01-19, so that day holds two sessions.
+**Evidence**
 
-**Basis for inclusion.** Each counted encounter has status "attended" or "attended_partial" and a service type the treatment plan counts (BH-D003). The output counts partial attendance as attended. Partial-attendance sessions are HG-E112 (BH-D106), HG-E113 (BH-D107, BH-D108) and HG-E119 (BH-D113).
+Counted sessions (patient HG-M042):
 
-**Multi-document encounters (counted once each).** Nine encounters are supported by more than one document: HG-E101, HG-E102, HG-E104, HG-E105, HG-E107, HG-E110, HG-E113, HG-E115 and HG-E118. HG-E110 has four supporting documents (BH-D101 to BH-D104). Each was counted once in the total, so the documents do not add to the count.
+| Encounter | Date | Type | Status | Documents |
+|---|---|---|---|---|
+| HG-E101 | 2026-01-05 | individual | attended | BH-D002, BH-D006 |
+| HG-E102 | 2026-01-06 | group | attended | BH-D004, BH-D005, BH-D006 |
+| HG-E104 | 2026-01-09 | family | attended | BH-D006, BH-D007, BH-D008 |
+| HG-E105 | 2026-01-12 | group | attended | BH-D005, BH-D006, BH-D009 |
+| HG-E107 | 2026-01-14 | individual | attended | BH-D006, BH-D011 |
+| HG-E110 | 2026-01-19 | group | attended | BH-D101, BH-D102, BH-D103, BH-D104 |
+| HG-E111 | 2026-01-19 | individual | attended | BH-D105 |
+| HG-E112 | 2026-01-21 | individual | attended_partial | BH-D106 |
+| HG-E113 | 2026-01-22 | group | attended | BH-D107, BH-D108 |
+| HG-E115 | 2026-01-26 | individual | attended | BH-D110, BH-D111 |
+| HG-E118 | 2026-01-29 | group | attended | BH-D107, BH-D108 |
+| HG-E119 | 2026-01-30 | family | attended_partial | BH-D113 |
 
-**Possible duplicate pattern to check.** HG-E113 (2026-01-22) and HG-E118 (2026-01-29) cite the same two documents, BH-D107 and BH-D108. They are different subjects on different dates, so the output counts them separately. A reviewer should confirm that BH-D107 and BH-D108 each record two distinct sessions and are not one record reused.
+Excluded records (not counted):
 
-**Excluded records (not counted).**
-- Status-based exclusions: HG-E103 (no_show, BH-D015), HG-E116 (no_show, BH-D112), HG-E108 (clinic_cancelled, BH-D016), HG-E117 (patient_cancelled, BH-D108).
-- Service-type exclusions under the treatment plan (BH-D003): HG-E106 and HG-E120 (medication, both attended), HG-E109 (collateral, status patient_absent), HG-E114 (coordination, attended), and enc:BH-D115:0 (other, attended, 2026-01-30).
+- HG-E103, 2026-01-08, individual: no_show (BH-D006, BH-D015).
+- HG-E106, 2026-01-13, medication: excluded by treatment plan BH-D003 (BH-D006, BH-D010).
+- HG-E108, 2026-01-15, group: clinic_cancelled (BH-D006, BH-D016).
+- HG-E109, 2026-01-16, collateral: excluded by treatment plan BH-D003 (BH-D006, BH-D012).
+- HG-E114, 2026-01-23, coordination: excluded by treatment plan BH-D003 (BH-D109).
+- HG-E116, 2026-01-27, group: no_show (BH-D108, BH-D112).
+- HG-E117, 2026-01-28, individual: patient_cancelled (BH-D108).
+- HG-E120, 2026-01-30, medication: excluded by treatment plan BH-D003 (BH-D114).
 
-Attended encounters excluded by service type (HG-E106, HG-E114, HG-E120, enc:BH-D115:0) would change the total if the plan's service-type list were different. The output's list is the basis for the count.
+Duplicate risk:
 
-**Unresolved item.**
-- **HG-E115 (2026-01-26, individual, counted).** The contact times differ between documents. BH-D110 gives 09:00–09:50, which is 50 minutes. BH-D111 gives 09:10–09:50, which is 40 minutes. The output reports minutes as null and gives a range of 40–50. The session is counted in the total of 12 under either time, so the count does not change. The duration is unresolved. It would be settled by checking the contact start and end times against the primary session record or the clinician's note for that date.
+- Nine counted sessions are supported by more than one document. Each is listed once in the count.
+- January 19 has two counted sessions (HG-E110 and HG-E111), which is why 12 sessions give 11 distinct days.
+- BH-D006 supports five counted sessions and four excluded records. BH-D107 and BH-D108 each support both HG-E113 and HG-E118. BH-D108 also supports the excluded HG-E116 and HG-E117.
+- Two counted sessions have status attended_partial (HG-E112, HG-E119). They are counted under the output's rules.
+
+**Unresolved**
+
+- HG-E115 (2026-01-26): contact intervals differ between documents. BH-D110 gives 09:00–09:50. BH-D111 gives 09:10–09:50. The output gives a range of 40–50 minutes. The low end is from BH-D111 and the high end is from BH-D110. The session is counted in the total of 12 either way. The minutes value would be settled by the source schedule or the contact record that set the start time.

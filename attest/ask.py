@@ -1,7 +1,7 @@
 """Context, route to function, run, narrate with citations, fallback, save receipt.
 
     python -m attest.ask questions.json          # answers each; writes out/answers/<id>.md and .json
-    python -m attest.ask "How many group sessions did HG-M042 attend in week 2?"
+    python -m attest.ask "How many group sessions did patient M017 attend in week 2?"
 
 The model picks a function and fills its blanks. Code runs it. The model then writes
 prose from the function output only. It never sees the documents and never does math.
@@ -37,6 +37,7 @@ ROUTE_TOOL = {
         "properties": {
             "function": {"type": "string", "enum": list(FUNCTIONS) + ["none"]},
             "patient": {"type": "string", "description": "MRN, from the question or the context"},
+            "named_patient": {"type": "string", "description": "the patient name or ID exactly as the question wrote it, if it names one; omit if the question names nobody"},
             "start": {"type": "string", "description": "YYYY-MM-DD"},
             "end": {"type": "string", "description": "YYYY-MM-DD"},
             "dates": {"type": "array", "items": {"type": "string"}, "description": "YYYY-MM-DD list, for day; one or more"},
@@ -47,26 +48,31 @@ ROUTE_TOOL = {
     },
 }
 
-ROUTE_SYSTEM = """You route a question about a patient's record to one tested function. You do not answer the question.
+ROUTE_SYSTEM = """Route a question about a patient's record to one function. Do not answer it.
 
 Functions:
 """ + "\n".join(f"- {k}: {v}" for k, v in FUNCTIONS.items()) + """
 
-Rules:
-- Use the context for anything the question does not name: patient, clinic, period. "The review period", "the episode" mean the context period.
-- Dates are YYYY-MM-DD. "January 5-30, 2026" is start 2026-01-05, end 2026-01-30.
-- If the question asks about progress, symptoms, assessments, or the reason for a visit, choose timeline.
-- If it asks to reconstruct specific dates, choose day and list every date asked in dates.
-- If no function fits, return function none and say why in why_none.
+- Take patient, clinic, and period from the context when the question does not name them. "The review period" and "the episode" mean the context period.
+- Dates as YYYY-MM-DD.
+- Progress, symptoms, assessments, or the reason for a visit: timeline.
+- Reconstruct specific dates: day, with every date asked in dates.
+- Nothing fits: function none, with why_none.
 """
 
-WRITE_SYSTEM = """You write the answer to a records-review question from a function's output. Rules:
-- Use only the facts in the output. Do not compute, infer, or add totals. The numbers are already computed.
-- Cite the evidence: for each number or claim, name the encounter and the documents behind it as given (for example HG-E110, BH-D103). Where the output includes a basis string, state it in your own short words.
-- State every unresolved item the output lists, and what would settle it.
-- If the output gives a low and high value, report both and say why.
-- Plain, formal English. Short paragraphs or a compact table. No filler, no hedging beyond what the output marks unresolved.
-- Do not restate the question.
+WRITE_SYSTEM = """Write the answer to a records-review question from a function's output.
+
+Three sections, these headings, this order: **Answer**, **Evidence**, **Unresolved**.
+- Answer: one to three sentences with the numbers or verdicts.
+- Evidence: a compact table or list, one line per item, each number with its encounter and documents.
+- Unresolved: only items the output marks unresolved or gives as a range. What differs, between which documents, what would settle it. "None." if none.
+
+- Use only facts in the output. Do not compute, infer, or add totals.
+- Cite encounter and document IDs as the output gives them. Put a basis string in a few plain words.
+- A low and high value: report both and say why in one clause.
+- Short sentences. Formal. No filler, no hedging, no remarks about the output, no restating the question, no closing summary.
+- If the output has `supported` and `not_supported` lists, state both under Answer, each as a short list.
+- Omit what the question did not ask and the output did not flag.
 """
 
 
@@ -81,6 +87,28 @@ def _client():
     if not os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit("ANTHROPIC_API_KEY not set.")
     return anthropic.Anthropic()
+
+
+def _patient_names(con):
+    """[(patient_row, name)] from the mrn and patient_name header claims."""
+    out = []
+    for p in db.patients(con):
+        row = con.execute("SELECT value FROM claims WHERE clinic=? AND patient=? AND field='patient_name' LIMIT 1",
+                          (p["clinic"], p["patient"])).fetchone()
+        out.append((p, row[0] if row else "name not stated"))
+    return out
+
+
+def _patient_known(con, text):
+    """True when the text matches a known MRN or any word of a known patient name, case-insensitive."""
+    t = text.lower()
+    for p, name in _patient_names(con):
+        if p["patient"].lower() in t or t in p["patient"].lower():
+            return True
+        for w in name.lower().replace(",", " ").split():
+            if len(w) > 2 and (w in t or t in w):
+                return True
+    return False
 
 
 def default_context(con):
@@ -176,17 +204,25 @@ def answer(con, client, question, ctx, log):
     tokens = {"in": u1.input_tokens, "out": u1.output_tokens}
     log(f"route  {fn}  params={ {k: r.get(k) for k in ('patient','start','end','dates')} }  {t_route:.2f}s")
 
+    named = (r.get("named_patient") or "").strip()
+    if named and not _patient_known(con, named):
+        text = f"**Answer**\n\nNo patient in the record matches \"{named}\".\n\n**Evidence**\n\nNone.\n\n**Unresolved**\n\nNone."
+        db.log_question(con, asked, question, ctx, "none", r, {}, text, False, 0, int(t_route*1000)); con.commit()
+        return text, {}, ctx
+
     if fn == "none" or (fn not in FUNCTIONS):
         if not ctx.get("patient"):
-            text = "The question names no patient and the database holds more than one. Name the patient (MRN) to continue."
+            text = "**Answer**\n\nThe question names no patient and the record holds more than one. Name the patient to continue.\n\n**Evidence**\n\nNone.\n\n**Unresolved**\n\nNone."
             db.log_question(con, asked, question, ctx, "none", r, {}, text, False, 0, int(t_route*1000)); con.commit()
             return text, {}, ctx
         result, err = fallback_sql(client, con, question, ctx)
-        head = "This question does not map to a tested computation. Provisional answer below from a generated, read-only query; unreviewed.\n\n"
+        head = "**Provisional.** This question does not map to a tested computation. The answer below comes from a generated, read-only query and is unreviewed.\n\n"
         if err:
             text = head + f"The generated query failed: {err}\n\nQuery:\n{result['sql']}"
         else:
-            prose, u2, t_w = write(client, question, result, r.get("why_none"))
+            note = ("Provisional query. " + ("It returned zero rows: say the query may be wrong, not that the fact is absent. "
+                    if not result.get("rows") else "Results are unreviewed. ") + (r.get("why_none") or ""))
+            prose, u2, t_w = write(client, question, result, note)
             tokens["in"] += u2.input_tokens; tokens["out"] += u2.output_tokens
             text = head + prose + f"\n\nQuery (saved for review):\n```sql\n{result['sql']}\n```"
         db.log_question(con, asked, question, ctx, "fallback_sql", r, result, text, True, 0, int(t_route*1000)); con.commit()

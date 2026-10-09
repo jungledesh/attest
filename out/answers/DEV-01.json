@@ -50,6 +50,7 @@
     "minutes": 45,
     "documents": [
      "BH-D006",
+     "BH-D007",
      "BH-D008"
     ]
    },
@@ -113,7 +114,7 @@
     "subject": "HG-E113",
     "date": "2026-01-22",
     "service_type": "group",
-    "status": "attended_partial",
+    "status": "attended",
     "minutes": 45,
     "documents": [
      "BH-D107",
@@ -191,7 +192,7 @@
     "subject": "HG-E109",
     "date": "2026-01-16",
     "service_type": "collateral",
-    "status": "patient_absent",
+    "status": "attended",
     "why": "collateral is excluded by the treatment plan (plan:BH-D003)",
     "documents": [
      "BH-D006",
@@ -238,16 +239,6 @@
     "documents": [
      "BH-D114"
     ]
-   },
-   {
-    "subject": "enc:BH-D115:0",
-    "date": "2026-01-30",
-    "service_type": "other",
-    "status": "attended",
-    "why": "other is not a counting type in the treatment plan (plan:BH-D003)",
-    "documents": [
-     "BH-D115"
-    ]
    }
   ],
   "multi_document": [
@@ -273,6 +264,7 @@
     "date": "2026-01-09",
     "documents": [
      "BH-D006",
+     "BH-D007",
      "BH-D008"
     ]
    },

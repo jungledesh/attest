@@ -1,16 +1,60 @@
-2026-10-08T22:28:44+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
-2026-10-08T22:28:44+00:00  Q DEV-01: For January 5–30, 2026, how many therapy sessions did Rowan attend, by service type and in
-2026-10-08T22:28:45+00:00  route  sessions  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  0.96s
-2026-10-08T22:28:54+00:00  answer sessions  function=2ms  model=10060ms  tokens=3873+2217
-2026-10-08T22:28:54+00:00  Q DEV-02: How many therapy minutes and hours did Rowan actually receive during the review period, ov
-2026-10-08T22:28:57+00:00  route  minutes_by_week  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  3.14s
-2026-10-08T22:29:06+00:00  answer minutes_by_week  function=3ms  model=11461ms  tokens=3895+2053
-2026-10-08T22:29:06+00:00  Q DEV-03: For each week, did the delivered therapy meet the goal documented in Rowan’s treatment pla
-2026-10-08T22:29:07+00:00  route  plan_check  params={'patient': None, 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.26s
-2026-10-08T22:29:14+00:00  answer plan_check  function=4ms  model=8144ms  tokens=2971+1711
-2026-10-08T22:29:14+00:00  Q DEV-04: Reconstruct the care on January 19 and January 21. How many therapy contacts and patient t
-2026-10-08T22:29:15+00:00  route  day  params={'patient': 'HG-M042', 'start': None, 'end': None, 'dates': ['2026-01-19', '2026-01-21']}  1.15s
-2026-10-08T22:29:22+00:00  answer day  function=3ms  model=8193ms  tokens=3659+1859
-2026-10-08T22:29:22+00:00  Q DEV-05: Summarize the documented symptom course during the episode and the reason for the addition
-2026-10-08T22:29:23+00:00  route  timeline  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  0.93s
-2026-10-08T22:29:36+00:00  answer timeline  function=2ms  model=13994ms  tokens=7313+3276
+2026-10-09T00:19:51+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-09T00:19:51+00:00  Q DEV-01: For January 5–30, 2026, how many therapy sessions did Rowan attend, by service type and in
+2026-10-09T00:19:53+00:00  route  sessions  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.62s
+2026-10-09T00:20:01+00:00  answer sessions  function=2ms  model=10147ms  tokens=3912+2321
+2026-10-09T00:20:01+00:00  Q DEV-02: How many therapy minutes and hours did Rowan actually receive during the review period, ov
+2026-10-09T00:20:02+00:00  route  minutes_by_week  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.08s
+2026-10-09T00:20:11+00:00  answer minutes_by_week  function=1ms  model=9682ms  tokens=4214+2275
+2026-10-09T00:20:11+00:00  Q DEV-03: For each week, did the delivered therapy meet the goal documented in Rowan’s treatment pla
+2026-10-09T00:20:12+00:00  route  plan_check  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.22s
+2026-10-09T00:20:19+00:00  answer plan_check  function=5ms  model=8283ms  tokens=3229+1773
+2026-10-09T00:20:19+00:00  Q DEV-04: Reconstruct the care on January 19 and January 21. How many therapy contacts and patient t
+2026-10-09T00:20:20+00:00  route  day  params={'patient': 'HG-M042', 'start': None, 'end': None, 'dates': ['2026-01-19', '2026-01-21']}  0.92s
+2026-10-09T00:20:27+00:00  answer day  function=4ms  model=7467ms  tokens=3996+1734
+2026-10-09T00:20:27+00:00  Q DEV-05: Summarize the documented symptom course during the episode and the reason for the addition
+2026-10-09T00:20:28+00:00  route  timeline  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.74s
+2026-10-09T00:20:38+00:00  answer timeline  function=2ms  model=11492ms  tokens=6270+2646
+2026-10-09T00:22:07+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-09T00:22:07+00:00  Q Q: How many group sessions did tara attend in week 2?
+2026-10-09T00:22:08+00:00  route  sessions  params={'patient': 'HG-M042', 'start': '2026-01-12', 'end': '2026-01-18', 'dates': None}  1.42s
+2026-10-09T00:22:18+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-09T00:22:18+00:00  Q Q: How many group sessions did perry  attend in week 2?
+2026-10-09T00:22:20+00:00  route  sessions  params={'patient': 'HG-M042', 'start': '2026-01-12', 'end': '2026-01-18', 'dates': None}  1.29s
+2026-10-09T00:22:35+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-09T00:22:35+00:00  Q Q: Which clinicians signed documents for this patient, and how many each?
+2026-10-09T00:22:36+00:00  route  none  params={'patient': 'HG-M042', 'start': None, 'end': None, 'dates': None}  1.48s
+2026-10-09T00:25:51+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-09T00:25:51+00:00  Q DEV-01: For January 5–30, 2026, how many therapy sessions did Rowan attend, by service type and in
+2026-10-09T00:25:53+00:00  route  sessions  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.46s
+2026-10-09T00:26:02+00:00  answer sessions  function=2ms  model=10807ms  tokens=3901+2505
+2026-10-09T00:26:02+00:00  Q DEV-02: How many therapy minutes and hours did Rowan actually receive during the review period, ov
+2026-10-09T00:26:03+00:00  route  minutes_by_week  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.05s
+2026-10-09T00:26:12+00:00  answer minutes_by_week  function=1ms  model=9911ms  tokens=4214+2373
+2026-10-09T00:26:12+00:00  Q DEV-03: For each week, did the delivered therapy meet the goal documented in Rowan’s treatment pla
+2026-10-09T00:26:13+00:00  route  plan_check  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.16s
+2026-10-09T00:26:19+00:00  answer plan_check  function=2ms  model=7100ms  tokens=3234+1714
+2026-10-09T00:26:19+00:00  Q DEV-04: Reconstruct the care on January 19 and January 21. How many therapy contacts and patient t
+2026-10-09T00:26:20+00:00  route  day  params={'patient': 'HG-M042', 'start': None, 'end': None, 'dates': ['2026-01-19', '2026-01-21']}  1.02s
+2026-10-09T00:26:26+00:00  answer day  function=5ms  model=6649ms  tokens=4010+1600
+2026-10-09T00:26:26+00:00  Q DEV-05: Summarize the documented symptom course during the episode and the reason for the addition
+2026-10-09T00:26:27+00:00  route  timeline  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.53s
+2026-10-09T00:26:35+00:00  answer timeline  function=3ms  model=9255ms  tokens=6606+2225
+2026-10-09T00:26:39+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-09T00:26:39+00:00  Q Q: Which clinicians signed documents for this patient, and how many each?
+2026-10-09T00:26:40+00:00  route  none  params={'patient': 'HG-M042', 'start': None, 'end': None, 'dates': None}  1.56s
+2026-10-09T00:27:56+00:00  start  model=claude-haiku-5-5  context={'clinic': 'Harbor Grove Behavioral Health', 'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30'}
+2026-10-09T00:27:56+00:00  Q DEV-01: For January 5–30, 2026, how many therapy sessions did Rowan attend, by service type and in
+2026-10-09T00:27:58+00:00  route  sessions  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.56s
+2026-10-09T00:28:06+00:00  answer sessions  function=2ms  model=9595ms  tokens=3938+2291
+2026-10-09T00:28:06+00:00  Q DEV-02: How many therapy minutes and hours did Rowan actually receive during the review period, ov
+2026-10-09T00:28:07+00:00  route  minutes_by_week  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.02s
+2026-10-09T00:28:17+00:00  answer minutes_by_week  function=3ms  model=10962ms  tokens=4247+2649
+2026-10-09T00:28:17+00:00  Q DEV-03: For each week, did the delivered therapy meet the goal documented in Rowan’s treatment pla
+2026-10-09T00:28:18+00:00  route  plan_check  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.16s
+2026-10-09T00:28:27+00:00  answer plan_check  function=3ms  model=9959ms  tokens=3261+1719
+2026-10-09T00:28:27+00:00  Q DEV-04: Reconstruct the care on January 19 and January 21. How many therapy contacts and patient t
+2026-10-09T00:28:28+00:00  route  day  params={'patient': 'HG-M042', 'start': None, 'end': None, 'dates': ['2026-01-19', '2026-01-21']}  1.02s
+2026-10-09T00:28:32+00:00  answer day  function=5ms  model=4971ms  tokens=4045+1190
+2026-10-09T00:28:32+00:00  Q DEV-05: Summarize the documented symptom course during the episode and the reason for the addition
+2026-10-09T00:28:33+00:00  route  timeline  params={'patient': 'HG-M042', 'start': '2026-01-05', 'end': '2026-01-30', 'dates': None}  1.68s
+2026-10-09T00:28:42+00:00  answer timeline  function=3ms  model=10687ms  tokens=6642+2763

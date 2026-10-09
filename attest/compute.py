@@ -106,14 +106,14 @@ def encounters(con, clinic, patient, start=None, end=None):
         status = _val(e, "status")
         plan = plan_in_effect(plans, day)
         eligible, why = True, "counts toward plan"
-        if plan and stype in plan["excluded"]:
+        if status in INELIGIBLE_STATUS:
+            eligible, why = False, f"status {status}"
+        elif plan and stype in plan["excluded"]:
             eligible, why = False, f"{stype} is excluded by the treatment plan ({plan['subject']})"
         elif plan and plan["counting"] and stype not in plan["counting"]:
             eligible, why = False, f"{stype} is not a counting type in the treatment plan ({plan['subject']})"
         elif stype is None:
-            eligible, why = False, "service type not stated"
-        elif status in INELIGIBLE_STATUS:
-            eligible, why = False, f"status {status}"
+            eligible, why = False, "service type not stated or not settled"
         elif status is None and _val(e, "minutes") in (None, "0"):
             eligible, why = False, "no attendance or minutes stated"
         m = e.get("minutes", {})
@@ -126,10 +126,13 @@ def encounters(con, clinic, patient, start=None, end=None):
             "eligible": eligible, "why": why,
             "documents": (_val(e, "documents") or "").split(",") if _val(e, "documents") else [],
             "document_types": {d: dtypes.get(d) for d in ((_val(e, "documents") or "").split(",") if _val(e, "documents") else [])},
+            "modality": _val(e, "modality"),
             "arrival": _val(e, "arrival"), "departure": _val(e, "departure"),
             "contact_intervals": _list_vals(e, "contact_interval"),
             "patient_present_intervals": _list_vals(e, "patient_present_interval"),
             "nontherapeutic_intervals": _list_vals(e, "nontherapeutic_interval"),
+            "other_facts": {f.split(":", 1)[1]: r["value"] for f, r in e.items()
+                            if isinstance(r, dict) and f.startswith("extra:")},
             "departure_basis": (e.get("departure") or {}).get("basis"),
             "status_basis": (e.get("status") or {}).get("basis"),
             "fields": {f: {"value": r["value"], "basis": r["basis"], "status": r["status"], "claim_rows": r["claim_rows"]}
@@ -163,11 +166,12 @@ def _week_start(d):
 def minutes_by_week(con, clinic, patient, start, end):
     encs = [e for e in encounters(con, clinic, patient, start, end) if e["eligible"]]
     weeks = defaultdict(lambda: {"minutes_low": 0, "minutes_high": 0, "minutes_with_breaks": 0, "days": set(),
-                                 "encounters": [], "unresolved": [], "not_stated": []})
+                                 "encounters": [], "documents": set(), "unresolved": [], "not_stated": []})
     for e in encs:
         wk = _week_start(_d(e["date"]))
         w = weeks[wk]
         w["encounters"].append(e["subject"])
+        w["documents"].update(e["documents"])
         if e["therapy_day"] == "true":
             w["days"].add(e["date"])
         if e["minutes"] is not None:
@@ -186,7 +190,8 @@ def minutes_by_week(con, clinic, patient, start, end):
                      "therapy_days": len(w["days"]), "minutes_low": w["minutes_low"], "minutes_high": w["minutes_high"],
                      "minutes_with_breaks": w["minutes_with_breaks"],
                      "hours_low": round(w["minutes_low"] / 60, 2), "hours_high": round(w["minutes_high"] / 60, 2),
-                     "encounters": w["encounters"], "unresolved": w["unresolved"], "not_stated": w["not_stated"]})
+                     "encounters": w["encounters"], "documents": sorted(w["documents"]),
+                     "unresolved": w["unresolved"], "not_stated": w["not_stated"]})
     tot_lo = sum(r["minutes_low"] for r in rows); tot_hi = sum(r["minutes_high"] for r in rows)
     return {"patient": patient, "start": start.isoformat(), "end": end.isoformat(), "weeks": rows,
             "total_minutes_low": tot_lo, "total_minutes_high": tot_hi,
@@ -284,9 +289,47 @@ def timeline(con, clinic, patient, start=None, end=None):
                                   "service_type": _val(e, "service_type"), "status": _val(e, "status"), "text": r["value"]})
     items = [i for i in items if i["date"] and (not start or _d(i["date"]) >= start) and (not end or _d(i["date"]) <= end)]
     items.sort(key=lambda i: (i["date"], i["kind"] != "measure", i["subject"]))
-    return {"patient": patient, "items": items,
-            "distinct_measures": [i for i in items if i["kind"] == "measure" and i["distinct"] == "true"],
-            "copied_measures": [i for i in items if i["kind"] == "measure" and i["distinct"] != "true"]}
+    distinct = [i for i in items if i["kind"] == "measure" and i["distinct"] == "true"]
+    copied = [i for i in items if i["kind"] == "measure" and i["distinct"] != "true"]
+    return {"patient": patient, "items": items, "distinct_measures": distinct, "copied_measures": copied,
+            "progress": _progress(distinct, copied, items)}
+
+
+def _progress(distinct, copied, items):
+    """What the record supports about progress, and what it cannot. Computed, not judged."""
+    supported, not_supported = [], []
+    by_name = defaultdict(list)
+    for m in distinct:
+        try:
+            by_name[m["score_name"]].append((m["date"], int(m["score_value"]), m["subject"]))
+        except (TypeError, ValueError):
+            pass
+    trends = []
+    for name, pts in by_name.items():
+        pts.sort()
+        if len(pts) >= 2:
+            first, last = pts[0], pts[-1]
+            days = (_d(last[0]) - _d(first[0])).days
+            direction = "decreased" if last[1] < first[1] else "increased" if last[1] > first[1] else "unchanged"
+            trends.append({"instrument": name, "n_distinct": len(pts), "first": first[1], "first_date": first[0],
+                           "last": last[1], "last_date": last[0], "change": last[1] - first[1], "days": days,
+                           "direction": direction, "subjects": [p[2] for p in pts]})
+            supported.append(f"{name} {direction} from {first[1]} ({first[0]}) to {last[1]} ({last[0]}) across "
+                             f"{len(pts)} distinct assessments over {days} days")
+        else:
+            not_supported.append(f"a trend for {name}: only {len(pts)} distinct assessment on record")
+    if copied:
+        supported.append(f"{len(copied)} measure record(s) are copies of an earlier form and are not counted as new assessments")
+    summaries = [i for i in items if i["kind"] == "summary"]
+    if summaries:
+        supported.append(f"{len(summaries)} clinical summaries describe the course in words; these are clinician accounts, not measurements")
+    if len(by_name) == 1:
+        not_supported.append(f"change in any domain other than what {next(iter(by_name))} measures: it is the only instrument on record")
+    if not by_name:
+        not_supported.append("any measured change: no questionnaire scores on record")
+    not_supported.append("item-level or symptom-specific change: only total scores are recorded")
+    not_supported.append("a cause for any change: the record does not link scores to specific interventions")
+    return {"trends": trends, "supported": supported, "not_supported": not_supported}
 
 
 def plan_change(con, clinic, patient):

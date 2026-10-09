@@ -81,3 +81,23 @@ def test_day_and_consecutive_below():
     assert d["therapy_contacts"] == 1 and d["therapy_minutes"] == 45 and d["therapy_minutes_with_breaks"] == 60
     cb = c.consecutive_below(con, date(2026, 1, 5), date(2026, 1, 18))
     assert cb["patients_checked"] == 1 and cb["below"] == []
+
+
+def test_timeline_progress_is_computed_not_judged():
+    con = db.connect(":memory:")
+    for d in ("A", "B", "C"):
+        db.insert_document(con, d, f"sha-{d}", f"{d}.txt", "", "now")
+        db.insert_claims(con, [(d, C, P, f"doc:{d}", "doc_type", "measure", 1)])
+    db.insert_claims(con, [
+        ("A", C, P, "measure:A:0", "score_name", "PHQ-9", 2), ("A", C, P, "measure:A:0", "score_value", "18", 2),
+        ("A", C, P, "measure:A:0", "completed_on", "2026-01-05", 2),
+        ("B", C, P, "measure:B:0", "score_name", "PHQ-9", 2), ("B", C, P, "measure:B:0", "score_value", "10", 2),
+        ("B", C, P, "measure:B:0", "completed_on", "2026-01-30", 2),
+        ("C", C, P, "measure:C:0", "score_name", "PHQ-9", 2), ("C", C, P, "measure:C:0", "score_value", "18", 2),
+        ("C", C, P, "measure:C:0", "completed_on", "2026-01-05", 2), ("C", C, P, "measure:C:0", "copy_of", "A", 3)])
+    resolve_patient(con, C, P)
+    pr = c.timeline(con, C, P)["progress"]
+    t = pr["trends"][0]
+    assert (t["first"], t["last"], t["change"], t["direction"], t["n_distinct"]) == (18, 10, -8, "decreased", 2)
+    assert any("copies" in x for x in pr["supported"])
+    assert any("only instrument" in x for x in pr["not_supported"])

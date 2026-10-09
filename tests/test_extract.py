@@ -46,3 +46,24 @@ def test_plan_and_measure_subjects():
     assert ("plan:P-1", "min_minutes_per_week", "150", 9) in rows
     assert ("plan:P-1", "counting_type", "group", 10) in rows
     assert ("measure:P-1:0", "score_value", "18", 12) in rows
+
+
+def test_list_wrapped_as_string_inside_list_is_unwrapped():
+    import json
+    inner = json.dumps([{"encounter": {"value": "E-9", "line": 3},
+                         "contact_intervals": [{"value": "09:00–09:50", "line": 7}]}])
+    form = {"header": {"doc_id": {"value": "X-9", "line": 1}, "mrn": {"value": "M1", "line": 1},
+                       "clinic": {"value": "C", "line": 1}, "doc_type": {"value": "clinical_note", "line": 1}},
+            "encounters": [inner], "extra": []}
+    _, _, _, rows, flags = flatten(form, "f")
+    assert ("E-9", "contact_interval", "09:00–09:50", 7) in rows
+    assert not any(f.startswith("malformed") for f in flags)
+
+
+def test_truncated_json_missing_closing_brace_is_repaired():
+    cut = '[{"encounter": {"value": "E-8", "line": 3}, "status": {"value": "attended", "line": 5}]'  # missing one }
+    form = {"header": {"doc_id": {"value": "X-8", "line": 1}, "mrn": {"value": "M1", "line": 1},
+                       "clinic": {"value": "C", "line": 1}, "doc_type": {"value": "clinical_note", "line": 1}},
+            "encounters": [cut], "extra": []}
+    _, _, _, rows, flags = flatten(form, "f")
+    assert ("E-8", "status", "attended", 5) in rows and not flags

@@ -1,6 +1,6 @@
 # Decision doc
 
-Notes from the design phase. To be polished into the README later.
+Notes from the design phase, with the decisions added during the build in section 8.
 
 ---
 
@@ -76,9 +76,10 @@ Split the problem into three independent choices.
 One table. Seven columns, every row:
 
 ```
-doc | clinic | patient | encounter | field | value | line
+doc | clinic | patient | subject | field | value | line
 ```
 
+- `subject` is what the fact is about: an encounter ID, or `plan:<doc>` or `measure:<doc>` for facts with no encounter. Renamed from `encounter` during build for that reason.
 - `field` is the name of the fact, `value` is the fact. A roster contributes rows with field=arrival, field=departure. A PHQ-9 review contributes field=phq9_score. A plan contributes field=min_minutes_per_week. Different document shapes become different field names in the same two columns. The shape lives in the data, not the schema. This is how one table takes any document, including ones we have not seen.
 - `summary` is just another field. Not a separate column.
 - Nothing is ever deleted or edited. A correction adds a row; it does not change the roster's row.
@@ -102,7 +103,7 @@ BH-D104 resent copy  | departure | 11:30 | line 15
 
 - MRN = Medical Record Number, the clinic's patient ID. Unique within a clinic by design. Names repeat and get misspelled.
 - Assumption: MRN is unique within a clinic, not across clinics. Two hospitals could both have an M042. So the key is (clinic, MRN). Costs one column now, avoids a collision later. Added now rather than deferred because it makes the scaling story honest.
-- Encounter is a separate column, not part of the patient key. It identifies which visit a row is about and changes per appointment. The `HG-` prefix on both is the clinic's initials, which is a naming coincidence, not a relationship.
+- Subject (encounter) is a separate column, not part of the patient key. It identifies which visit a row is about and changes per appointment. The `HG-` prefix on both is the clinic's initials, which is a naming coincidence, not a relationship.
 
 ### Indexes
 
@@ -194,3 +195,19 @@ LLM reads each document once into a claims table; rules resolve conflicts and re
 - Storage engine: SQLite vs Postgres.
 - Model and settings for extraction and answering.
 - Build order for the four hours.
+
+---
+
+## 8. Decisions made during the build
+
+Each came from a measured failure, each is general.
+
+- Few-shot examples as real tool-call turns, not text. Text examples made the model return the whole form as a string.
+- Three examples, not two: a plan with a score was added after the model put plan goals and PHQ scores in `extra`.
+- Repair before retry. A reply cut one character short or a list wrapped in a list is fixed in code; only a still-malformed section costs a second model call.
+- Scheduling facts by vote, presence by witness ladder. A register misread a service type and outranked a draft that had it right. What was booked is known equally by every source; who was there is not.
+- Lower-rank sources break ties between equal notes. Two clinical notes disagreed on a type; the scheduling export agreed with one. Majority of documents.
+- Intervals from one document are legs of one session; from different documents, a conflict. Two notes for one session were being unioned into the longer one.
+- No temperature knob in the API. Stability measured across four runs instead of assumed: answer numbers stable, labels on excluded encounters not.
+- Unknown patient name is refused, not defaulted. The one-patient default applied to any name until a question about a nonexistent patient got a real answer.
+- Answer in three fixed sections. Free-form prose from the writer was dense and padded; Answer / Evidence / Unresolved is the same information in a third of the space.
